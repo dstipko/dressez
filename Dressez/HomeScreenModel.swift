@@ -9,5 +9,10 @@
 import Foundation
 
 class HomeScreenModel {
-    //networking, fetching from db
+    
+    let persistanceService: PersistanceService
+    
+    init() {
+        persistanceService = PersistanceService()
+    }
 }
