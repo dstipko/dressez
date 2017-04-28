@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */; };
-		86DFC9A01EB3CA3C00A9D4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99F1EB3CA3C00A9D4D0 /* ViewController.swift */; };
-		86DFC9A31EB3CA3C00A9D4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A11EB3CA3C00A9D4D0 /* Main.storyboard */; };
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
-		86DFC9A81EB3CA3C00A9D4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A61EB3CA3C00A9D4D0 /* LaunchScreen.storyboard */; };
+		86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */; };
+		86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */; };
+		86DFC9B81EB3D61E00A9D4D0 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */; };
+		86DFC9B91EB3D61E00A9D4D0 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86DFC99A1EB3CA3C00A9D4D0 /* Dressez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dressez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86DFC99F1EB3CA3C00A9D4D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86DFC9A21EB3CA3C00A9D4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86DFC9A71EB3CA3C00A9D4D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
+		86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
+		86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenController.swift; path = ../HomeScreenController.swift; sourceTree = "<group>"; };
+		86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeScreenController.xib; path = ../HomeScreenController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,22 @@
 			isa = PBXGroup;
 			children = (
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
-				86DFC99F1EB3CA3C00A9D4D0 /* ViewController.swift */,
-				86DFC9A11EB3CA3C00A9D4D0 /* Main.storyboard */,
+				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
 				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
-				86DFC9A61EB3CA3C00A9D4D0 /* LaunchScreen.storyboard */,
 				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
 			);
 			path = Dressez;
+			sourceTree = "<group>";
+		};
+		86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */,
+				86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */,
+				86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */,
+				86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */,
+			);
+			name = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DFC9A81EB3CA3C00A9D4D0 /* LaunchScreen.storyboard in Resources */,
+				86DFC9B91EB3D61E00A9D4D0 /* HomeScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
-				86DFC9A31EB3CA3C00A9D4D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +146,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DFC9A01EB3CA3C00A9D4D0 /* ViewController.swift in Sources */,
+				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
+				86DFC9B81EB3D61E00A9D4D0 /* HomeScreenController.swift in Sources */,
+				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		86DFC9A11EB3CA3C00A9D4D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86DFC9A21EB3CA3C00A9D4D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		86DFC9A61EB3CA3C00A9D4D0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86DFC9A71EB3CA3C00A9D4D0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		86DFC9AA1EB3CA3C00A9D4D0 /* Debug */ = {

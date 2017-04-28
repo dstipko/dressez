@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeScreenController.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 4/28/17.
@@ -8,18 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeScreenController: UIViewController {
 
+    let viewModel = HomeScreenModel()
+    let presenter = HomeScreenPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
