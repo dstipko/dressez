@@ -12,10 +12,11 @@
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
 		86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */; };
 		86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */; };
-		86DFC9B81EB3D61E00A9D4D0 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */; };
-		86DFC9B91EB3D61E00A9D4D0 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */; };
 		86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */; };
 		86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */; };
+		86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */; };
+		86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626391EB3E401003D2E51 /* HomeScreenController.swift */; };
+		86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +27,11 @@
 		86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
 		86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
-		86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenController.swift; path = ../HomeScreenController.swift; sourceTree = "<group>"; };
-		86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeScreenController.xib; path = ../HomeScreenController.xib; sourceTree = "<group>"; };
 		86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
+		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
 				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
+				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
 			);
 			path = Dressez;
 			sourceTree = "<group>";
@@ -98,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */,
-				86DFC9B61EB3D61E00A9D4D0 /* HomeScreenController.swift */,
+				86E626391EB3E401003D2E51 /* HomeScreenController.swift */,
 				86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */,
-				86DFC9B71EB3D61E00A9D4D0 /* HomeScreenController.xib */,
+				86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */,
 			);
 			name = HomeScreen;
 			sourceTree = "<group>";
@@ -167,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DFC9B91EB3D61E00A9D4D0 /* HomeScreenController.xib in Resources */,
+				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +232,8 @@
 			files = (
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
-				86DFC9B81EB3D61E00A9D4D0 /* HomeScreenController.swift in Sources */,
+				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
+				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
@@ -377,6 +381,7 @@
 				86DFC9AE1EB3CA3C00A9D4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

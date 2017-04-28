@@ -12,9 +12,11 @@ class HomeScreenController: UIViewController {
 
     let viewModel = HomeScreenModel()
     let presenter = HomeScreenPresenter()
+    let networking = NetworkingService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        networking.fetchWeather()
         // Do any additional setup after loading the view, typically from a nib.
     }
 }
