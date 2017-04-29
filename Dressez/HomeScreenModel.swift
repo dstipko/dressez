@@ -12,6 +12,7 @@ class HomeScreenModel: BaseViewModel {
 
     var navigationService: NavigationService!
     var networking: NetworkingService!
-
+    var persistanceService: PersistanceService!
+    
     required init() {}
 }

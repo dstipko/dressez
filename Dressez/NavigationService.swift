@@ -13,6 +13,7 @@ struct NavigationService {
     
     var tabBarController: TabBarController!
     let networking = NetworkingService()
+    var persistanceService = PersistanceService()
     
     mutating func initWithHomeScreen(window: UIWindow) {
         tabBarController = TabBarController()
@@ -36,6 +37,7 @@ struct NavigationService {
         var viewModel = ViewModelType.init()
         viewModel.navigationService = self
         viewModel.networking = networking
+        viewModel.persistanceService = persistanceService
         
         var presenter = PresenterType.init()
         let viewController: T = T()

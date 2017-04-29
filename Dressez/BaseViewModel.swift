@@ -16,6 +16,7 @@ protocol ModelType {
 protocol BaseViewModel {
 	var networking: NetworkingService! { get set }
 	var navigationService: NavigationService! { get set }
+    var persistanceService : PersistanceService! {get set}
 	
 	init()
 	
