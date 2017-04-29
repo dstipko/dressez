@@ -28,6 +28,12 @@
 		86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626561EB4E873003D2E51 /* BaseViewModel.swift */; };
 		86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626571EB4E873003D2E51 /* BaseViewController.swift */; };
 		86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626581EB4E873003D2E51 /* BasePresenter.swift */; };
+		BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */; };
+		BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A81EB4EB0F0048039E /* ItemColor.swift */; };
+		BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A91EB4EB0F0048039E /* ItemType.swift */; };
+		BC17E6AF1EB4EB0F0048039E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */; };
+		BC17E6B11EB4EB8F0048039E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6B01EB4EB8F0048039E /* ImageService.swift */; };
+		BC17E6B41EB4EF190048039E /* NSManagedObjectContext+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6B31EB4EF180048039E /* NSManagedObjectContext+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		86E626561EB4E873003D2E51 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		86E626571EB4E873003D2E51 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86E626581EB4E873003D2E51 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
+		BC17E6A81EB4EB0F0048039E /* ItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemColor.swift; sourceTree = "<group>"; };
+		BC17E6A91EB4EB0F0048039E /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BC17E6B01EB4EB8F0048039E /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		BC17E6B31EB4EF180048039E /* NSManagedObjectContext+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utilities.swift"; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +120,8 @@
 		86DFC99C1EB3CA3C00A9D4D0 /* Dressez */ = {
 			isa = PBXGroup;
 			children = (
+				BC17E6B21EB4EF0F0048039E /* Utilities */,
+				BC17E69D1EB4E76B0048039E /* Model */,
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
 				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
@@ -161,6 +175,23 @@
 				86E626581EB4E873003D2E51 /* BasePresenter.swift */,
 			);
 			name = BaseClasses;
+		BC17E69D1EB4E76B0048039E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */,
+				BC17E6A81EB4EB0F0048039E /* ItemColor.swift */,
+				BC17E6A91EB4EB0F0048039E /* ItemType.swift */,
+				BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BC17E6B21EB4EF0F0048039E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BC17E6B31EB4EF180048039E /* NSManagedObjectContext+Utilities.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		BC1C134A1EB4BD1B008880B6 /* Services */ = {
@@ -169,6 +200,7 @@
 				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
 				86E6263D1EB4CC91003D2E51 /* NavigationService.swift */,
+				BC17E6B01EB4EB8F0048039E /* ImageService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -298,14 +330,21 @@
 			files = (
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
+				BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
 				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
+				BC17E6B11EB4EB8F0048039E /* ImageService.swift in Sources */,
+				BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */,
+				BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 				86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */,
+				BC17E6B41EB4EF190048039E /* NSManagedObjectContext+Utilities.swift in Sources */,
+				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
+				BC17E6AF1EB4EB0F0048039E /* Model.xcdatamodeld in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 				86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
@@ -460,6 +499,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */,
+			);
+			currentVersion = BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 86DFC9921EB3CA3C00A9D4D0 /* Project object */;
 }
