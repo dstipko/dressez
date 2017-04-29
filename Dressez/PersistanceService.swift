@@ -8,8 +8,10 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 struct PersistanceService {
+    
     private var storeURL: URL {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         return URL(fileURLWithPath: paths).appendingPathComponent("Dressez.sqlite")
@@ -55,5 +57,48 @@ struct PersistanceService {
                                           sectionNameKeyPath: nil,
                                           cacheName: nil)
     }
+}
 
+extension PersistanceService {
+    
+    func createClothingItem(name: String,
+                            image: UIImage,
+                            type: ItemType,
+                            color: ItemColor,
+                            completion: @escaping (ClothingItem) -> ()) {
+        guard let context = context else {
+            fatalError("context not available")
+        }
+        
+        ClothingItem.insert(into: context, name: name, image: image, type: type, color: color) {
+            clothingItem in completion(clothingItem)
+        }
+    }
+    
+    func update(clothingItem: ClothingItem) {
+        guard let context = clothingItem.managedObjectContext else {
+            print("context not available")
+            return
+        }
+        
+        context.perform {
+            let status = context.saveOrRollback()
+            print("context saved:", status)
+        }
+    }
+    
+    func delete(clothingItem: ClothingItem) {
+        guard let context = clothingItem.managedObjectContext else {
+            print("context not available")
+            return
+        }
+        
+        context.perform {
+            let imageService = ImageService()
+            imageService.delete(fileName: clothingItem.imagePath)
+            context.delete(clothingItem)
+            let status = context.saveOrRollback()
+            print("context saved:",  status)
+        }
+    }
 }
