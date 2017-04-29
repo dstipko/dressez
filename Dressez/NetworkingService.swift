@@ -21,6 +21,7 @@ class NetworkingService: NSObject, CLLocationManagerDelegate {
         super.init()
         setupLocationManager()
     }
+    
     func fetchWeather() {
         guard let currentLocation = locationManager.location?.coordinate else { return }
     
