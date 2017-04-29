@@ -9,5 +9,7 @@
 import Foundation
 
 enum ItemColor : Int {
-    case Red, Green, Blue
+    case red
+    case green
+    case blue
 }
