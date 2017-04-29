@@ -10,12 +10,7 @@ import Foundation
 import UIKit
 
 class ClosetScreenModel: BaseViewModel {
-    
-    var navigationService: NavigationService!
-    var networking: NetworkingService!
-    var persistanceService: PersistanceService!
-    
-    required init() {}
+
     
     func saveChosenImage(image: UIImage) {
         
