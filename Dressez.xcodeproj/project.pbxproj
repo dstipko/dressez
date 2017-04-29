@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
+		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
+		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
+		862DDD381EB51CEB0057C43C /* NewClothingItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD371EB51CEB0057C43C /* NewClothingItemModel.swift */; };
+		862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */; };
 		86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */; };
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
 		86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
+		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
+		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
+		862DDD371EB51CEB0057C43C /* NewClothingItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemModel.swift; sourceTree = "<group>"; };
+		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
 		86DFC99A1EB3CA3C00A9D4D0 /* Dressez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dressez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +107,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		862DDD3B1EB51D620057C43C /* NewClothingItemScreen */ = {
+			isa = PBXGroup;
+			children = (
+				862DDD371EB51CEB0057C43C /* NewClothingItemModel.swift */,
+				862DDD331EB51CD60057C43C /* NewClothingItemController.swift */,
+				862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */,
+				862DDD341EB51CD60057C43C /* NewClothingItemController.xib */,
+			);
+			name = NewClothingItemScreen;
+			sourceTree = "<group>";
+		};
 		86DFC9911EB3CA3C00A9D4D0 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6279101EB50CDA00F39BB9 /* Model */,
+				862DDD3B1EB51D620057C43C /* NewClothingItemScreen */,
 				BC6279111EB50CE500F39BB9 /* Utilities */,
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
@@ -272,6 +292,7 @@
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
 				86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
+				862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +361,15 @@
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
+				862DDD381EB51CEB0057C43C /* NewClothingItemModel.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 				86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
 				86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */,
+				862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */,
 				BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */,
+				862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */,
 				BC62790D1EB50CD500F39BB9 /* ItemType.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
 				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,

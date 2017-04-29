@@ -47,4 +47,13 @@ struct NavigationService {
         
         return viewController
     }
+    
+    func pushToNewClothingItemScreen(navigationController: UINavigationController?, image: UIImage) {
+        
+        let viewController: NewClothingItemController = controllerFactory(ViewModelType: NewClothingItemModel.self, PresenterType: NewClothingItemPresenter.self)
+        viewController.image = image
+        
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
