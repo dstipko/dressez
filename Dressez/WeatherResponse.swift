@@ -12,6 +12,7 @@ import ObjectMapper
 class WeatherResponse: Mappable {
  
     var id: Int?
+    
     required init?(map: Map){
         
     }
