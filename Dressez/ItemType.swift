@@ -9,5 +9,7 @@
 import Foundation
 
 enum ItemType : Int{
-    case tshirt, jacket_light, jacket_heavy
+    case tshirt
+    case jacketLight
+    case jacketHeavy
 }
