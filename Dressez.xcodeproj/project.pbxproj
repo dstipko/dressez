@@ -17,10 +17,10 @@
 		86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */; };
 		86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626391EB3E401003D2E51 /* HomeScreenController.swift */; };
 		86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */; };
-		BC17E6A31EB4E77F0048039E /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E69E1EB4E77F0048039E /* ClothingItem.swift */; };
-		BC17E6A41EB4E77F0048039E /* ItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E69F1EB4E77F0048039E /* ItemColor.swift */; };
-		BC17E6A51EB4E77F0048039E /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A01EB4E77F0048039E /* ItemType.swift */; };
-		BC17E6A61EB4E77F0048039E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A11EB4E77F0048039E /* Model.xcdatamodeld */; };
+		BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */; };
+		BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A81EB4EB0F0048039E /* ItemColor.swift */; };
+		BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A91EB4EB0F0048039E /* ItemType.swift */; };
+		BC17E6AF1EB4EB0F0048039E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +36,10 @@
 		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
 		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		BC17E69E1EB4E77F0048039E /* ClothingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClothingItem.swift; path = ../../../../../Downloads/Archive/ClothingItem.swift; sourceTree = "<group>"; };
-		BC17E69F1EB4E77F0048039E /* ItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemColor.swift; path = ../../../../../Downloads/Archive/ItemColor.swift; sourceTree = "<group>"; };
-		BC17E6A01EB4E77F0048039E /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemType.swift; path = ../../../../../Downloads/Archive/ItemType.swift; sourceTree = "<group>"; };
-		BC17E6A21EB4E77F0048039E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
+		BC17E6A81EB4EB0F0048039E /* ItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemColor.swift; sourceTree = "<group>"; };
+		BC17E6A91EB4EB0F0048039E /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,10 +119,10 @@
 		BC17E69D1EB4E76B0048039E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC17E69E1EB4E77F0048039E /* ClothingItem.swift */,
-				BC17E69F1EB4E77F0048039E /* ItemColor.swift */,
-				BC17E6A01EB4E77F0048039E /* ItemType.swift */,
-				BC17E6A11EB4E77F0048039E /* Model.xcdatamodeld */,
+				BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */,
+				BC17E6A81EB4EB0F0048039E /* ItemColor.swift */,
+				BC17E6A91EB4EB0F0048039E /* ItemType.swift */,
+				BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,14 +260,14 @@
 			files = (
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
-				BC17E6A51EB4E77F0048039E /* ItemType.swift in Sources */,
+				BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
-				BC17E6A31EB4E77F0048039E /* ClothingItem.swift in Sources */,
-				BC17E6A41EB4E77F0048039E /* ItemColor.swift in Sources */,
+				BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */,
+				BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
-				BC17E6A61EB4E77F0048039E /* Model.xcdatamodeld in Sources */,
+				BC17E6AF1EB4EB0F0048039E /* Model.xcdatamodeld in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,14 +418,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC17E6A11EB4E77F0048039E /* Model.xcdatamodeld */ = {
+		BC17E6AA1EB4EB0F0048039E /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BC17E6A21EB4E77F0048039E /* Model.xcdatamodel */,
+				BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */,
 			);
-			currentVersion = BC17E6A21EB4E77F0048039E /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../../../../../Downloads/Archive/Model.xcdatamodeld;
+			currentVersion = BC17E6AB1EB4EB0F0048039E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
