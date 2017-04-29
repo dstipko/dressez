@@ -29,8 +29,6 @@ class ClosetScreenController: BaseViewController {
         presenter.setup()
         configureRightBarButtonItem()
         picker.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -40,11 +38,8 @@ class ClosetScreenController: BaseViewController {
     
     
     func openImagePicker(selector: UIBarButtonItem) {
-        
-        
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
-        
         self.present(picker, animated: true, completion: nil)
     }
     

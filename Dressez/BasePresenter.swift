@@ -2,8 +2,8 @@
 //  BasePresenter.swift
 //  LikeUs
 //
-//  Created by Filip Fajdetic on 29/12/2016.
-//  Copyright © 2016 Filip Fajdetic. All rights reserved.
+//  Created by Dora Stipković on 4/29/17.
+//  Copyright © 2017 Dora Stipković. All rights reserved.
 //
 
 import Foundation
