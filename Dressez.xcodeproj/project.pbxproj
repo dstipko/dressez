@@ -17,6 +17,13 @@
 		86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */; };
 		86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626391EB3E401003D2E51 /* HomeScreenController.swift */; };
 		86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */; };
+		86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263D1EB4CC91003D2E51 /* NavigationService.swift */; };
+		86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263F1EB4CD08003D2E51 /* TabBarController.swift */; };
+		86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626411EB4CD60003D2E51 /* NavigationController.swift */; };
+		86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */; };
+		86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */; };
+		86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */; };
+		86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
 		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		86E6263D1EB4CC91003D2E51 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		86E6263F1EB4CD08003D2E51 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		86E626411EB4CD60003D2E51 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenController.swift; sourceTree = "<group>"; };
+		86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetScreenController.xib; sourceTree = "<group>"; };
+		86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenModel.swift; sourceTree = "<group>"; };
+		86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenPresenter.swift; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,11 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
-				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
-				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
-				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
-				BC1C134A1EB4BD1B008880B6 /* Services */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
+				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
+				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
+				86E6264C1EB4D029003D2E51 /* ClosetScreen */,
+				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
+				BC1C134A1EB4BD1B008880B6 /* Services */,
+				86E626431EB4CD84003D2E51 /* TopControllers */,
 			);
 			path = Dressez;
 			sourceTree = "<group>";
@@ -107,11 +123,32 @@
 			name = HomeScreen;
 			sourceTree = "<group>";
 		};
+		86E626431EB4CD84003D2E51 /* TopControllers */ = {
+			isa = PBXGroup;
+			children = (
+				86E6263F1EB4CD08003D2E51 /* TabBarController.swift */,
+				86E626411EB4CD60003D2E51 /* NavigationController.swift */,
+			);
+			name = TopControllers;
+			sourceTree = "<group>";
+		};
+		86E6264C1EB4D029003D2E51 /* ClosetScreen */ = {
+			isa = PBXGroup;
+			children = (
+				86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */,
+				86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */,
+				86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */,
+				86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */,
+			);
+			name = ClosetScreen;
+			sourceTree = "<group>";
+		};
 		BC1C134A1EB4BD1B008880B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
+				86E6263D1EB4CC91003D2E51 /* NavigationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -179,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
+				86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -241,10 +279,16 @@
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
+				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
+				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
+				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
+				86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
+				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
+				86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
