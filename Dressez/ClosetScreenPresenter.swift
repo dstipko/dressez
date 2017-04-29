@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ClosetScreenPresenter: BasePresenter {
     
@@ -16,4 +17,9 @@ class ClosetScreenPresenter: BasePresenter {
     }
     
     required init() {}
+    
+    func setup() {
+        viewController.navigationItem.title = "Dressez"
+    }
+    
 }

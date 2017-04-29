@@ -14,7 +14,8 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:UIFont(name: "Helvetica", size: 18)!]
-        navigationBar.barStyle = UIBarStyle.blackOpaque
+        navigationBar.barStyle = UIBarStyle.default
+        navigationBar.barTintColor = UIColor.darkGray
     }
     
 }

@@ -31,6 +31,10 @@ struct NavigationService {
         window.rootViewController = tabBarController
     }
     
+    func dismissViewController(viewController: UIViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
+    
     func controllerFactory<T: BaseViewController, V: BaseViewModel, P: BasePresenter>(ViewModelType: V.Type, PresenterType: P.Type) -> T {
         
         var viewModel = ViewModelType.init()

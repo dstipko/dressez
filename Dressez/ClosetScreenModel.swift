@@ -8,6 +8,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ClosetScreenModel: BaseViewModel {
     
@@ -15,5 +16,13 @@ class ClosetScreenModel: BaseViewModel {
     var networking: NetworkingService!
     
     required init() {}
+    
+    func closeImagePicker(viewController: UIViewController) {
+        navigationService.dismissViewController(viewController: viewController)
+    }
+    
+    func saveChosenImage(image: UIImage) {
+        
+    }
     
 }

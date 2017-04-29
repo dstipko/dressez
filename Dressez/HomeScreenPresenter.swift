@@ -16,4 +16,8 @@ class HomeScreenPresenter: BasePresenter {
     weak var viewController: HomeScreenController! {
         return baseViewController as! HomeScreenController
     }
+    
+    func setup() {
+        viewController.navigationItem.title = "Dressez"
+    }
 }
