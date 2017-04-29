@@ -34,10 +34,7 @@ struct NavigationService {
     
     func controllerFactory<T: BaseViewController, V: BaseViewModel, P: BasePresenter>(ViewModelType: V.Type, PresenterType: P.Type) -> T {
         
-        var viewModel = ViewModelType.init()
-        viewModel.navigationService = self
-        viewModel.networking = networking
-        viewModel.persistanceService = persistanceService
+        let viewModel = ViewModelType.init(networking: networking, navigation: self, persistance: persistanceService)
         
         var presenter = PresenterType.init()
         let viewController: T = T()
