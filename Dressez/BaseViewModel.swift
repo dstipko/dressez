@@ -13,27 +13,15 @@ protocol ModelType {
 	var errors: Array<RequestError>? { get set }
 }
 
-protocol BaseViewModel {
-	var networking: NetworkingService! { get set }
-	var navigationService: NavigationService! { get set }
-    var persistanceService : PersistanceService! {get set}
-	
-	init()
-	
-	func extractError(response: HTTPURLResponse, data: ModelType?) -> Error?
+class BaseViewModel {
+	var networking: NetworkingService!
+	var navigationService: NavigationService!
+    var persistanceService : PersistanceService!
+    
+    required init(networking: NetworkingService, navigation: NavigationService, persistance: PersistanceService) {
+        self.networking = networking
+        self.navigationService = navigation
+        self.persistanceService = persistance
+    }
 }
 
-extension BaseViewModel {
-	
-	func extractError(response: HTTPURLResponse, data: ModelType?) -> Error? {
-		if response.statusCode != 200 {
-			return response.statusCode as? Error
-		}
-		if data?.errors?.count != 0 {
-			return data?.errors?.first
-		}
-		
-		return nil
-	}
-	
-}
