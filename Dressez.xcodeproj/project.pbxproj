@@ -17,6 +17,17 @@
 		86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */; };
 		86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626391EB3E401003D2E51 /* HomeScreenController.swift */; };
 		86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */; };
+		86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263D1EB4CC91003D2E51 /* NavigationService.swift */; };
+		86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6263F1EB4CD08003D2E51 /* TabBarController.swift */; };
+		86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626411EB4CD60003D2E51 /* NavigationController.swift */; };
+		86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */; };
+		86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */; };
+		86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */; };
+		86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */; };
+		86E626551EB4E222003D2E51 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626541EB4E222003D2E51 /* RequestError.swift */; };
+		86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626561EB4E873003D2E51 /* BaseViewModel.swift */; };
+		86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626571EB4E873003D2E51 /* BaseViewController.swift */; };
+		86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626581EB4E873003D2E51 /* BasePresenter.swift */; };
 		BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */; };
 		BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A81EB4EB0F0048039E /* ItemColor.swift */; };
 		BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC17E6A91EB4EB0F0048039E /* ItemType.swift */; };
@@ -31,13 +42,24 @@
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
+		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeScreenModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
-		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeScreenController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		86E6263D1EB4CC91003D2E51 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NavigationService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		86E6263F1EB4CD08003D2E51 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		86E626411EB4CD60003D2E51 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ClosetScreenController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetScreenController.xib; sourceTree = "<group>"; };
+		86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenModel.swift; sourceTree = "<group>"; };
+		86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenPresenter.swift; sourceTree = "<group>"; };
+		86E626541EB4E222003D2E51 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		86E626561EB4E873003D2E51 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		86E626571EB4E873003D2E51 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		86E626581EB4E873003D2E51 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BC17E6A71EB4EB0F0048039E /* ClothingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		BC17E6A81EB4EB0F0048039E /* ItemColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemColor.swift; sourceTree = "<group>"; };
 		BC17E6A91EB4EB0F0048039E /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
@@ -101,11 +123,15 @@
 				BC17E6B21EB4EF0F0048039E /* Utilities */,
 				BC17E69D1EB4E76B0048039E /* Model */,
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
-				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
-				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
-				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
-				BC1C134A1EB4BD1B008880B6 /* Services */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
+				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
+				86E626541EB4E222003D2E51 /* RequestError.swift */,
+				86E6265C1EB4E879003D2E51 /* BaseClasses */,
+				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
+				86E6264C1EB4D029003D2E51 /* ClosetScreen */,
+				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
+				BC1C134A1EB4BD1B008880B6 /* Services */,
+				86E626431EB4CD84003D2E51 /* TopControllers */,
 			);
 			path = Dressez;
 			sourceTree = "<group>";
@@ -121,6 +147,34 @@
 			name = HomeScreen;
 			sourceTree = "<group>";
 		};
+		86E626431EB4CD84003D2E51 /* TopControllers */ = {
+			isa = PBXGroup;
+			children = (
+				86E6263F1EB4CD08003D2E51 /* TabBarController.swift */,
+				86E626411EB4CD60003D2E51 /* NavigationController.swift */,
+			);
+			name = TopControllers;
+			sourceTree = "<group>";
+		};
+		86E6264C1EB4D029003D2E51 /* ClosetScreen */ = {
+			isa = PBXGroup;
+			children = (
+				86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */,
+				86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */,
+				86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */,
+				86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */,
+			);
+			name = ClosetScreen;
+			sourceTree = "<group>";
+		};
+		86E6265C1EB4E879003D2E51 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				86E626561EB4E873003D2E51 /* BaseViewModel.swift */,
+				86E626571EB4E873003D2E51 /* BaseViewController.swift */,
+				86E626581EB4E873003D2E51 /* BasePresenter.swift */,
+			);
+			name = BaseClasses;
 		BC17E69D1EB4E76B0048039E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +199,7 @@
 			children = (
 				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
+				86E6263D1EB4CC91003D2E51 /* NavigationService.swift */,
 				BC17E6B01EB4EB8F0048039E /* ImageService.swift */,
 			);
 			name = Services;
@@ -213,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
+				86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -276,15 +332,26 @@
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
 				BC17E6AE1EB4EB0F0048039E /* ItemType.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
+				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
+				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
 				BC17E6B11EB4EB8F0048039E /* ImageService.swift in Sources */,
 				BC17E6AC1EB4EB0F0048039E /* ClothingItem.swift in Sources */,
 				BC17E6AD1EB4EB0F0048039E /* ItemColor.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
+				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
+				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
+				86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */,
 				BC17E6B41EB4EF190048039E /* NSManagedObjectContext+Utilities.swift in Sources */,
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 				BC17E6AF1EB4EB0F0048039E /* Model.xcdatamodeld in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
+				86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */,
+				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
+				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,
+				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,
+				86E626551EB4E222003D2E51 /* RequestError.swift in Sources */,
+				86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

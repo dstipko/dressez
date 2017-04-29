@@ -1,17 +1,23 @@
 //
-//  HomeScreenModel.swift
+//  ClosetModel.swift
 //  Dressez
 //
-//  Created by Dora Stipković on 4/28/17.
+//  Created by Dora Stipković on 4/29/17.
 //  Copyright © 2017 Dora Stipković. All rights reserved.
 //
 
 import Foundation
+import UIKit
 
-class HomeScreenModel: BaseViewModel {
-
+class ClosetScreenModel: BaseViewModel {
+    
     var navigationService: NavigationService!
     var networking: NetworkingService!
-
+    
     required init() {}
+    
+    func saveChosenImage(image: UIImage) {
+        
+    }
+    
 }
