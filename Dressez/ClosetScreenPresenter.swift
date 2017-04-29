@@ -8,6 +8,12 @@
 
 import Foundation
 
-class ClosetScreenPresenter {
+class ClosetScreenPresenter: BasePresenter {
     
+    weak var baseViewController: BaseViewController!
+    weak var viewController: ClosetScreenController! {
+        return baseViewController as! ClosetScreenController
+    }
+    
+    required init() {}
 }

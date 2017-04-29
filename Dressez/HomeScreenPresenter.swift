@@ -8,6 +8,12 @@
 
 import Foundation
 
-class HomeScreenPresenter {
+class HomeScreenPresenter: BasePresenter {
+ 
+    required init() { }
     
+    weak var baseViewController: BaseViewController!
+    weak var viewController: HomeScreenController! {
+        return baseViewController as! HomeScreenController
+    }
 }

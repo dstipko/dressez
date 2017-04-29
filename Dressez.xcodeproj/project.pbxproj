@@ -24,6 +24,10 @@
 		86E626471EB4D00C003D2E51 /* ClosetScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */; };
 		86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */; };
 		86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */; };
+		86E626551EB4E222003D2E51 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626541EB4E222003D2E51 /* RequestError.swift */; };
+		86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626561EB4E873003D2E51 /* BaseViewModel.swift */; };
+		86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626571EB4E873003D2E51 /* BaseViewController.swift */; };
+		86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626581EB4E873003D2E51 /* BasePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,20 +36,24 @@
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
+		86DFC9AF1EB3CC9100A9D4D0 /* HomeScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeScreenModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
-		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeScreenController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		86E6263D1EB4CC91003D2E51 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		86E6263D1EB4CC91003D2E51 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NavigationService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86E6263F1EB4CD08003D2E51 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		86E626411EB4CD60003D2E51 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenController.swift; sourceTree = "<group>"; };
+		86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ClosetScreenController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetScreenController.xib; sourceTree = "<group>"; };
 		86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenModel.swift; sourceTree = "<group>"; };
 		86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenPresenter.swift; sourceTree = "<group>"; };
+		86E626541EB4E222003D2E51 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		86E626561EB4E873003D2E51 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		86E626571EB4E873003D2E51 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		86E626581EB4E873003D2E51 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +111,8 @@
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
 				86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */,
+				86E626541EB4E222003D2E51 /* RequestError.swift */,
+				86E6265C1EB4E879003D2E51 /* BaseClasses */,
 				86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */,
 				86E6264C1EB4D029003D2E51 /* ClosetScreen */,
 				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
@@ -135,12 +145,22 @@
 		86E6264C1EB4D029003D2E51 /* ClosetScreen */ = {
 			isa = PBXGroup;
 			children = (
-				86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */,
-				86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */,
 				86E626481EB4D019003D2E51 /* ClosetScreenModel.swift */,
+				86E626441EB4D00C003D2E51 /* ClosetScreenController.swift */,
 				86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */,
+				86E626451EB4D00C003D2E51 /* ClosetScreenController.xib */,
 			);
 			name = ClosetScreen;
+			sourceTree = "<group>";
+		};
+		86E6265C1EB4E879003D2E51 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				86E626561EB4E873003D2E51 /* BaseViewModel.swift */,
+				86E626571EB4E873003D2E51 /* BaseViewController.swift */,
+				86E626581EB4E873003D2E51 /* BasePresenter.swift */,
+			);
+			name = BaseClasses;
 			sourceTree = "<group>";
 		};
 		BC1C134A1EB4BD1B008880B6 /* Services */ = {
@@ -287,7 +307,11 @@
 				86DFC9B01EB3CC9100A9D4D0 /* HomeScreenModel.swift in Sources */,
 				86E626461EB4D00C003D2E51 /* ClosetScreenController.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
+				86E626591EB4E873003D2E51 /* BaseViewModel.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
+				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,
+				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,
+				86E626551EB4E222003D2E51 /* RequestError.swift in Sources */,
 				86E626491EB4D019003D2E51 /* ClosetScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

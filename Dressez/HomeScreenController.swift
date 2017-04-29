@@ -8,15 +8,17 @@
 
 import UIKit
 
-class HomeScreenController: UIViewController {
+class HomeScreenController: BaseViewController {
 
-    let viewModel = HomeScreenModel()
-    let presenter = HomeScreenPresenter()
-    let networking = NetworkingService()
+    var viewModel: HomeScreenModel! {
+        return baseViewModel as! HomeScreenModel
+    }
+    var presenter: HomeScreenPresenter! {
+        return basePresenter as! HomeScreenPresenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networking.fetchWeather()
         // Do any additional setup after loading the view, typically from a nib.
     }
 }

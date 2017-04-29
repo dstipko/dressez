@@ -9,12 +9,11 @@
 
 import Foundation
 
-class ClosetScreenModel {
+class ClosetScreenModel: BaseViewModel {
     
-    let persistanceService: PersistanceService
+    var navigationService: NavigationService!
+    var networking: NetworkingService!
     
-    init() {
-        persistanceService = PersistanceService()
-    }
+    required init() {}
     
 }

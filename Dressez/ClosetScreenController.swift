@@ -8,10 +8,14 @@
 
 import UIKit
 
-class ClosetScreenController: UIViewController {
+class ClosetScreenController: BaseViewController {
 
-    let viewModel = HomeScreenModel()
-    let presenter = HomeScreenPresenter()
+    var viewModel: ClosetScreenModel! {
+        return baseViewModel as! ClosetScreenModel
+    }
+    var presenter: ClosetScreenPresenter! {
+        return basePresenter as! ClosetScreenPresenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

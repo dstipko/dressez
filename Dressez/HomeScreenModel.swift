@@ -8,11 +8,10 @@
 
 import Foundation
 
-class HomeScreenModel {
-    
-    let persistanceService: PersistanceService
-    
-    init() {
-        persistanceService = PersistanceService()
-    }
+class HomeScreenModel: BaseViewModel {
+
+    var navigationService: NavigationService!
+    var networking: NetworkingService!
+
+    required init() {}
 }
