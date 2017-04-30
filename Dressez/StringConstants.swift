@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Strings {
+struct StringConstants {
     
     static var title = "Add clothing item"
     static var selectColor = "Select color"

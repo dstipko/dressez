@@ -56,6 +56,6 @@ class ClosetScreenPresenter: BasePresenter {
     }
     
     func configureImagePickerController(picker: UIImagePickerController) {
-        picker.navigationBar.tintColor = Colors.green
+        picker.navigationBar.tintColor = ColorConstants.green
     }
 }

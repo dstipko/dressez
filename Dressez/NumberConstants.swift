@@ -1,5 +1,5 @@
 //
-//  Numbers.swift
+//  NumberConstants.swift
 //  Dressez
 //
 //  Created by Tvrtko Zadro on 30/04/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Numbers {
+struct NumberConstants {
     
     static var cornerRadius: CGFloat = 8
 }

@@ -15,8 +15,8 @@ class NavigationController: UINavigationController {
         navigationBar.isTranslucent = false
         navigationBar.isOpaque = true
         navigationBar.barStyle = UIBarStyle.default
-        navigationBar.tintColor = Colors.green
-        navigationBar.barTintColor = Colors.barsDefault
+        navigationBar.tintColor = ColorConstants.green
+        navigationBar.barTintColor = ColorConstants.barsDefault
     }
     
 }

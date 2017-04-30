@@ -22,23 +22,24 @@ class NewClothingItemPresenter: BasePresenter {
     required init() {}
     
     func setup(image: UIImage, imageView: UIImageView, saveButton: UIButton) {
-        viewController.navigationItem.title = Strings.title
+        viewController.navigationItem.title = StringConstants.title
         imageView.image = image
-        imageView.layer.cornerRadius = Numbers.cornerRadius
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = NumberConstants.cornerRadius
         imageView.layer.masksToBounds = true
         
         saveButton.setTitleColor(.white, for: .normal)
-        saveButton.layer.cornerRadius = Numbers.cornerRadius
+        saveButton.layer.cornerRadius = NumberConstants.cornerRadius
         saveButton.layer.masksToBounds = true
     }
     
     func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
-        nameTextField.placeholder = Strings.newClothingItemNameFieldPlaceholder
-        typeTextField.placeholder = Strings.newClothingItemTypeFieldPlaceholder
-        colorTextField.placeholder = Strings.newClothingItemColorFieldPlaceholder
+        nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
+        typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
+        colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
     }
     
     func assignbackground() {
-        viewController.view.backgroundColor = Colors.green
+        viewController.view.backgroundColor = ColorConstants.green
     }
 }

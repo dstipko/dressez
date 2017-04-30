@@ -1,5 +1,5 @@
 //
-//  Colors.swift
+//  ColorConstants.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 4/30/17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Colors {
+struct ColorConstants {
     
     static var barsDefault = UIColor(colorLiteralRed: (247/255), green: (247/255), blue: (247/255), alpha: 1)
     static var darkGray = UIColor(colorLiteralRed: 0.36, green: 0.41, blue: 0.45, alpha: 1.0)

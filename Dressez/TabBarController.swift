@@ -15,8 +15,8 @@ class TabBarController: UITabBarController {
         tabBar.isTranslucent = false
         tabBar.isOpaque = true
         tabBar.barStyle = UIBarStyle.default
-        tabBar.tintColor = Colors.green
-        tabBar.barTintColor = Colors.barsDefault
+        tabBar.tintColor = ColorConstants.green
+        tabBar.barTintColor = ColorConstants.barsDefault
     }
 
 }
