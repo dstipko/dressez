@@ -27,7 +27,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func updateView(with : WeatherResponse) {
-        viewController.imageWeatherIcon.image = UIImage(named: "rain.png")
+        viewController.imageWeatherIcon.image = IconUtil.getAppropriateWeatherIcon(weatherID: with.id!)
         
         viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
         viewController.labelWeatherDesc.text = with.weatherDesc
@@ -67,4 +67,6 @@ class HomeScreenPresenter: BasePresenter {
     func fetchWeather() -> Observable<WeatherResponse> {
         return networking.fetchWeather()
     }
+    
+    
 }
