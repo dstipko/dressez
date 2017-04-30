@@ -27,8 +27,8 @@ class NewClothingItemController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.setup(image: image, imageView: clothingItemImageView, saveButton: saveButton)
-        presenter.configureTextFields(nameTextField: nameTextField, typeTextField: typeTextField, colorTextField: colorTextField)
+        presenter.setup()
+        presenter.configureTextFields()
         
         typeTextField.delegate = self
         colorTextField.delegate = self

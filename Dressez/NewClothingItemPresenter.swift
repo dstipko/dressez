@@ -21,22 +21,22 @@ class NewClothingItemPresenter: BasePresenter {
 
     required init() {}
     
-    func setup(image: UIImage, imageView: UIImageView, saveButton: UIButton) {
+    func setup() {
         viewController.navigationItem.title = StringConstants.title
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = NumberConstants.cornerRadius
-        imageView.layer.masksToBounds = true
+        viewController.clothingItemImageView.image = viewController.image
+        viewController.clothingItemImageView.contentMode = .scaleAspectFit
+        viewController.clothingItemImageView.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.clothingItemImageView.layer.masksToBounds = true
         
-        saveButton.setTitleColor(.white, for: .normal)
-        saveButton.layer.cornerRadius = NumberConstants.cornerRadius
-        saveButton.layer.masksToBounds = true
+        viewController.saveButton.setTitleColor(.white, for: .normal)
+        viewController.saveButton.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.saveButton.layer.masksToBounds = true
     }
     
-    func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
-        nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
-        typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
-        colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
+    func configureTextFields() {
+        viewController.nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
+        viewController.typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
+        viewController.colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
     }
     
     func assignBackground() {

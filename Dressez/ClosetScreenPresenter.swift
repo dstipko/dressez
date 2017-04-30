@@ -47,8 +47,13 @@ class ClosetScreenPresenter: BasePresenter {
     }
     
     func assignBackground() {
+        guard let backgroundImage = UIImage(named: "background_blurred") else {
+            viewController.view.backgroundColor = ColorConstants.green
+            return
+        }
+        
         UIGraphicsBeginImageContext(viewController.view.frame.size)
-        UIImage(named: "background_blurred")?.draw(in: viewController.view.bounds)
+        backgroundImage.draw(in: viewController.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

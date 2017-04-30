@@ -41,8 +41,13 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func assignBackground() {
+        guard let backgroundImage = UIImage(named: "background") else {
+            viewController.view.backgroundColor = ColorConstants.green
+            return
+        }
+        
         UIGraphicsBeginImageContext(viewController.view.frame.size)
-        UIImage(named: "background")?.draw(in: viewController.view.bounds)
+        backgroundImage.draw(in: viewController.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
