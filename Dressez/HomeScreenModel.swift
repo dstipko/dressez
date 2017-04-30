@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomeScreenModel: BaseViewModel {
 
+    func fetchWeather() -> Observable<WeatherResponse> {
+        return networking.fetchWeather()
+    }
 }
