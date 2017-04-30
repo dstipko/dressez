@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,7 +42,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4D-ok-5xD">
-                    <rect key="frame" x="10" y="460" width="275" height="40"/>
+                    <rect key="frame" x="10" y="460" width="355" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="j2i-NZ-AdP"/>
                     </constraints>
@@ -51,7 +51,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysq-mL-KYH">
-                    <rect key="frame" x="10" y="540" width="275" height="40"/>
+                    <rect key="frame" x="10" y="540" width="355" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="9c4-Gk-aEq"/>
                     </constraints>
@@ -91,56 +91,30 @@
                         <action selector="saveClothingItem:" destination="-1" eventType="touchUpInside" id="y1d-9m-cCu"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hba-0s-zVh">
-                    <rect key="frame" x="295" y="460" width="70" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="70" id="7cC-sh-NYu"/>
-                        <constraint firstAttribute="height" constant="40" id="lvh-F4-rRd"/>
-                    </constraints>
-                    <state key="normal" title="Choose"/>
-                    <connections>
-                        <action selector="showTypeActionSheet:" destination="-1" eventType="touchUpInside" id="jTt-YS-kEn"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3id-1p-cTe">
-                    <rect key="frame" x="295" y="540" width="70" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Uss-9o-6vS"/>
-                        <constraint firstAttribute="width" constant="70" id="V4T-7P-Kn9"/>
-                    </constraints>
-                    <state key="normal" title="Choose"/>
-                    <connections>
-                        <action selector="showColorActionSheet:" destination="-1" eventType="touchUpInside" id="e5O-IH-0l3"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9Ul-mR-zBL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="16h-ic-F2D"/>
-                <constraint firstItem="hba-0s-zVh" firstAttribute="leading" secondItem="P4D-ok-5xD" secondAttribute="trailing" constant="10" id="1PG-Rb-Vai"/>
                 <constraint firstAttribute="trailing" secondItem="Cu8-Tg-pci" secondAttribute="trailing" constant="10" id="2Pc-sH-Wvo"/>
                 <constraint firstItem="vIe-CP-g9H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="7uN-Wc-4sZ"/>
                 <constraint firstAttribute="trailing" secondItem="9Ul-mR-zBL" secondAttribute="trailing" constant="50" id="8tU-fQ-A2j"/>
-                <constraint firstAttribute="trailing" secondItem="hba-0s-zVh" secondAttribute="trailing" constant="10" id="9cV-1V-sNm"/>
-                <constraint firstAttribute="trailing" secondItem="3id-1p-cTe" secondAttribute="trailing" constant="10" id="BqM-cl-3h6"/>
                 <constraint firstItem="HTS-dn-qfc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="DYW-3l-4Sp"/>
                 <constraint firstAttribute="bottom" secondItem="9Ul-mR-zBL" secondAttribute="bottom" constant="20" id="E9p-c7-3g4"/>
+                <constraint firstAttribute="trailing" secondItem="ysq-mL-KYH" secondAttribute="trailing" constant="10" id="Ha3-44-xiA"/>
                 <constraint firstItem="P4D-ok-5xD" firstAttribute="top" secondItem="Cu8-Tg-pci" secondAttribute="bottom" constant="40" id="Igj-8k-fbk"/>
                 <constraint firstItem="ysq-mL-KYH" firstAttribute="top" secondItem="P4D-ok-5xD" secondAttribute="bottom" constant="40" id="LRo-Q4-K0V"/>
                 <constraint firstItem="P4D-ok-5xD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="MZC-Ai-Dlq"/>
                 <constraint firstItem="Cu8-Tg-pci" firstAttribute="top" secondItem="HTS-dn-qfc" secondAttribute="bottom" constant="40" id="NBB-sE-VV0"/>
-                <constraint firstItem="hba-0s-zVh" firstAttribute="top" secondItem="Cu8-Tg-pci" secondAttribute="bottom" constant="40" id="TPy-sv-F8U"/>
                 <constraint firstItem="ysq-mL-KYH" firstAttribute="top" secondItem="mQo-fI-rHd" secondAttribute="bottom" id="Tjd-aM-nRJ"/>
                 <constraint firstItem="mQo-fI-rHd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Uhl-tF-9MS"/>
                 <constraint firstItem="Cu8-Tg-pci" firstAttribute="top" secondItem="VLY-Z4-tzf" secondAttribute="bottom" id="Uvl-4C-WSN"/>
                 <constraint firstItem="Cu8-Tg-pci" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="adB-a3-mrI"/>
                 <constraint firstItem="HTS-dn-qfc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dMp-tz-nmt"/>
-                <constraint firstItem="3id-1p-cTe" firstAttribute="leading" secondItem="ysq-mL-KYH" secondAttribute="trailing" constant="10" id="eNV-Ci-02q"/>
                 <constraint firstItem="P4D-ok-5xD" firstAttribute="top" secondItem="vIe-CP-g9H" secondAttribute="bottom" id="fe7-vm-Gi4"/>
                 <constraint firstAttribute="trailing" secondItem="HTS-dn-qfc" secondAttribute="trailing" constant="10" id="k9t-ul-hYI"/>
                 <constraint firstItem="VLY-Z4-tzf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qYI-zq-dJR"/>
+                <constraint firstAttribute="trailing" secondItem="P4D-ok-5xD" secondAttribute="trailing" constant="10" id="rxu-Oi-EgC"/>
                 <constraint firstItem="ysq-mL-KYH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="vsm-3r-qwC"/>
-                <constraint firstItem="3id-1p-cTe" firstAttribute="top" secondItem="hba-0s-zVh" secondAttribute="bottom" constant="40" id="yuF-NB-CVG"/>
             </constraints>
         </view>
     </objects>

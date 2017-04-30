@@ -28,7 +28,6 @@ class NewClothingItemController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.setup(image: image, imageView: clothingItemImageView)
-        presenter.configureTextFields(nameTextField: nameTextField, typeTextField: typeTextField, colorTextField: colorTextField)
         
         typeTextField.delegate = self
         colorTextField.delegate = self
@@ -55,37 +54,10 @@ class NewClothingItemController: BaseViewController {
         }
         
     }
-    
-    /*@IBAction func showTypeActionSheet(_ sender: Any) {
-        let typeMenu = presenter.createAlertController(title: nil, message: StringConstants.selectType, style: .actionSheet)
-        for type in ItemType.allValues {
-            let colorAction = presenter.createAlertAction(title: type.description(), completionHandler: { _ in
-                self.itemType = type.rawValue
-                self.typeTextField.text = type.description()
-                self.dismiss(animated: true, completion: nil)
-                return
-            })
-            typeMenu.addAction(colorAction)
-        }
-        self.present(typeMenu, animated: true, completion: nil)
-    }
-    
-    @IBAction func showColorActionSheet(_ sender: Any) {
-        let colorsMenu = presenter.createAlertController(title: nil, message: StringConstants.selectColor, style: .actionSheet)
-        for color in ItemColor.allValues {
-            let colorAction = presenter.createAlertAction(title: color.description(), completionHandler: { _ in
-                self.itemColor = color.rawValue
-                self.colorTextField.text = color.description()
-                self.dismiss(animated: true, completion: nil)
-                return
-            })
-            colorsMenu.addAction(colorAction)
-        }
-        self.present(colorsMenu, animated: true, completion: nil)
-    }*/
 }
 
 extension NewClothingItemController: UITextFieldDelegate {
+
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         switch textField {
         case typeTextField:
@@ -115,6 +87,6 @@ extension NewClothingItemController: UITextFieldDelegate {
         default:
             return false
         }
-        return true
+        return false
     }
 }
