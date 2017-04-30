@@ -37,6 +37,7 @@ class ClosetScreenController: BaseViewController {
         collectionView.delegate = self
         resultController.delegate = self
         picker.delegate = self
+        presenter.configureImagePickerController(picker: picker)
     }
     
     override func viewDidLayoutSubviews() {
