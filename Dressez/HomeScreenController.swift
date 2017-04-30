@@ -45,17 +45,17 @@ class HomeScreenController: BaseViewController {
     }
     
     func fetchWeather(){
-        
-    viewModel.fetchWeather().subscribe(onNext: {(result) in
-            self.onWeatherfetched(response: result)
-        }, onError: {(error) in
-            return
-        }, onCompleted: {
-        }, onDisposed: {
-        }).addDisposableTo(bag)
+        viewModel.fetchWeather().subscribe(onNext: {(result) in
+                self.onWeatherFetched(response: result)
+            }, onError: {(error) in
+                return
+            }, onCompleted: {
+            }, onDisposed: {
+            }
+        ).addDisposableTo(bag)
     }
     
-    func onWeatherfetched(response : WeatherResponse){
+    func onWeatherFetched(response : WeatherResponse){
         presenter.updateView(with: response)
     }
 }

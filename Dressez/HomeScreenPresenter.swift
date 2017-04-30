@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class HomeScreenPresenter: BasePresenter {
- 
+    
     required init() { }
     
     weak var baseViewController: BaseViewController!
@@ -22,7 +22,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.navigationItem.title = "Dressez"
     }
     
-    func updateView(with : WeatherResponse){
+    func updateView(with : WeatherResponse) {
         viewController.imageWeatherIcon.image = UIImage(named: "rain.png")
         
         viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
@@ -36,7 +36,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
     }
     
-    func assignbackground(){
+    func assignbackground() {
         UIGraphicsBeginImageContext(viewController.view.frame.size)
         UIImage(named: "background")?.draw(in: viewController.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
@@ -45,7 +45,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func addRoundedBorders(){
+    func addRoundedBorders() {
         viewController.reccomendationsView.layer.cornerRadius = CGFloat(10)
         viewController.reccomendationsView.layer.shadowColor = UIColor.black.cgColor
         viewController.reccomendationsView.layer.shadowOpacity = 0.5
