@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WeatherCodeConstants{
+struct WeatherCodeConstants {
 
     static let MinimumApiWeatherCode = 200
     static let MaximumApiWeatherCode = 999

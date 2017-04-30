@@ -20,5 +20,5 @@ class RequestError: Mappable, Error {
 	func mapping(map: Map) {
 		message <- map["message"]
 	}
-
+	
 }

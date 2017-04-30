@@ -27,7 +27,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func updateView(with : WeatherResponse) {
-        viewController.imageWeatherIcon.image = IconUtil.setAppropriateWeatherIcon(weatherID: with.id!)
+        viewController.imageWeatherIcon.image = IconUtil.getAppropriateWeatherIcon(weatherID: with.id!)
         
         viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
         viewController.labelWeatherDesc.text = with.weatherDesc

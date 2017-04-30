@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class IconUtil {
+struct IconUtil {
     
-    static func setAppropriateWeatherIcon(weatherID : Int) -> UIImage {
+    static func getAppropriateWeatherIcon(weatherID : Int) -> UIImage {
         if (weatherID > WeatherCodeConstants.MinimumApiWeatherCode && weatherID < WeatherCodeConstants.MaximumApiWeatherCode){
             switch(weatherID){
                 case WeatherCodeConstants.Thunderstorm..<WeatherCodeConstants.Drizzle:
