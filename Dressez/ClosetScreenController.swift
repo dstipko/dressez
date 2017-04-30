@@ -52,11 +52,31 @@ class ClosetScreenController: BaseViewController {
     
     
     func openImagePicker(selector: UIBarButtonItem) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        self.present(picker, animated: true, completion: nil)
+        let pickerType = createAlertController(title: nil, message: nil, style: .actionSheet)
+        let galleryAction = createAlertAction(title: StringConstants.photoGallery, completionHandler: { _ in
+            self.picker.allowsEditing = false
+            self.picker.sourceType = .photoLibrary
+            self.present(self.picker, animated: true, completion: nil)
+        })
+        let cameraAction = createAlertAction(title: StringConstants.camera, completionHandler: { _ in
+            self.picker.allowsEditing = false
+            if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+                let availabilityAlert = self.createAlertController(title: nil, message: StringConstants.noCamera, style: .alert)
+                let okAction = self.createAlertAction(title: StringConstants.ok, completionHandler: { _ in
+                    self.dismiss(animated: true, completion: nil)
+                })
+                availabilityAlert.addAction(okAction)
+                self.present(availabilityAlert, animated: true, completion: nil)
+            }
+            else {
+                self.picker.sourceType = .camera
+                self.present(self.picker, animated: true, completion: nil)
+            }
+        })
+        pickerType.addAction(galleryAction)
+        pickerType.addAction(cameraAction)
+        self.present(pickerType, animated: true, completion: nil)
     }
-    
 }
 
 extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
