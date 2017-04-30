@@ -11,7 +11,7 @@ import UIKit
 
 struct ColorConstants {
     
-    static var barsDefault = UIColor(colorLiteralRed: (247/255), green: (247/255), blue: (247/255), alpha: 1)
-    static var darkGray = UIColor(colorLiteralRed: 0.36, green: 0.41, blue: 0.45, alpha: 1.0)
-    static var green = UIColor(colorLiteralRed: (131/255), green: (164/255), blue: (76/255), alpha:1.0)
+    static var barsDefault = UIColor(colorLiteralRed: (247/255), green: (247/255), blue: (247/255), alpha: (100/100))
+    static var darkGray = UIColor(colorLiteralRed: (92/255), green: (105/255), blue: (115/255), alpha: (100/100))
+    static var green = UIColor(colorLiteralRed: (131/255), green: (164/255), blue: (76/255), alpha: (100/100))
 }
