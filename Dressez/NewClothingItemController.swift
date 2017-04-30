@@ -36,7 +36,7 @@ class NewClothingItemController: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        presenter.assignbackground()
+        presenter.assignBackground()
     }
    
     @IBAction func saveClothingItem(_ sender: Any) {

@@ -39,7 +39,7 @@ class NewClothingItemPresenter: BasePresenter {
         colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
     }
     
-    func assignbackground() {
+    func assignBackground() {
         viewController.view.backgroundColor = ColorConstants.green
     }
 }

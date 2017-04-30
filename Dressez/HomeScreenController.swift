@@ -37,7 +37,7 @@ class HomeScreenController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        presenter.assignbackground()
+        presenter.assignBackground()
         presenter.addRoundedBorders()
     }
     

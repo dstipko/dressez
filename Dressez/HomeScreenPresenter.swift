@@ -40,7 +40,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
     }
     
-    func assignbackground() {
+    func assignBackground() {
         UIGraphicsBeginImageContext(viewController.view.frame.size)
         UIImage(named: "background")?.draw(in: viewController.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
