@@ -16,10 +16,31 @@ class ClosetScreenPresenter: BasePresenter {
         return baseViewController as! ClosetScreenController
     }
     
+    private let numberOfCellsInRow : CGFloat = 3
+    private let spacing : CGFloat = 5
+    private let cellHeight : CGFloat = 90
+    
     required init() {}
     
     func setup() {
         viewController.navigationItem.title = "Dressez"
+    }
+
+    func configureCollectionViewCell(cell: CollectionViewCell, image: UIImage) -> CollectionViewCell {
+        cell.imageView.image = image
+        return cell
+    }
+    
+    func configureCollectionViewLayout() {
+        guard let collectionView = viewController.collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+                return
+        }
+        let width = collectionView.frame.width
+        let itemWidth = (width - (numberOfCellsInRow + 1) * spacing) / numberOfCellsInRow
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
     }
     
 }

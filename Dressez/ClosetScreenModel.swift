@@ -11,9 +11,4 @@ import UIKit
 
 class ClosetScreenModel: BaseViewModel {
 
-    
-    func saveChosenImage(image: UIImage) {
-        
-    }
-    
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum ImagePickerType {
     case gallery
@@ -14,7 +15,13 @@ enum ImagePickerType {
 }
 
 class ClosetScreenController: BaseViewController {
-
+    
+    fileprivate var resultController: NSFetchedResultsController<NSFetchRequestResult>!
+    fileprivate let picker = UIImagePickerController()
+    fileprivate let reuseIdentifier = "collectionCell"
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var viewModel: ClosetScreenModel! {
         return baseViewModel as! ClosetScreenModel
     }
@@ -22,13 +29,21 @@ class ClosetScreenController: BaseViewController {
         return basePresenter as! ClosetScreenPresenter
     }
     
-    let picker = UIImagePickerController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.resultController = viewModel.persistanceService.fetchAllItems()
         presenter.setup()
         configureRightBarButtonItem()
+        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
         picker.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        presenter.configureCollectionViewLayout()
     }
     
     
@@ -46,7 +61,7 @@ class ClosetScreenController: BaseViewController {
 }
 
 extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         dismiss(animated: true, completion: nil)
@@ -57,6 +72,35 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         //viewModel.closeImagePicker(viewController: picker)
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let sectionData = resultController.sections?[section] else {
+            return 0
+        }
+        return sectionData.numberOfObjects
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let current = resultController.object(at: indexPath) as! ClothingItem
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        if let image = current.image {
+            return presenter.configureCollectionViewCell(cell: cell, image: image)
+        }
+        else {
+            return UICollectionViewCell()
+        }
+    }
+}
+
+extension ClosetScreenController: NSFetchedResultsControllerDelegate {
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        collectionView.reloadData()
     }
 }
 
