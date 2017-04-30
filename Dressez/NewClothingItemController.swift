@@ -17,9 +17,6 @@ class NewClothingItemController: BaseViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     
-    var viewModel: NewClothingItemModel! {
-        return baseViewModel as! NewClothingItemModel
-    }
     var presenter: NewClothingItemPresenter! {
         return basePresenter as! NewClothingItemPresenter
     }
@@ -38,11 +35,11 @@ class NewClothingItemController: BaseViewController {
         if let colorId = itemColor, let typeId = itemType,let type = ItemType(rawValue: typeId), let color = ItemColor(rawValue: colorId), let nameText = nameTextField.text, let name = nameText.onlyHasWhitespaces() ? nil : nameText {
             
             DispatchQueue.main.async {
-                self.viewModel.persistanceService.createClothingItem(name: name, image: self.image, type: type, color: color, completion: { item in
+                self.presenter.persistanceService.createClothingItem(name: name, image: self.image, type: type, color: color, completion: { item in
                     return
                 })
             }
-            self.viewModel.navigationService.popController(navigationController: self.navigationController)
+            self.presenter.navigationService.popController(navigationController: self.navigationController)
         }
         else {
             let alert = presenter.createAlertController(title: nil, message: StringConstants.requiredFields, style: .alert)

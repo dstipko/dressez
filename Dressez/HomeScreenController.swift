@@ -23,9 +23,6 @@ class HomeScreenController: BaseViewController {
     @IBOutlet weak var labelWind: UILabel!
     @IBOutlet weak var labelPressure: UILabel!
     
-    var viewModel: HomeScreenModel! {
-        return baseViewModel as! HomeScreenModel
-    }
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
     }
@@ -45,7 +42,7 @@ class HomeScreenController: BaseViewController {
     }
     
     func fetchWeather(){
-        viewModel.fetchWeather().subscribe(onNext: {(result) in
+        presenter.fetchWeather().subscribe(onNext: {(result) in
                 self.onWeatherFetched(response: result)
             }, onError: {(error) in
                 return

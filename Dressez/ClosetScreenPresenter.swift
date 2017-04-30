@@ -11,6 +11,9 @@ import UIKit
 
 class ClosetScreenPresenter: BasePresenter {
     
+    var navigationService: NavigationService!
+    var persistanceService: PersistanceService!
+    var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: ClosetScreenController! {
         return baseViewController as! ClosetScreenController

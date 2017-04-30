@@ -18,11 +18,11 @@ struct NavigationService {
     mutating func initWithHomeScreen(window: UIWindow) {
         tabBarController = TabBarController()
         
-        let homeScreenController : HomeScreenController = controllerFactory(ViewModelType: HomeScreenModel.self, PresenterType: HomeScreenPresenter.self)
+        let homeScreenController : HomeScreenController = controllerFactory(PresenterType: HomeScreenPresenter.self)
         let homeNavigationController = NavigationController(rootViewController: homeScreenController)
         homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "web.png"), selectedImage: nil)
         
-        let closetScreenController: ClosetScreenController = controllerFactory(ViewModelType: ClosetScreenModel.self, PresenterType: ClosetScreenPresenter.self)
+        let closetScreenController: ClosetScreenController = controllerFactory(PresenterType: ClosetScreenPresenter.self)
         
         let closetNavigationController = NavigationController(rootViewController: closetScreenController)
         closetNavigationController.tabBarItem = UITabBarItem(title: "Closet", image: UIImage(named: "web.png"), selectedImage: nil)
@@ -32,13 +32,13 @@ struct NavigationService {
         window.rootViewController = tabBarController
     }
     
-    func controllerFactory<T: BaseViewController, V: BaseViewModel, P: BasePresenter>(ViewModelType: V.Type, PresenterType: P.Type) -> T {
-        
-        let viewModel = ViewModelType.init(networking: networking, navigation: self, persistance: persistanceService)
+    func controllerFactory<T: BaseViewController, P: BasePresenter>(PresenterType: P.Type) -> T {
         
         var presenter = PresenterType.init()
+        presenter.networking = networking
+        presenter.navigationService = self
+        presenter.persistanceService = persistanceService
         let viewController: T = T()
-        viewController.baseViewModel = viewModel
         viewController.basePresenter = presenter
         presenter.baseViewController = viewController
         
@@ -47,7 +47,7 @@ struct NavigationService {
     
     func pushToNewClothingItemScreen(navigationController: UINavigationController?, image: UIImage) {
         
-        let viewController: NewClothingItemController = controllerFactory(ViewModelType: NewClothingItemModel.self, PresenterType: NewClothingItemPresenter.self)
+        let viewController: NewClothingItemController = controllerFactory(PresenterType: NewClothingItemPresenter.self)
         viewController.image = image
         
         viewController.hidesBottomBarWhenPushed = true
