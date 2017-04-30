@@ -57,6 +57,5 @@ class ClosetScreenPresenter: BasePresenter {
     
     func configureImagePickerController(picker: UIImagePickerController) {
         picker.navigationBar.tintColor = Colors.green
-        picker.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont.boldSystemFont(ofSize: 26)]
     }
 }

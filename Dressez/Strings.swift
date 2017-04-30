@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-struct StringConstants {
+struct Strings {
     
     static var title = "Add clothing item"
     static var selectColor = "Select color"
@@ -19,6 +18,5 @@ struct StringConstants {
     static var newClothingItemNameFieldPlaceholder = "Enter desired name..."
     static var newClothingItemTypeFieldPlaceholder = "Select type..."
     static var newClothingItemColorFieldPlaceholder = "Select color..."
-
 }
 

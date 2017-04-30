@@ -14,7 +14,6 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
         navigationBar.isOpaque = true
-        navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 26)]
         navigationBar.barStyle = UIBarStyle.default
         navigationBar.tintColor = Colors.green
         navigationBar.barTintColor = Colors.barsDefault

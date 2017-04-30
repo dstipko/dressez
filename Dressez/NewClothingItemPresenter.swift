@@ -21,15 +21,21 @@ class NewClothingItemPresenter: BasePresenter {
 
     required init() {}
     
-    func setup(image: UIImage, imageView: UIImageView) {
-        viewController.navigationItem.title = StringConstants.title
+    func setup(image: UIImage, imageView: UIImageView, saveButton: UIButton) {
+        viewController.navigationItem.title = Strings.title
         imageView.image = image
+        imageView.layer.cornerRadius = Numbers.cornerRadius
+        imageView.layer.masksToBounds = true
+        
+        saveButton.setTitleColor(.white, for: .normal)
+        saveButton.layer.cornerRadius = Numbers.cornerRadius
+        saveButton.layer.masksToBounds = true
     }
     
     func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
-        nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
-        typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
-        colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
+        nameTextField.placeholder = Strings.newClothingItemNameFieldPlaceholder
+        typeTextField.placeholder = Strings.newClothingItemTypeFieldPlaceholder
+        colorTextField.placeholder = Strings.newClothingItemColorFieldPlaceholder
     }
     
     func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
@@ -41,11 +47,6 @@ class NewClothingItemPresenter: BasePresenter {
     }
     
     func assignbackground() {
-        UIGraphicsBeginImageContext(viewController.view.frame.size)
-        UIImage(named: "background_blurred")?.draw(in: viewController.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        viewController.view.backgroundColor = UIColor(patternImage: image)
+        viewController.view.backgroundColor = Colors.green
     }
 }
