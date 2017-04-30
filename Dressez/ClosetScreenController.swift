@@ -22,16 +22,13 @@ class ClosetScreenController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewModel: ClosetScreenModel! {
-        return baseViewModel as! ClosetScreenModel
-    }
     var presenter: ClosetScreenPresenter! {
         return basePresenter as! ClosetScreenPresenter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.resultController = viewModel.persistanceService.fetchAllItems()
+        self.resultController = presenter.persistanceService.fetchAllItems()
         presenter.setup()
         configureRightBarButtonItem()
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
@@ -65,7 +62,7 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         dismiss(animated: true, completion: nil)
-        viewModel.navigationService.pushToNewClothingItemScreen(navigationController: self.navigationController, image: chosenImage)
+        presenter.navigationService.pushToNewClothingItemScreen(navigationController: self.navigationController, image: chosenImage)
         
     }
     

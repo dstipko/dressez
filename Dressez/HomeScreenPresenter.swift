@@ -8,15 +8,19 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class HomeScreenPresenter: BasePresenter {
     
-    required init() { }
-    
+    var navigationService: NavigationService!
+    var persistanceService: PersistanceService!
+    var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: HomeScreenController! {
         return baseViewController as! HomeScreenController
     }
+    
+    required init() { }
     
     func setup() {
         viewController.navigationItem.title = "Dressez"
@@ -53,5 +57,9 @@ class HomeScreenPresenter: BasePresenter {
         viewController.reccomendationsView.layer.shadowRadius = 05
         viewController.reccomendationsView.layer.shadowPath = UIBezierPath(rect: viewController.reccomendationsView.bounds).cgPath
         viewController.reccomendationsView.layer.shouldRasterize = true
+    }
+    
+    func fetchWeather() -> Observable<WeatherResponse> {
+        return networking.fetchWeather()
     }
 }
