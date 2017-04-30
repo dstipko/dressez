@@ -13,8 +13,10 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.isTranslucent = false
-        tabBar.barTintColor = UIColor.darkGray
+        tabBar.isOpaque = true
         tabBar.barStyle = UIBarStyle.default
+        tabBar.tintColor = Colors.green
+        tabBar.barTintColor = Colors.barsDefault
     }
 
 }

@@ -20,12 +20,12 @@ struct NavigationService {
         
         let homeScreenController : HomeScreenController = controllerFactory(PresenterType: HomeScreenPresenter.self)
         let homeNavigationController = NavigationController(rootViewController: homeScreenController)
-        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "web.png"), selectedImage: nil)
+        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "temperature"), selectedImage: nil)
         
         let closetScreenController: ClosetScreenController = controllerFactory(PresenterType: ClosetScreenPresenter.self)
         
         let closetNavigationController = NavigationController(rootViewController: closetScreenController)
-        closetNavigationController.tabBarItem = UITabBarItem(title: "Closet", image: UIImage(named: "web.png"), selectedImage: nil)
+        closetNavigationController.tabBarItem = UITabBarItem(title: "Closet", image: UIImage(named: "wardrobe"), selectedImage: nil)
         
         tabBarController.viewControllers = [homeNavigationController,closetNavigationController]
         

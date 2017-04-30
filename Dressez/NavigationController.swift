@@ -13,9 +13,11 @@ class NavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isTranslucent = false
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:UIFont(name: "Helvetica", size: 18)!]
+        navigationBar.isOpaque = true
+        navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 26)]
         navigationBar.barStyle = UIBarStyle.default
-        navigationBar.barTintColor = UIColor.darkGray
+        navigationBar.tintColor = Colors.green
+        navigationBar.barTintColor = Colors.barsDefault
     }
     
 }
