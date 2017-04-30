@@ -25,11 +25,6 @@ class NewClothingItemPresenter: BasePresenter {
         viewController.navigationItem.title = StringConstants.title
         imageView.image = image
     }
-
-    func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
-        typeTextField.isUserInteractionEnabled = false
-        colorTextField.isUserInteractionEnabled = false 
-    }
     
     func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
         return UIAlertController(title: title, message: message, preferredStyle: style)
