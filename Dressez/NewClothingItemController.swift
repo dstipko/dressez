@@ -27,10 +27,16 @@ class NewClothingItemController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.setup(image: image, imageView: clothingItemImageView)
+        presenter.setup()
+        presenter.configureTextFields()
         
         typeTextField.delegate = self
         colorTextField.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        presenter.assignBackground()
     }
    
     @IBAction func saveClothingItem(_ sender: Any) {

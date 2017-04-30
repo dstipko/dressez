@@ -18,12 +18,28 @@ class NewClothingItemPresenter: BasePresenter {
     weak var viewController: NewClothingItemController! {
         return baseViewController as! NewClothingItemController
     }
-    
+
     required init() {}
     
-    func setup(image: UIImage, imageView: UIImageView) {
+    func setup() {
         viewController.navigationItem.title = StringConstants.title
-        imageView.image = image
+        viewController.clothingItemImageView.image = viewController.image
+        viewController.clothingItemImageView.contentMode = .scaleAspectFit
+        viewController.clothingItemImageView.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.clothingItemImageView.layer.masksToBounds = true
+        
+        viewController.saveButton.setTitleColor(.white, for: .normal)
+        viewController.saveButton.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.saveButton.layer.masksToBounds = true
     }
     
+    func configureTextFields() {
+        viewController.nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
+        viewController.typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
+        viewController.colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
+    }
+    
+    func assignBackground() {
+        viewController.view.backgroundColor = ColorConstants.green
+    }
 }

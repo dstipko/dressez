@@ -19,7 +19,7 @@ extension String {
 extension UIViewController {    
     func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-        alert.view.tintColor = Colors.green
+        alert.view.tintColor = ColorConstants.green
         return alert
     }
     
