@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct StringConstants {
     
@@ -17,3 +18,4 @@ struct StringConstants {
     static var requiredFields = "Empty fields"
 
 }
+
