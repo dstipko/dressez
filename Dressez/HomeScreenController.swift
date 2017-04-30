@@ -40,8 +40,8 @@ class HomeScreenController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        assignbackground()
-        addRoundedBorders()
+        presenter.assignbackground()
+        presenter.addRoundedBorders()
     }
     
     func fetchWeather(){
@@ -57,24 +57,5 @@ class HomeScreenController: BaseViewController {
     
     func onWeatherfetched(response : WeatherResponse){
         presenter.updateView(with: response)
-    }
-    
-    func assignbackground(){
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "background")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        self.view.backgroundColor = UIColor(patternImage: image)
-    }
-    
-    func addRoundedBorders(){
-        reccomendationsView.layer.cornerRadius = CGFloat(10)
-        reccomendationsView.layer.shadowColor = UIColor.black.cgColor
-        reccomendationsView.layer.shadowOpacity = 0.5
-        reccomendationsView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        reccomendationsView.layer.shadowRadius = 05
-        reccomendationsView.layer.shadowPath = UIBezierPath(rect: reccomendationsView.bounds).cgPath
-        reccomendationsView.layer.shouldRasterize = true
     }
 }

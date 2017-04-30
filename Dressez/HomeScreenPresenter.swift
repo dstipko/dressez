@@ -35,4 +35,23 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelWind.text = "Wind: " + String(describing: with.windSpeed!) + " km/h"
         viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
     }
+    
+    func assignbackground(){
+        UIGraphicsBeginImageContext(viewController.view.frame.size)
+        UIImage(named: "background")?.draw(in: viewController.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        viewController.view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    func addRoundedBorders(){
+        viewController.reccomendationsView.layer.cornerRadius = CGFloat(10)
+        viewController.reccomendationsView.layer.shadowColor = UIColor.black.cgColor
+        viewController.reccomendationsView.layer.shadowOpacity = 0.5
+        viewController.reccomendationsView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        viewController.reccomendationsView.layer.shadowRadius = 05
+        viewController.reccomendationsView.layer.shadowPath = UIBezierPath(rect: viewController.reccomendationsView.bounds).cgPath
+        viewController.reccomendationsView.layer.shouldRasterize = true
+    }
 }
