@@ -101,4 +101,14 @@ extension PersistanceService {
             print("context saved:",  status)
         }
     }
+    
+    func fetchAllItems() -> NSFetchedResultsController<NSFetchRequestResult> {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ClothingItem")
+        request.sortDescriptors=[NSSortDescriptor(key: "typeId", ascending: false)]
+        
+        let resultController = fetchController(forRequest: request)
+        try! resultController.performFetch()
+        return resultController
+    }
+
 }
