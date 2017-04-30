@@ -46,4 +46,12 @@ class ClosetScreenPresenter: BasePresenter {
         layout.minimumInteritemSpacing = spacing
     }
     
+    func assignbackground() {
+        UIGraphicsBeginImageContext(viewController.view.frame.size)
+        UIImage(named: "background_blurred")?.draw(in: viewController.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        viewController.view.backgroundColor = UIColor(patternImage: image)
+    }
 }

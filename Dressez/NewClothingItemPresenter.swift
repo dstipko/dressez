@@ -18,12 +18,18 @@ class NewClothingItemPresenter: BasePresenter {
     weak var viewController: NewClothingItemController! {
         return baseViewController as! NewClothingItemController
     }
-    
+
     required init() {}
     
     func setup(image: UIImage, imageView: UIImageView) {
         viewController.navigationItem.title = StringConstants.title
         imageView.image = image
+    }
+    
+    func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
+        nameTextField.placeholder = StringConstants.newClothingItemNameFieldPlaceholder
+        typeTextField.placeholder = StringConstants.newClothingItemTypeFieldPlaceholder
+        colorTextField.placeholder = StringConstants.newClothingItemColorFieldPlaceholder
     }
     
     func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
@@ -34,5 +40,12 @@ class NewClothingItemPresenter: BasePresenter {
         return UIAlertAction(title: title, style: .default, handler: completionHandler)
     }
     
-    
+    func assignbackground() {
+        UIGraphicsBeginImageContext(viewController.view.frame.size)
+        UIImage(named: "background_blurred")?.draw(in: viewController.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        viewController.view.backgroundColor = UIColor(patternImage: image)
+    }
 }

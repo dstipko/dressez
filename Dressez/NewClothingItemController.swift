@@ -28,9 +28,21 @@ class NewClothingItemController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.setup(image: image, imageView: clothingItemImageView)
+        presenter.configureTextFields(nameTextField: nameTextField, typeTextField: typeTextField, colorTextField: colorTextField)
         
         typeTextField.delegate = self
         colorTextField.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        presenter.assignbackground()
+        
+        clothingItemImageView.layer.cornerRadius = CGFloat(NumberConstants.cornerRadius)
+        clothingItemImageView.layer.masksToBounds = true
+        
+        saveButton.layer.cornerRadius = CGFloat(NumberConstants.cornerRadius)
+        saveButton.layer.masksToBounds = true
     }
    
     @IBAction func saveClothingItem(_ sender: Any) {

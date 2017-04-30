@@ -41,6 +41,7 @@ class ClosetScreenController: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        presenter.assignbackground()
         presenter.configureCollectionViewLayout()
     }
     

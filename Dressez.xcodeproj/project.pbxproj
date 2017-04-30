@@ -38,6 +38,7 @@
 		BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6279041EB50CD500F39BB9 /* ImageService.swift */; };
 		BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6279071EB50CD500F39BB9 /* Model.xcdatamodeld */; };
 		BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */; };
+		BC94653C1EB678CD007C719A /* NumberConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94653B1EB678CD007C719A /* NumberConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BC6279041EB50CD500F39BB9 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		BC6279081EB50CD500F39BB9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utilities.swift"; sourceTree = "<group>"; };
+		BC94653B1EB678CD007C719A /* NumberConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberConstants.swift; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				86E626431EB4CD84003D2E51 /* TopControllers */,
 				862DDD401EB5E9280057C43C /* GeneralExtensions.swift */,
 				865BD2891EB5FE9A002A5C78 /* StringConstants.swift */,
+				BC94653B1EB678CD007C719A /* NumberConstants.swift */,
 			);
 			path = Dressez;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				865BD2951EB63EB0002A5C78 /* ClosetScreenController.swift in Sources */,
+				BC94653C1EB678CD007C719A /* NumberConstants.swift in Sources */,
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
