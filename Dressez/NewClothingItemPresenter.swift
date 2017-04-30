@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NewClothingItemPresenter: BasePresenter {
     
@@ -17,8 +18,13 @@ class NewClothingItemPresenter: BasePresenter {
     
     required init() {}
     
-    func setup() {
+    func setup(image: UIImage, imageView: UIImageView) {
         viewController.navigationItem.title = "Dressez"
+        imageView.image = image
     }
 
+    func configureTextFields(nameTextField: UITextField, typeTextField: UITextField, colorTextField: UITextField) {
+        typeTextField.isUserInteractionEnabled = false
+        colorTextField.isUserInteractionEnabled = false 
+    }
 }

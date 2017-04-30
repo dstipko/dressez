@@ -49,6 +49,7 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        dismiss(animated: true, completion: nil)
         viewModel.navigationService.pushToNewClothingItemScreen(navigationController: self.navigationController, image: chosenImage)
         
     }
