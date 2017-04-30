@@ -6,5 +6,6 @@ target 'Dressez' do
   use_frameworks!
 
 pod 'AlamofireObjectMapper', '~> 4.0'
+pod 'RxSwift', '~> 3.0'
 
 end
