@@ -18,5 +18,8 @@ struct Strings {
     static var newClothingItemNameFieldPlaceholder = "Enter desired name..."
     static var newClothingItemTypeFieldPlaceholder = "Select type..."
     static var newClothingItemColorFieldPlaceholder = "Select color..."
+    static var photoGallery = "Photo gallery"
+    static var camera = "Camera"
+    static var noCamera = "Camera not available"
 }
 

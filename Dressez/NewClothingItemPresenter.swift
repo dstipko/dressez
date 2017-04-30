@@ -38,14 +38,6 @@ class NewClothingItemPresenter: BasePresenter {
         colorTextField.placeholder = Strings.newClothingItemColorFieldPlaceholder
     }
     
-    func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
-        return UIAlertController(title: title, message: message, preferredStyle: style)
-    }
-    
-    func createAlertAction(title: String?, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
-        return UIAlertAction(title: title, style: .default, handler: completionHandler)
-    }
-    
     func assignbackground() {
         viewController.view.backgroundColor = Colors.green
     }

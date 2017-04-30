@@ -50,8 +50,8 @@ class NewClothingItemController: BaseViewController {
             self.presenter.navigationService.popController(navigationController: self.navigationController)
         }
         else {
-            let alert = presenter.createAlertController(title: nil, message: Strings.requiredFields, style: .alert)
-            let okAction = presenter.createAlertAction(title: Strings.ok, completionHandler: { _ in
+            let alert = createAlertController(title: nil, message: StringConstants.requiredFields, style: .alert)
+            let okAction = createAlertAction(title: StringConstants.ok, completionHandler: { _ in
                 self.dismiss(animated: true, completion: nil)
                 
             })
@@ -67,9 +67,9 @@ extension NewClothingItemController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         switch textField {
         case typeTextField:
-            let typeMenu = presenter.createAlertController(title: nil, message: Strings.selectType, style: .actionSheet)
+            let typeMenu = createAlertController(title: nil, message: StringConstants.selectType, style: .actionSheet)
             for type in ItemType.allValues {
-                let colorAction = presenter.createAlertAction(title: type.description(), completionHandler: { _ in
+                let colorAction = createAlertAction(title: type.description(), completionHandler: { _ in
                     self.itemType = type.rawValue
                     self.typeTextField.text = type.description()
                     self.dismiss(animated: true, completion: nil)
@@ -79,9 +79,9 @@ extension NewClothingItemController: UITextFieldDelegate {
             }
             self.present(typeMenu, animated: true, completion: nil)
         case colorTextField:
-            let colorsMenu = presenter.createAlertController(title: nil, message: Strings.selectColor, style: .actionSheet)
+            let colorsMenu = createAlertController(title: nil, message: StringConstants.selectColor, style: .actionSheet)
             for color in ItemColor.allValues {
-                let colorAction = presenter.createAlertAction(title: color.description(), completionHandler: { _ in
+                let colorAction = createAlertAction(title: color.description(), completionHandler: { _ in
                     self.itemColor = color.rawValue
                     self.colorTextField.text = color.description()
                     self.dismiss(animated: true, completion: nil)
