@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
+		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862D3B111EB6A15000A2D3C8 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */; };
 		862D3B121EB6A15000A2D3C8 /* ImageGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
+		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
+		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
 		862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryViewController.xib; sourceTree = "<group>"; };
 		862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				86E626541EB4E222003D2E51 /* RequestError.swift */,
 				BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */,
+				180C6EA71EB67B1800407C96 /* IconUtil.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				865BD29C1EB67D36002A5C78 /* ColorConstants.swift */,
 				865BD2891EB5FE9A002A5C78 /* StringConstants.swift */,
 				BC94653B1EB678CD007C719A /* NumberConstants.swift */,
+				180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -387,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -399,6 +405,7 @@
 			files = (
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
+				180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				862DDD441EB5EAB80057C43C /* ItemColor.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
@@ -410,6 +417,7 @@
 				BC94653C1EB678CD007C719A /* NumberConstants.swift in Sources */,
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
+				180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 				862D3B111EB6A15000A2D3C8 /* ImageGalleryViewController.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
