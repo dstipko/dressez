@@ -11,6 +11,9 @@ import UIKit
 
 class NewClothingItemPresenter: BasePresenter {
     
+    var navigationService: NavigationService!
+    var persistanceService: PersistanceService!
+    var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: NewClothingItemController! {
         return baseViewController as! NewClothingItemController

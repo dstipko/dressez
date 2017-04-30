@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-	var baseViewModel: BaseViewModel!
+
 	var basePresenter: BasePresenter!
 }
