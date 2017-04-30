@@ -11,38 +11,26 @@ import UIKit
 
 class IconUtil {
     
-    static let MinimumApiWeatherCode = 200
-    static let MaximumApiWeatherCode = 999
-    static let Thunderstorm = 200
-    static let Drizzle = 300
-    static let Rain = 500
-    static let Snow = 600
-    static let Atmosphere = 700
-    static let Clear = 800
-    static let Clouds = 810
-    static let Extreme = 900
-    static let Additional = 910
-    
     static func setAppropriateWeatherIcon(weatherID : Int) -> UIImage {
-        if (weatherID > IconUtil.MinimumApiWeatherCode && weatherID < IconUtil.MaximumApiWeatherCode){
+        if (weatherID > WeatherCodeConstants.MinimumApiWeatherCode && weatherID < WeatherCodeConstants.MaximumApiWeatherCode){
             switch(weatherID){
-                case IconUtil.Thunderstorm..<IconUtil.Drizzle:
+                case WeatherCodeConstants.Thunderstorm..<WeatherCodeConstants.Drizzle:
                     return #imageLiteral(resourceName: "storm")
-                case IconUtil.Drizzle..<IconUtil.Rain:
+                case WeatherCodeConstants.Drizzle..<WeatherCodeConstants.Rain:
                     return #imageLiteral(resourceName: "drizzle")
-                case IconUtil.Rain..<IconUtil.Snow:
+                case WeatherCodeConstants.Rain..<WeatherCodeConstants.Snow:
                     return #imageLiteral(resourceName: "rain")
-                case IconUtil.Snow..<IconUtil.Atmosphere:
+                case WeatherCodeConstants.Snow..<WeatherCodeConstants.Atmosphere:
                     return #imageLiteral(resourceName: "snow")
-                case IconUtil.Atmosphere..<IconUtil.Clear:
+                case WeatherCodeConstants.Atmosphere..<WeatherCodeConstants.Clear:
                     return #imageLiteral(resourceName: "mist")
-                case IconUtil.Clear:
+                case WeatherCodeConstants.Clear:
                     return #imageLiteral(resourceName: "sun")
-                case IconUtil.Clear..<IconUtil.Clouds:
+                case WeatherCodeConstants.Clear..<WeatherCodeConstants.Clouds:
                     return #imageLiteral(resourceName: "cloud")
-                case IconUtil.Extreme..<IconUtil.Additional:
+                case WeatherCodeConstants.Extreme..<WeatherCodeConstants.Additional:
                     return #imageLiteral(resourceName: "storm")
-                case IconUtil.Additional..<IconUtil.MaximumApiWeatherCode:
+                case WeatherCodeConstants.Additional..<WeatherCodeConstants.MaximumApiWeatherCode:
                     return #imageLiteral(resourceName: "mist")
                 default:
                     return #imageLiteral(resourceName: "sun")

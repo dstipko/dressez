@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
+		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
+		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				865BD29C1EB67D36002A5C78 /* ColorConstants.swift */,
 				865BD2891EB5FE9A002A5C78 /* StringConstants.swift */,
 				BC94653B1EB678CD007C719A /* NumberConstants.swift */,
+				180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */,
 				86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */,
+				180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				862DDD441EB5EAB80057C43C /* ItemColor.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
