@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 struct NumberConstants {
     
-    static var cornerRadius = 8
+    static var cornerRadius: CGFloat = 8
 }

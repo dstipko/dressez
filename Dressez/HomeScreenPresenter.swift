@@ -50,7 +50,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func addRoundedBorders() {
-        viewController.reccomendationsView.layer.cornerRadius = CGFloat(10)
+        viewController.reccomendationsView.layer.cornerRadius = NumberConstants.cornerRadius
         viewController.reccomendationsView.layer.shadowColor = UIColor.black.cgColor
         viewController.reccomendationsView.layer.shadowOpacity = 0.5
         viewController.reccomendationsView.layer.shadowOffset = CGSize(width: 3, height: 3)

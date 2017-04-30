@@ -38,10 +38,10 @@ class NewClothingItemController: BaseViewController {
         super.viewDidLayoutSubviews()
         presenter.assignbackground()
         
-        clothingItemImageView.layer.cornerRadius = CGFloat(NumberConstants.cornerRadius)
+        clothingItemImageView.layer.cornerRadius = NumberConstants.cornerRadius
         clothingItemImageView.layer.masksToBounds = true
         
-        saveButton.layer.cornerRadius = CGFloat(NumberConstants.cornerRadius)
+        saveButton.layer.cornerRadius = NumberConstants.cornerRadius
         saveButton.layer.masksToBounds = true
     }
    
