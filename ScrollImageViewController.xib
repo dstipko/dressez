@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollImageViewController" customModule="Dressez" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="DYI-yB-v4q" id="4ZO-rF-c3v"/>
+                <outlet property="scrollView" destination="HgY-gi-hp2" id="gdb-98-qB7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-gi-hp2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-yB-v4q">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DYI-yB-v4q" firstAttribute="top" secondItem="HgY-gi-hp2" secondAttribute="top" id="0XQ-4B-D5C"/>
+                        <constraint firstAttribute="bottom" secondItem="DYI-yB-v4q" secondAttribute="bottom" id="7Su-dQ-uma"/>
+                        <constraint firstItem="DYI-yB-v4q" firstAttribute="centerY" secondItem="HgY-gi-hp2" secondAttribute="centerY" id="ApJ-5Y-HLj"/>
+                        <constraint firstItem="DYI-yB-v4q" firstAttribute="centerX" secondItem="HgY-gi-hp2" secondAttribute="centerX" id="Jbt-cn-ZFJ"/>
+                        <constraint firstItem="DYI-yB-v4q" firstAttribute="leading" secondItem="HgY-gi-hp2" secondAttribute="leading" id="Kq8-l2-0Wu"/>
+                        <constraint firstAttribute="trailing" secondItem="DYI-yB-v4q" secondAttribute="trailing" id="wg5-rC-M2i"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HgY-gi-hp2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0F1-MY-vhy"/>
+                <constraint firstItem="HgY-gi-hp2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Fkv-hm-Lgs"/>
+                <constraint firstAttribute="bottom" secondItem="HgY-gi-hp2" secondAttribute="bottom" id="HHx-99-Sua"/>
+                <constraint firstAttribute="trailing" secondItem="HgY-gi-hp2" secondAttribute="trailing" id="SjR-ud-GHJ"/>
+                <constraint firstItem="HgY-gi-hp2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="URD-Kb-Wry"/>
+                <constraint firstItem="HgY-gi-hp2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XG5-KQ-6Wq"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
