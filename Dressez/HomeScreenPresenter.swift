@@ -40,9 +40,14 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
     }
     
-    func assignbackground() {
+    func assignBackground() {
+        guard let backgroundImage = UIImage(named: "background") else {
+            viewController.view.backgroundColor = ColorConstants.green
+            return
+        }
+        
         UIGraphicsBeginImageContext(viewController.view.frame.size)
-        UIImage(named: "background")?.draw(in: viewController.view.bounds)
+        backgroundImage.draw(in: viewController.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -50,7 +55,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func addRoundedBorders() {
-        viewController.reccomendationsView.layer.cornerRadius = CGFloat(10)
+        viewController.reccomendationsView.layer.cornerRadius = NumberConstants.cornerRadius
         viewController.reccomendationsView.layer.shadowColor = UIColor.black.cgColor
         viewController.reccomendationsView.layer.shadowOpacity = 0.5
         viewController.reccomendationsView.layer.shadowOffset = CGSize(width: 3, height: 3)

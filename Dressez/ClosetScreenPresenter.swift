@@ -46,8 +46,21 @@ class ClosetScreenPresenter: BasePresenter {
         layout.minimumInteritemSpacing = spacing
     }
     
-    func configureImagePickerController(picker: UIImagePickerController) {
-        picker.navigationBar.tintColor = Colors.green
-        picker.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont.boldSystemFont(ofSize: 26)]
+    func assignBackground() {
+        guard let backgroundImage = UIImage(named: "background_blurred") else {
+            viewController.view.backgroundColor = ColorConstants.green
+            return
+        }
+        
+        UIGraphicsBeginImageContext(viewController.view.frame.size)
+        backgroundImage.draw(in: viewController.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        viewController.view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    func configureImagePickerController() {
+        baseViewPresenter.picker.navigationBar.tintColor = ColorConstants.green
     }
 }

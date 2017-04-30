@@ -14,6 +14,7 @@
                 <outlet property="clothingItemImageView" destination="HTS-dn-qfc" id="Grk-4X-BHg"/>
                 <outlet property="colorTextField" destination="ysq-mL-KYH" id="ceo-RZ-aNm"/>
                 <outlet property="nameTextField" destination="Cu8-Tg-pci" id="cFh-F1-fjN"/>
+                <outlet property="saveButton" destination="9Ul-mR-zBL" id="FgF-qz-zRW"/>
                 <outlet property="typeTextField" destination="P4D-ok-5xD" id="HtE-E5-yII"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,7 +34,8 @@
                     </constraints>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-Tg-pci">
-                    <rect key="frame" x="10" y="380" width="355" height="40"/>
+                    <rect key="frame" x="10" y="360" width="355" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.74529109589041098" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="RX6-CW-fTQ"/>
                     </constraints>
@@ -42,7 +44,8 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4D-ok-5xD">
-                    <rect key="frame" x="10" y="460" width="355" height="40"/>
+                    <rect key="frame" x="10" y="420" width="355" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75101669520547942" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="j2i-NZ-AdP"/>
                     </constraints>
@@ -51,7 +54,8 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysq-mL-KYH">
-                    <rect key="frame" x="10" y="540" width="355" height="40"/>
+                    <rect key="frame" x="10" y="480" width="355" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75222067636986301" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="9c4-Gk-aEq"/>
                     </constraints>
@@ -60,21 +64,21 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-Z4-tzf">
-                    <rect key="frame" x="10" y="364" width="35.5" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="10" y="344" width="36.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIe-CP-g9H">
-                    <rect key="frame" x="10" y="444" width="30" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="10" y="404" width="31" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQo-fI-rHd">
-                    <rect key="frame" x="10" y="524" width="33" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="10" y="463" width="36.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ul-mR-zBL">
@@ -101,10 +105,10 @@
                 <constraint firstItem="HTS-dn-qfc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="DYW-3l-4Sp"/>
                 <constraint firstAttribute="bottom" secondItem="9Ul-mR-zBL" secondAttribute="bottom" constant="20" id="E9p-c7-3g4"/>
                 <constraint firstAttribute="trailing" secondItem="ysq-mL-KYH" secondAttribute="trailing" constant="10" id="Ha3-44-xiA"/>
-                <constraint firstItem="P4D-ok-5xD" firstAttribute="top" secondItem="Cu8-Tg-pci" secondAttribute="bottom" constant="40" id="Igj-8k-fbk"/>
-                <constraint firstItem="ysq-mL-KYH" firstAttribute="top" secondItem="P4D-ok-5xD" secondAttribute="bottom" constant="40" id="LRo-Q4-K0V"/>
+                <constraint firstItem="P4D-ok-5xD" firstAttribute="top" secondItem="Cu8-Tg-pci" secondAttribute="bottom" constant="20" id="Igj-8k-fbk"/>
+                <constraint firstItem="ysq-mL-KYH" firstAttribute="top" secondItem="P4D-ok-5xD" secondAttribute="bottom" constant="20" id="LRo-Q4-K0V"/>
                 <constraint firstItem="P4D-ok-5xD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="MZC-Ai-Dlq"/>
-                <constraint firstItem="Cu8-Tg-pci" firstAttribute="top" secondItem="HTS-dn-qfc" secondAttribute="bottom" constant="40" id="NBB-sE-VV0"/>
+                <constraint firstItem="Cu8-Tg-pci" firstAttribute="top" secondItem="HTS-dn-qfc" secondAttribute="bottom" constant="20" id="NBB-sE-VV0"/>
                 <constraint firstItem="ysq-mL-KYH" firstAttribute="top" secondItem="mQo-fI-rHd" secondAttribute="bottom" id="Tjd-aM-nRJ"/>
                 <constraint firstItem="mQo-fI-rHd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Uhl-tF-9MS"/>
                 <constraint firstItem="Cu8-Tg-pci" firstAttribute="top" secondItem="VLY-Z4-tzf" secondAttribute="bottom" id="Uvl-4C-WSN"/>
