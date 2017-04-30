@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct StringConstants {
     
@@ -15,5 +16,9 @@ struct StringConstants {
     static var selectType = "Select type"
     static var ok = "OK"
     static var requiredFields = "Empty fields"
+    static var photoGallery = "Photo gallery"
+    static var camera = "Camera"
+    static var noCamera = "Camera not available"
 
 }
+

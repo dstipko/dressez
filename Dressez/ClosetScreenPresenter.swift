@@ -26,7 +26,7 @@ class ClosetScreenPresenter: BasePresenter {
     required init() {}
     
     func setup() {
-        viewController.navigationItem.title = "Dressez"
+        viewController.navigationItem.title = "Closet"
     }
 
     func configureCollectionViewCell(cell: CollectionViewCell, image: UIImage) -> CollectionViewCell {
@@ -46,4 +46,8 @@ class ClosetScreenPresenter: BasePresenter {
         layout.minimumInteritemSpacing = spacing
     }
     
+    func configureImagePickerController(picker: UIImagePickerController) {
+        picker.navigationBar.tintColor = Colors.green
+        picker.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont.boldSystemFont(ofSize: 26)]
+    }
 }

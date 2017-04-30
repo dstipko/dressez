@@ -26,13 +26,4 @@ class NewClothingItemPresenter: BasePresenter {
         imageView.image = image
     }
     
-    func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
-        return UIAlertController(title: title, message: message, preferredStyle: style)
-    }
-    
-    func createAlertAction(title: String?, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
-        return UIAlertAction(title: title, style: .default, handler: completionHandler)
-    }
-    
-    
 }
