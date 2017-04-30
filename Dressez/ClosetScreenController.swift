@@ -38,6 +38,7 @@ class ClosetScreenController: BaseViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
+        resultController.delegate = self
         picker.delegate = self
     }
     
@@ -70,7 +71,6 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        //viewModel.closeImagePicker(viewController: picker)
         dismiss(animated: true, completion: nil)
     }
 }
