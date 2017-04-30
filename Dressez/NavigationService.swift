@@ -53,4 +53,8 @@ struct NavigationService {
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func popController(navigationController: UINavigationController?) {
+        _ = navigationController?.popViewController(animated: true)
+    }
 }

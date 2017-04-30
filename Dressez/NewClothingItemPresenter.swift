@@ -19,7 +19,7 @@ class NewClothingItemPresenter: BasePresenter {
     required init() {}
     
     func setup(image: UIImage, imageView: UIImageView) {
-        viewController.navigationItem.title = "Dressez"
+        viewController.navigationItem.title = StringConstants.title
         imageView.image = image
     }
 
@@ -27,4 +27,14 @@ class NewClothingItemPresenter: BasePresenter {
         typeTextField.isUserInteractionEnabled = false
         colorTextField.isUserInteractionEnabled = false 
     }
+    
+    func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
+        return UIAlertController(title: title, message: message, preferredStyle: style)
+    }
+    
+    func createAlertAction(title: String?, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
+        return UIAlertAction(title: title, style: .default, handler: completionHandler)
+    }
+    
+    
 }

@@ -5,7 +5,7 @@
 //  Created by Dora Stipković on 4/29/17.
 //  Copyright © 2017 Dora Stipković. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import RxSwift
 
@@ -25,6 +25,8 @@ class NewClothingItemController: BaseViewController {
     }
     
     var image: UIImage!
+    private var itemType: Int?
+    private var itemColor: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +35,32 @@ class NewClothingItemController: BaseViewController {
     }
    
     @IBAction func saveClothingItem(_ sender: Any) {
-//        viewModel.persistanceService.createClothingItem(name: nameTextField.text, image: image, type: TypeEnum(rawValue: typeTextField.text), color: ColorEnum(rawValue: colorTextField.text), completion: nil)
+        if let colorId = itemColor, let typeId = itemType,let type = ItemType(rawValue: typeId), let color = ItemColor(rawValue: colorId), let nameText = nameTextField.text, let name = nameText.onlyHasWhitespaces() ? nil : nameText {
+            
+            DispatchQueue.main.async {
+                self.viewModel.persistanceService.createClothingItem(name: name, image: self.image, type: type, color: color, completion: { item in
+                    return
+                })
+            }
+            self.viewModel.navigationService.popController(navigationController: self.navigationController)
+        }
+        else {
+            let alert = presenter.createAlertController(title: nil, message: StringConstants.requiredFields, style: .alert)
+            let okAction = presenter.createAlertAction(title: StringConstants.ok, completionHandler: { _ in
+                self.dismiss(animated: true, completion: nil)
+                
+            })
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     @IBAction func showTypeActionSheet(_ sender: Any) {
-        let typeMenu = UIAlertController(title: nil, message: "Select item type", preferredStyle: .actionSheet)
-        for color in TypeEnum.allValues {
-            let colorAction = UIAlertAction(title: color.rawValue, style: .default, handler: { _ in
-                self.typeTextField.text = color.rawValue
+        let typeMenu = presenter.createAlertController(title: nil, message: StringConstants.selectType, style: .actionSheet)
+        for type in ItemType.allValues {
+            let colorAction = presenter.createAlertAction(title: type.description(), completionHandler: { _ in
+                self.itemType = type.rawValue
+                self.typeTextField.text = type.description()
                 self.dismiss(animated: true, completion: nil)
                 return
             })
@@ -51,10 +71,11 @@ class NewClothingItemController: BaseViewController {
     
     
     @IBAction func showColorActionSheet(_ sender: Any) {
-        let colorsMenu = UIAlertController(title: nil, message: "Select color", preferredStyle: .actionSheet)
-        for color in ColorEnum.allValues {
-            let colorAction = UIAlertAction(title: color.rawValue, style: .default, handler: { _ in
-                self.colorTextField.text = color.rawValue
+        let colorsMenu = presenter.createAlertController(title: nil, message: StringConstants.selectColor, style: .actionSheet)
+        for color in ItemColor.allValues {
+            let colorAction = presenter.createAlertAction(title: color.description(), completionHandler: { _ in
+                self.itemColor = color.rawValue
+                self.colorTextField.text = color.description()
                 self.dismiss(animated: true, completion: nil)
                 return
             })
