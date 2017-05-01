@@ -16,7 +16,7 @@ class HomeScreenPresenter: BasePresenter {
     private let cellHeight : CGFloat = 100
     
     var navigationService: NavigationService!
-    var persistanceService: PersistanceService!
+    var persistenceService: PersistenceService!
     var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: HomeScreenController! {

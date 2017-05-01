@@ -12,7 +12,7 @@ import UIKit
 class ItemDetailsPagePresenter: BasePresenter {
     
     var navigationService: NavigationService!
-    var persistanceService: PersistanceService!
+    var persistenceService: PersistenceService!
     var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: ItemDetailsPageController! {

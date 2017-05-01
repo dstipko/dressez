@@ -32,7 +32,7 @@
 		86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */; };
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
 		86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */; };
-		86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */; };
+		86DFC9BB1EB3D6B600A9D4D0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BA1EB3D6B600A9D4D0 /* PersistenceService.swift */; };
 		86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */; };
 		86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */; };
 		86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626391EB3E401003D2E51 /* HomeScreenController.swift */; };
@@ -79,7 +79,7 @@
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Dressez/Assets.xcassets; sourceTree = "<group>"; };
 		86DFC9A91EB3CA3C00A9D4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Dressez/Info.plist; sourceTree = "<group>"; };
 		86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
-		86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		86DFC9BA1EB3D6B600A9D4D0 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
 		86E626391EB3E401003D2E51 /* HomeScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeScreenController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6279041EB50CD500F39BB9 /* ImageService.swift */,
-				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
+				86DFC9BA1EB3D6B600A9D4D0 /* PersistenceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
 				86E6263D1EB4CC91003D2E51 /* NavigationService.swift */,
 			);
@@ -436,7 +436,7 @@
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
 				180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */,
-				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
+				86DFC9BB1EB3D6B600A9D4D0 /* PersistenceService.swift in Sources */,
 				862D3B111EB6A15000A2D3C8 /* ItemDetailsPageController.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
 				862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */,

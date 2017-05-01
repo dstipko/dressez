@@ -11,7 +11,7 @@ import Foundation
 class ItemDetailsPresenter: BasePresenter {
     
     var navigationService: NavigationService!
-    var persistanceService: PersistanceService!
+    var persistenceService: PersistenceService!
     var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
     weak var viewController: ItemDetailsScreenController! {

@@ -121,8 +121,5 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         
         let navController = NavigationController(rootViewController: detailsVC)
         present(navController, animated: true, completion: nil)
-
     }
 }
-
-

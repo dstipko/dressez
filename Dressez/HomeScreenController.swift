@@ -33,7 +33,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        closetItems = (presenter.persistanceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
+        closetItems = (presenter.persistenceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
         
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self

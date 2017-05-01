@@ -13,7 +13,7 @@ import CoreData
 class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsControllerDelegate {
     
     var navigationService: NavigationService!
-    var persistanceService: PersistanceService!
+    var persistenceService: PersistenceService!
     var networking: NetworkingService!
     var resultController: NSFetchedResultsController<NSFetchRequestResult>!
     weak var baseViewController: BaseViewController!
@@ -29,7 +29,7 @@ class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsController
     
     func setup() {
         viewController.navigationItem.title = "Closet"
-        resultController = persistanceService.fetchAllItems()
+        resultController = persistenceService.fetchAllItems()
         resultController.delegate = self
     }
 

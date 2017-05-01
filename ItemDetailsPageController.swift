@@ -69,16 +69,16 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
         if currentindex == 0 {
             return nil
         } else {
-            return pageControllers[currentindex-1]
+            return pageControllers[currentindex - 1]
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let currentindex = pageControllers.index(of: viewController)!
-        if currentindex == pageControllers.count-1 {
+        if currentindex == pageControllers.count - 1 {
             return nil
         } else {
-            return pageControllers[currentindex+1]
+            return pageControllers[currentindex + 1]
         }
     }
     
