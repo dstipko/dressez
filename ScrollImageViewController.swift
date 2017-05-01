@@ -8,16 +8,24 @@
 
 import UIKit
 
-class ScrollImageViewController: UIViewController, UIScrollViewDelegate {
+class ScrollImageViewController: BaseViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var itemNameLabel: UILabel!
+
+    @IBOutlet weak var itemColorLabel: UILabel!
+    @IBOutlet weak var itemTypeLabel: UILabel!
+    var item: ClothingItem?
     
-    var image: UIImage?
+    var presenter: ScrollImagePresenter! {
+        return basePresenter as! ScrollImagePresenter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image
+        scrollView.delegate = self
+        presenter.setup()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

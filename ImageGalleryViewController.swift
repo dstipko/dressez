@@ -8,25 +8,29 @@
 
 import UIKit
 
-class ImageGalleryViewController: UIViewController, UIPageViewControllerDataSource {
+class ImageGalleryViewController: BaseViewController, UIPageViewControllerDataSource {
 
     @IBOutlet weak var containerView: UIView!
     
     var pageControllers: [UIViewController] = []
     var pageController: UIPageViewController!
     
-    var images: [UIImage] = []
+    var items: [ClothingItem] = []
     var currentIndex: Int?
     
+    var presenter: ImageGalleryPresenter! {
+        return basePresenter as! ImageGalleryPresenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(closeGallery))
         let pageControl = UIPageControl.appearance()
-        pageControl.currentPageIndicatorTintColor = ColorConstants.green
+        containerView.backgroundColor = ColorConstants.green
+        pageControl.currentPageIndicatorTintColor = ColorConstants.darkGray
         pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.backgroundColor = UIColor.clear
-        
+        pageControl.backgroundColor = ColorConstants.green
         pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
         addPageViewControllers()
@@ -43,21 +47,22 @@ class ImageGalleryViewController: UIViewController, UIPageViewControllerDataSour
         pageController.view.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     }
     
+
     func closeGallery(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
     func addPageViewControllers() {
-        guard images.count > 0 else { return }
+        guard items.count > 0 else { return }
 
-        for image in images {
-            let scrollImageVC = ScrollImageViewController(nibName: "ScrollImageViewController", bundle: nil)
-            scrollImageVC.image = image
+        for item in items {
+            let scrollImageVC = presenter.navigationService.controllerFactory(PresenterType: ScrollImagePresenter.self) as ScrollImageViewController
+            scrollImageVC.item = item
             pageControllers.append(scrollImageVC)
         }
         
         pageController.dataSource = self
-        if let index = currentIndex, index < images.count {
+        if let index = currentIndex, index < items.count {
             pageController.setViewControllers([pageControllers[index]], direction: .forward, animated: true, completion: nil)
         } else {
             pageController.setViewControllers([pageControllers.first!], direction: .forward, animated: true, completion: nil)

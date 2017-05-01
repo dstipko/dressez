@@ -14,6 +14,8 @@
 		862D3B121EB6A15000A2D3C8 /* ImageGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */; };
 		862D3B151EB6A28800A2D3C8 /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */; };
 		862D3B161EB6A28800A2D3C8 /* ScrollImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */; };
+		862D3B191EB6B9C900A2D3C8 /* ScrollImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */; };
+		862D3B1B1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
 		862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */; };
@@ -56,6 +58,8 @@
 		862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryViewController.xib; sourceTree = "<group>"; };
 		862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
 		862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollImageViewController.xib; sourceTree = "<group>"; };
+		862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImagePresenter.swift; sourceTree = "<group>"; };
+		862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryPresenter.swift; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -127,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */,
+				862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */,
 				862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */,
+				862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */,
 				862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */,
 				862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */,
 			);
@@ -393,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -408,6 +414,7 @@
 				180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				862DDD441EB5EAB80057C43C /* ItemColor.swift in Sources */,
+				862D3B1B1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
 				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */,
@@ -434,6 +441,7 @@
 				865BD28A1EB5FE9A002A5C78 /* StringConstants.swift in Sources */,
 				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,
 				86E626551EB4E222003D2E51 /* RequestError.swift in Sources */,
+				862D3B191EB6B9C900A2D3C8 /* ScrollImagePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class ClosetScreenController: BaseViewController {
     fileprivate var resultController: NSFetchedResultsController<NSFetchRequestResult>!
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
-    
+    fileprivate var items: [ClothingItem] = []
     @IBOutlet weak var collectionView: UICollectionView!
     
     var presenter: ClosetScreenPresenter! {
@@ -31,6 +31,7 @@ class ClosetScreenController: BaseViewController {
         self.resultController = presenter.persistanceService.fetchAllItems()
         presenter.setup()
         configureRightBarButtonItem()
+        items = resultController.fetchedObjects as! [ClothingItem]
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.dataSource = self
@@ -113,6 +114,18 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         else {
             return UICollectionViewCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let galleryVC = presenter.navigationService.controllerFactory(PresenterType: ImageGalleryPresenter.self) as ImageGalleryViewController
+        galleryVC.modalTransitionStyle = .crossDissolve
+        galleryVC.items = items
+        galleryVC.currentIndex = indexPath.item
+        
+        let navController = NavigationController(rootViewController: galleryVC)
+        navController.navigationBar.isTranslucent = true
+        present(navController, animated: true, completion: nil)
+
     }
 }
 
