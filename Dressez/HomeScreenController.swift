@@ -9,10 +9,14 @@
 import UIKit
 import RxSwift
 
-class HomeScreenController: BaseViewController {
+class HomeScreenController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var bag : DisposeBag = DisposeBag()
+    private let reuseIdentifier = "closetItemCell"
+    private var closetItems : Array<ClothingItem> = []
 
+    @IBOutlet weak var outfitCollectionView: UICollectionView!
+    
     @IBOutlet weak var reccomendationsView: UIView!
     @IBOutlet weak var imageWeatherIcon: UIImageView!
     @IBOutlet weak var labelTemperature: UILabel!
@@ -30,15 +34,23 @@ class HomeScreenController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        closetItems = (presenter.persistanceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
+        
+        outfitCollectionView.delegate = self
+        outfitCollectionView.dataSource = self
+        
+        let nib = UINib(nibName: "ClosetItemCollectionViewCell", bundle: nil)
+        self.outfitCollectionView!.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        
         presenter.setup()
         
         fetchWeather()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidLayoutSubviews() {
         presenter.assignBackground()
-        presenter.addRoundedBorders()
+        presenter.configureCollectionViewLayout()
     }
     
     func fetchWeather(){
@@ -54,5 +66,19 @@ class HomeScreenController: BaseViewController {
     
     func onWeatherFetched(response : WeatherResponse){
         presenter.updateView(with: response)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return closetItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let object = closetItems[indexPath.item] as ClothingItem
+        let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ClosetItemCollectionViewCell
+        
+        presenter.addRoundedBorders(toCell : cell)
+        cell.imageView.image = object.image
+        
+        return cell
     }
 }

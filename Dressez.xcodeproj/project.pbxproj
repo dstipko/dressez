@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
+		180C6EAD1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */; };
+		180C6EAE1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
@@ -48,6 +50,8 @@
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
+		180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				86E626391EB3E401003D2E51 /* HomeScreenController.swift */,
 				86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */,
 				86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */,
+				180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */,
+				180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */,
 			);
 			name = HomeScreen;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			files = (
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
 				865BD2961EB63EB0002A5C78 /* ClosetScreenController.xib in Resources */,
+				180C6EAE1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 				862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */,
 				865BD29A1EB64093002A5C78 /* CollectionViewCell.xib in Resources */,
@@ -401,6 +408,7 @@
 				865BD2991EB64093002A5C78 /* CollectionViewCell.swift in Sources */,
 				BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */,
 				862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */,
+				180C6EAD1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,
 				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,

@@ -12,6 +12,9 @@ import RxSwift
 
 class HomeScreenPresenter: BasePresenter {
     
+    private let spacing : CGFloat = 28
+    private let cellHeight : CGFloat = 100
+    
     var navigationService: NavigationService!
     var persistanceService: PersistanceService!
     var networking: NetworkingService!
@@ -54,19 +57,29 @@ class HomeScreenPresenter: BasePresenter {
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func addRoundedBorders() {
-        viewController.reccomendationsView.layer.cornerRadius = NumberConstants.cornerRadius
-        viewController.reccomendationsView.layer.shadowColor = UIColor.black.cgColor
-        viewController.reccomendationsView.layer.shadowOpacity = 0.5
-        viewController.reccomendationsView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        viewController.reccomendationsView.layer.shadowRadius = 05
-        viewController.reccomendationsView.layer.shadowPath = UIBezierPath(rect: viewController.reccomendationsView.bounds).cgPath
-        viewController.reccomendationsView.layer.shouldRasterize = true
+    func addRoundedBorders(toCell : UICollectionViewCell) {
+        toCell.layer.cornerRadius = NumberConstants.cornerRadius
+        toCell.layer.shadowColor = UIColor.black.cgColor
+        toCell.layer.shadowOpacity = 0.5
+        toCell.layer.shadowOffset = CGSize(width: 3, height: 3)
+        toCell.layer.shadowRadius = 05
+        toCell.layer.shadowPath = UIBezierPath(rect: toCell.bounds).cgPath
+        toCell.layer.shouldRasterize = true
+    }
+    
+    func configureCollectionViewLayout() {
+        guard let collectionView = viewController.outfitCollectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        let itemWidth = cellHeight
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
     }
     
     func fetchWeather() -> Observable<WeatherResponse> {
         return networking.fetchWeather()
     }
-    
-    
 }
