@@ -131,8 +131,8 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
 extension ClosetScreenController: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        collectionView.reloadData()
         items = resultController.fetchedObjects as! [ClothingItem]
+        collectionView.reloadData()
     }
 }
 
