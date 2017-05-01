@@ -57,30 +57,4 @@ enum WeatherCondition : Int {
             return #imageLiteral(resourceName: "cloud")
         }
     }
-    
-    func getAppropriateItemTypeIds() -> [Int] {
-        var enumArray: [ItemType]
-        
-        switch self {
-        case .storm:
-            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .heavyJacket, .coat, .leatherShoes, .boots]
-        case .drizzle:
-            enumArray = [.trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .coat, .leatherShoes, .boots]
-        case .rain:
-            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .lightJacket, .heavyJacket, .coat, .leatherShoes, .boots]
-        case .snow:
-            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .lightJacket, .heavyJacket, .coat, .leatherShoes, .boots]
-        case .mist:
-            enumArray = [.trousers, .tracksuit, .tshirt, .shirt, .hoodie, .sweater, .lightJacket, .coat, .leatherShoes, .boots]
-        case .sun:
-            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .canvasShoes, .leatherShoes]
-        case .cloud:
-            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .canvasShoes, .leatherShoes]
-        }
-        
-        return enumArray.map({
-            (enumValue: ItemType) -> Int in
-            return enumValue.rawValue
-        })
-    }
 }

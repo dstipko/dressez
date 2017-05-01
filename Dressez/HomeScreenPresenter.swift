@@ -15,60 +15,53 @@ class HomeScreenPresenter: BasePresenter {
     var navigationService: NavigationService!
     var persistanceService: PersistanceService!
     var networking: NetworkingService!
+    
+    private var outfitService = OutfitService()
+    private var weatherInfo: WeatherResponse?
+
     weak var baseViewController: BaseViewController!
     weak var viewController: HomeScreenController! {
         return baseViewController as! HomeScreenController
     }
     
-    required init() { }
+    required init() {}
     
     func setup() {
         viewController.navigationItem.title = "Dressez"
     }
     
-    func updateView(with : WeatherResponse) {
-        viewController.imageWeatherIcon.image = with.weatherCondition?.getIcon()
+    func updateView(with weatherResponse: WeatherResponse) {
+        weatherInfo = weatherResponse
         
-        viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
-        viewController.labelWeatherDesc.text = with.weatherDesc
-        viewController.labelCityName.text = with.location
-        viewController.labelTemperatureHiLo.text =
-            "H " + String(describing: with.tempMax!) + "°" +
-            " L " + String(describing: with.tempMin!) + "°"
-        viewController.labelHumidity.text = "Humidity: " + String(describing: with.tempCurrent!) + "%"
-        viewController.labelWind.text = "Wind: " + String(describing: with.windSpeed!) + " km/h"
-        viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
-        
-        //TODO: REMOVE CODE BELOW
-        guard let temp = with.tempCurrent else {
+        updateWeatherPreview()
+        updateOutfitPreview()
+    }
+    
+    private func updateWeatherPreview() {
+        guard let weatherInfo = self.weatherInfo else {
             return
         }
         
-        var enumArray: [ItemType]
+        viewController.imageWeatherIcon.image = weatherInfo.weatherCondition?.getIcon()
         
-        switch temp {
-        case -100..<5:
-            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .heavyJacket, .coat, .leatherShoes, .boots]
-        case 5..<15:
-            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .lightJacket, .heavyJacket, .coat, .canvasShoes, .leatherShoes, .boots]
-        case 15..<25:
-            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .coat, .canvasShoes, .leatherShoes]
-        case 25..<100:
-            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .canvasShoes, .leatherShoes]
-        default:
-            enumArray = []
+        viewController.labelTemperature.text = String(describing: weatherInfo.tempCurrent!) + "°C"
+        viewController.labelWeatherDesc.text = weatherInfo.weatherDesc
+        viewController.labelCityName.text = weatherInfo.location
+        viewController.labelTemperatureHiLo.text =
+            "H " + String(describing: weatherInfo.tempMax!) + "°" +
+            " L " + String(describing: weatherInfo.tempMin!) + "°"
+        viewController.labelHumidity.text = "Humidity: " + String(describing: weatherInfo.tempCurrent!) + "%"
+        viewController.labelWind.text = "Wind: " + String(describing: weatherInfo.windSpeed!) + " km/h"
+        viewController.labelPressure.text = "Pressure: " + String(describing: weatherInfo.pressure!) + " hPa"
+    }
+    
+    private func updateOutfitPreview() {
+        guard let weatherInfo = self.weatherInfo else {
+            return
         }
         
-        let temperatureItemTypes = enumArray.map({
-            (enumValue: ItemType) -> Int in
-            return enumValue.rawValue
-        })
-        
-        let items = persistanceService.fetchClothingItems(weatherConditionItemTypes: (with.weatherCondition?.getAppropriateItemTypeIds())!, temperatureItemTypes: temperatureItemTypes)
-        for item in items {
-            print(item.name)
-        }
-        print(with.weatherCondition?.description() ?? "no value")
+        //TODO: save outfit
+        outfitService.generateOutfitFor(weatherInfo: weatherInfo)
     }
     
     func assignBackground() {

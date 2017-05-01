@@ -15,6 +15,7 @@ enum ItemCategory : Int {
     case feet
     
     static let allValues = [torsoInner, torsoOutter, legs, feet]
+    static let crucialCategories = [torsoInner, legs, feet]
     
     func description() -> String {
         switch self {
