@@ -20,6 +20,7 @@
                 <outlet property="labelTemperatureHiLo" destination="Q1Y-DU-N3B" id="0Fo-fR-Yj3"/>
                 <outlet property="labelWeatherDesc" destination="uuH-Nx-Xu7" id="WFR-NM-lzw"/>
                 <outlet property="labelWind" destination="jQT-AA-v1e" id="hco-QZ-FMY"/>
+                <outlet property="networkErrorTextView" destination="HrJ-LX-60u" id="Omn-Rb-5rM"/>
                 <outlet property="outfitCollectionView" destination="Mju-tr-YVd" id="5cM-Xt-oHl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -100,6 +101,14 @@
                         <outlet property="delegate" destination="-1" id="hsy-gF-3HX"/>
                     </connections>
                 </collectionView>
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Network not available! Please check your internet connection." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-LX-60u">
+                    <rect key="frame" x="16" y="256" width="339" height="141"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.22985467314720154" green="0.62695449590682983" blue="0.82711607217788696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

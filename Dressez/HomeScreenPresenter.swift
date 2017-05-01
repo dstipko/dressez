@@ -57,9 +57,9 @@ class HomeScreenPresenter: BasePresenter {
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func addRoundedBorders(toCell : UICollectionViewCell) {
-        toCell.layer.cornerRadius = NumberConstants.cornerRadius
-        toCell.layer.shouldRasterize = true
+    func addRoundedBorders(toView : UIView) {
+        toView.layer.cornerRadius = NumberConstants.cornerRadius
+        toView.layer.shouldRasterize = true
     }
     
     func configureCollectionViewLayout() {
@@ -72,6 +72,20 @@ class HomeScreenPresenter: BasePresenter {
         layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
+    }
+    
+    func checkNetworkStatus(){
+        if (viewController.currentReachabilityStatus == .notReachable){
+            let alert = UIAlertController(title: "Network unavailible", message: "Please check your internet connection.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { action in
+                // perhaps use action.title here
+            })
+            
+            viewController.present(alert, animated: true)
+            
+//            viewController.networkErrorTextView.isHidden = false
+//            addRoundedBorders(toView: viewController.networkErrorTextView )
+        }
     }
     
     func fetchWeather() -> Observable<WeatherResponse> {

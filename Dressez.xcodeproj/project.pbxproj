@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
+		180C6EB41EB7B8EA00407C96 /* NSObject+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
@@ -48,6 +49,7 @@
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
+		180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utilities.swift"; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				86E626541EB4E222003D2E51 /* RequestError.swift */,
 				BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */,
 				180C6EA71EB67B1800407C96 /* IconUtil.swift */,
+				180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,
 				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,
 				865BD29D1EB67D36002A5C78 /* ColorConstants.swift in Sources */,
+				180C6EB41EB7B8EA00407C96 /* NSObject+Utilities.swift in Sources */,
 				862DDD411EB5E9280057C43C /* GeneralExtensions.swift in Sources */,
 				865BD28A1EB5FE9A002A5C78 /* StringConstants.swift in Sources */,
 				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,

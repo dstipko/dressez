@@ -26,12 +26,16 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var labelWind: UILabel!
     @IBOutlet weak var labelPressure: UILabel!
     
+    @IBOutlet weak var networkErrorTextView: UITextView!
+    
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.checkNetworkStatus()
         
         closetItems = (presenter.persistanceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
         
@@ -75,7 +79,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         let object = closetItems[indexPath.item] as ClothingItem
         let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         
-        presenter.addRoundedBorders(toCell : cell)
+        presenter.addRoundedBorders(toView : cell)
         cell.imageView.image = object.image
         
         return cell
