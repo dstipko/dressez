@@ -18,29 +18,51 @@ class HomeScreenPresenter: BasePresenter {
     var navigationService: NavigationService!
     var persistanceService: PersistanceService!
     var networking: NetworkingService!
+    
+    private var outfitService = OutfitService()
+    private var weatherInfo: WeatherResponse?
+    var outfit: [ClothingItem]?
+
     weak var baseViewController: BaseViewController!
     weak var viewController: HomeScreenController! {
         return baseViewController as! HomeScreenController
     }
     
-    required init() { }
+    required init() {}
     
     func setup() {
         viewController.navigationItem.title = "Dressez"
     }
     
-    func updateView(with : WeatherResponse) {
-        viewController.imageWeatherIcon.image = IconUtil.getAppropriateWeatherIcon(weatherID: with.id!)
+    func updateView(with weatherResponse: WeatherResponse) {
+        weatherInfo = weatherResponse
         
-        viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
-        viewController.labelWeatherDesc.text = with.weatherDesc
-        viewController.labelCityName.text = with.location
+        updateWeatherPreview()
+        updateOutfitPreview()
+    }
+    
+    private func updateWeatherPreview() {
+        guard let weatherInfo = self.weatherInfo else { return }
+        
+        viewController.imageWeatherIcon.image = weatherInfo.weatherCondition?.getIcon()
+        
+        viewController.labelTemperature.text = String(describing: weatherInfo.tempCurrent!) + "°C"
+        viewController.labelWeatherDesc.text = weatherInfo.weatherDesc
+        viewController.labelCityName.text = weatherInfo.location
         viewController.labelTemperatureHiLo.text =
-            "H " + String(describing: with.tempMax!) + "°" +
-            " L " + String(describing: with.tempMin!) + "°"
-        viewController.labelHumidity.text = "Humidity: " + String(describing: with.tempCurrent!) + "%"
-        viewController.labelWind.text = "Wind: " + String(describing: with.windSpeed!) + " km/h"
-        viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
+            "H " + String(describing: weatherInfo.tempMax!) + "°" +
+            " L " + String(describing: weatherInfo.tempMin!) + "°"
+        viewController.labelHumidity.text = "Humidity: " + String(describing: weatherInfo.tempCurrent!) + "%"
+        viewController.labelWind.text = "Wind: " + String(describing: weatherInfo.windSpeed!) + " km/h"
+        viewController.labelPressure.text = "Pressure: " + String(describing: weatherInfo.pressure!) + " hPa"
+    }
+    
+    private func updateOutfitPreview() {
+        guard let weatherInfo = self.weatherInfo else { return }
+        
+        outfit = outfitService.generateOutfit(for: weatherInfo)
+        
+        viewController.outfitCollectionView.reloadData()
     }
     
     func assignBackground() {

@@ -16,8 +16,6 @@ enum ItemType : Int {
     case tshirt
     case hoodie
     case sweater
-    case dress
-    case undershirt
     case lightJacket
     case heavyJacket
     case coat
@@ -26,7 +24,7 @@ enum ItemType : Int {
     case boots
 
     static let allValues = [shorts, trousers, tracksuit, shirt, tshirt, hoodie,
-                            sweater, dress, undershirt, lightJacket, heavyJacket, coat,
+                            sweater, lightJacket, heavyJacket, coat,
                             canvasShoes, leatherShoes, boots]
     
     func description() -> String {
@@ -45,10 +43,6 @@ enum ItemType : Int {
             return "Hoodie"
         case .sweater:
             return "Sweater"
-        case .dress:
-            return "Dress"
-        case .undershirt:
-            return "Undershirt"
         case .lightJacket:
             return "Light jacket"
         case .heavyJacket:
@@ -61,6 +55,19 @@ enum ItemType : Int {
             return "Leather shoes"
         case .boots:
             return "Boots"
+        }
+    }
+    
+    func getCategory() -> ItemCategory {
+        switch self {
+        case .shorts, .trousers, .tracksuit:
+            return .legs
+        case .shirt, .tshirt, .hoodie, .sweater:
+            return .torsoInner
+        case .lightJacket, .heavyJacket, .coat:
+            return .torsoOuter
+        case .canvasShoes, .leatherShoes, .boots:
+            return .feet
         }
     }
 }

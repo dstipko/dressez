@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
 		180C6EB41EB7B8EA00407C96 /* NSObject+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
@@ -38,16 +37,18 @@
 		86E626551EB4E222003D2E51 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626541EB4E222003D2E51 /* RequestError.swift */; };
 		86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626571EB4E873003D2E51 /* BaseViewController.swift */; };
 		86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E626581EB4E873003D2E51 /* BasePresenter.swift */; };
+		BC0E74871EB6AF27002509BB /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0E74861EB6AF27002509BB /* ItemCategory.swift */; };
+		BC0E74891EB6B604002509BB /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0E74881EB6B604002509BB /* WeatherCondition.swift */; };
 		BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6279031EB50CD500F39BB9 /* ClothingItem.swift */; };
 		BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6279041EB50CD500F39BB9 /* ImageService.swift */; };
 		BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC6279071EB50CD500F39BB9 /* Model.xcdatamodeld */; };
 		BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */; };
 		BC94653C1EB678CD007C719A /* NumberConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94653B1EB678CD007C719A /* NumberConstants.swift */; };
+		BCA25B131EB6ACC300037798 /* OutfitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA25B121EB6ACC300037798 /* OutfitService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
-		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
 		180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utilities.swift"; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
@@ -79,11 +80,14 @@
 		86E626541EB4E222003D2E51 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		86E626571EB4E873003D2E51 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86E626581EB4E873003D2E51 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		BC0E74861EB6AF27002509BB /* ItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
+		BC0E74881EB6B604002509BB /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 		BC6279031EB50CD500F39BB9 /* ClothingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		BC6279041EB50CD500F39BB9 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		BC6279081EB50CD500F39BB9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Utilities.swift"; sourceTree = "<group>"; };
 		BC94653B1EB678CD007C719A /* NumberConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberConstants.swift; sourceTree = "<group>"; };
+		BCA25B121EB6ACC300037798 /* OutfitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitService.swift; sourceTree = "<group>"; };
 		D5A26A94F571583135240004 /* Pods_Dressez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dressez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B37116CE981F6C8EB4C4C4 /* Pods-Dressez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,7 @@
 		86DFC99C1EB3CA3C00A9D4D0 /* Dressez */ = {
 			isa = PBXGroup;
 			children = (
+				BC0E74831EB6AED1002509BB /* Enums */,
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
 				BC94653D1EB67FD0007C719A /* Constants */,
@@ -222,6 +227,17 @@
 			name = BaseClasses;
 			sourceTree = "<group>";
 		};
+		BC0E74831EB6AED1002509BB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				862DDD421EB5EAB80057C43C /* ItemColor.swift */,
+				862DDD431EB5EAB80057C43C /* ItemType.swift */,
+				BC0E74861EB6AF27002509BB /* ItemCategory.swift */,
+				BC0E74881EB6B604002509BB /* WeatherCondition.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
 		BC1C134A1EB4BD1B008880B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +245,7 @@
 				86DFC9BA1EB3D6B600A9D4D0 /* PersistanceService.swift */,
 				86DFC9BC1EB3D8E700A9D4D0 /* NetworkingService.swift */,
 				86E6263D1EB4CC91003D2E51 /* NavigationService.swift */,
+				BCA25B121EB6ACC300037798 /* OutfitService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -237,8 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				BC6279031EB50CD500F39BB9 /* ClothingItem.swift */,
-				862DDD421EB5EAB80057C43C /* ItemColor.swift */,
-				862DDD431EB5EAB80057C43C /* ItemType.swift */,
 				BC6279071EB50CD500F39BB9 /* Model.xcdatamodeld */,
 			);
 			name = Model;
@@ -381,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -399,18 +414,20 @@
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
 				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */,
+				BC0E74891EB6B604002509BB /* WeatherCondition.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
 				86DFC9BD1EB3D8E700A9D4D0 /* NetworkingService.swift in Sources */,
 				865BD2951EB63EB0002A5C78 /* ClosetScreenController.swift in Sources */,
+				BC0E74871EB6AF27002509BB /* ItemCategory.swift in Sources */,
 				BC94653C1EB678CD007C719A /* NumberConstants.swift in Sources */,
 				86E626421EB4CD60003D2E51 /* NavigationController.swift in Sources */,
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
-				180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
 				862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */,
 				865BD2991EB64093002A5C78 /* ImageCollectionViewCell.swift in Sources */,
 				BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */,
+				BCA25B131EB6ACC300037798 /* OutfitService.swift in Sources */,
 				862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,
