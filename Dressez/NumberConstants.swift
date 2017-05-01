@@ -13,4 +13,6 @@ struct NumberConstants {
     
     static var cornerRadius: CGFloat = 4
     static var borderWidth: CGFloat = 1
+    static let labelTopBottomPadding: CGFloat = 0
+    static let labelLeftRightPadding: CGFloat = 10
 }
