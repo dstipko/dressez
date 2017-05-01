@@ -29,11 +29,13 @@ class OutfitService {
         
         let weatherAppropriateItems = persistanceService.fetchClothingItems(itemTypes: itemTypes)
         
-        var colorMatchingItems = [[ClothingItem]]()
-        var outfit = [ClothingItem]()
+        var colorMatchingItems: [ClothingItem]
+        var outfit: [ClothingItem]
         
-        for (index, colorPalette) in ItemColor.complementarySets.shuffled().enumerated() {
-            colorMatchingItems[index] = weatherAppropriateItems.filter() {
+        for colorPalette in ItemColor.complementarySets.shuffled() {
+            outfit = [ClothingItem]()
+            
+            colorMatchingItems = weatherAppropriateItems.filter {
                 if ItemColor.neutralValues.contains($0.color) || colorPalette.contains($0.color) {
                     return true
                 } else {
@@ -41,15 +43,25 @@ class OutfitService {
                 }
             }
             
-            colorMatchingItems[index].shuffle()
+            colorMatchingItems.shuffle()
             
             for type in ItemType.allValues {
-                if let distinctItem = (colorMatchingItems[index].filter { return $0.type == type }).first {
+                if let distinctItem = (colorMatchingItems.filter { return $0.type == type }).first {
+                    print(distinctItem.name)
                     outfit.append(distinctItem)
                 }
             }
             
             if isValidOutfit(outfit: outfit) {
+                //TODO: remove this block
+                for (index, item) in outfit.enumerated() {
+                    print(index)
+                    print(item.name)
+                    print(item.color.description())
+                    print(item.type.description())
+                    print(item.category.description())
+                }
+                //
                 return outfit
             }
         }

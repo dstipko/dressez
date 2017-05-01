@@ -21,6 +21,7 @@ class HomeScreenPresenter: BasePresenter {
     
     private var outfitService = OutfitService()
     private var weatherInfo: WeatherResponse?
+    var outfit: [ClothingItem]?
 
     weak var baseViewController: BaseViewController!
     weak var viewController: HomeScreenController! {
@@ -63,8 +64,9 @@ class HomeScreenPresenter: BasePresenter {
             return
         }
         
-        //TODO: save outfit
-        outfitService.generateOutfitFor(weatherInfo: weatherInfo)
+        outfit = outfitService.generateOutfitFor(weatherInfo: weatherInfo)
+        
+        viewController.outfitCollectionView.reloadData()
     }
     
     func assignBackground() {

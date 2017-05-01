@@ -13,7 +13,6 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
 
     var bag : DisposeBag = DisposeBag()
     private let reuseIdentifier = "collectionCell"
-    private var closetItems : Array<ClothingItem> = []
 
     @IBOutlet weak var outfitCollectionView: UICollectionView!
     
@@ -32,8 +31,6 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        closetItems = (presenter.persistanceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
         
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self
@@ -68,15 +65,21 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return closetItems.count
+        guard let outfit = presenter.outfit else {
+            return 0
+        }
+        
+        return outfit.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let object = closetItems[indexPath.item] as ClothingItem
         let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
-        
         presenter.addRoundedBorders(toCell : cell)
-        cell.imageView.image = object.image
+        
+        if let outfit = presenter.outfit {
+            let object = outfit[indexPath.item] as ClothingItem
+            cell.imageView.image = object.image
+        }
         
         return cell
     }
