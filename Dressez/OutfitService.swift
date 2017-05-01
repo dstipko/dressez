@@ -20,11 +20,7 @@ class OutfitService {
         let appropriateTemperatureItemTypes = getItemTypesFor(temperature: weatherInfo.tempCurrent!)
         let appropriateConditionItemTypes = getItemTypesFor(weatherCondition: weatherInfo.weatherCondition!)
         let itemTypes = appropriateTemperatureItemTypes.filter {
-            if appropriateConditionItemTypes.contains($0) {
-                return true
-            } else {
-                return false
-            }
+            return appropriateConditionItemTypes.contains($0)
         }
         
         let weatherAppropriateItems = persistanceService.fetchClothingItems(itemTypes: itemTypes)
@@ -36,11 +32,7 @@ class OutfitService {
             outfit = [ClothingItem]()
             
             colorMatchingItems = weatherAppropriateItems.filter {
-                if ItemColor.neutralValues.contains($0.color) || colorPalette.contains($0.color) {
-                    return true
-                } else {
-                    return false
-                }
+                return ItemColor.neutralValues.contains($0.color) || colorPalette.contains($0.color)
             }
             
             colorMatchingItems.shuffle()
@@ -53,15 +45,6 @@ class OutfitService {
             }
             
             if isValidOutfit(outfit: outfit) {
-                //TODO: remove this block
-                for (index, item) in outfit.enumerated() {
-                    print(index)
-                    print(item.name)
-                    print(item.color.description())
-                    print(item.type.description())
-                    print(item.category.description())
-                }
-                //
                 return outfit
             }
         }

@@ -65,7 +65,7 @@ enum ItemType : Int {
         case .shirt, .tshirt, .hoodie, .sweater:
             return .torsoInner
         case .lightJacket, .heavyJacket, .coat:
-            return .torsoOutter
+            return .torsoOuter
         case .canvasShoes, .leatherShoes, .boots:
             return .feet
         }

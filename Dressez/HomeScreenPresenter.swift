@@ -60,9 +60,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     private func updateOutfitPreview() {
-        guard let weatherInfo = self.weatherInfo else {
-            return
-        }
+        guard let weatherInfo = self.weatherInfo else { return }
         
         outfit = outfitService.generateOutfitFor(weatherInfo: weatherInfo)
         

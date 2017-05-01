@@ -10,19 +10,19 @@ import Foundation
 
 enum ItemCategory : Int {
     case torsoInner
-    case torsoOutter
+    case torsoOuter
     case legs
     case feet
     
-    static let allValues = [torsoInner, torsoOutter, legs, feet]
+    static let allValues = [torsoInner, torsoOuter, legs, feet]
     static let crucialCategories = [torsoInner, legs, feet]
     
     func description() -> String {
         switch self {
         case .torsoInner:
             return "Torso"
-        case .torsoOutter:
-            return "Torso outter"
+        case .torsoOuter:
+            return "Torso outer"
         case .legs:
             return "Legs"
         case .feet:
