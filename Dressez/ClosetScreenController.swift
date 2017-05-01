@@ -133,6 +133,7 @@ extension ClosetScreenController: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         collectionView.reloadData()
+        items = resultController.fetchedObjects as! [ClothingItem]
     }
 }
 

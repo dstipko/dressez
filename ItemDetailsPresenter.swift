@@ -21,7 +21,7 @@ class ItemDetailsPresenter: BasePresenter {
     
     func setup() {
         guard let item = viewController.item else { return }
-        viewController.itemNameLabel.text = item.name
+        viewController.itemNameLabel.text = item.name.uppercased()
         viewController.itemTypeLabel.text = item.type.description()
         viewController.itemColorLabel.text = item.color.description()
         viewController.imageView.image = item.image

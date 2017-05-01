@@ -16,6 +16,7 @@
 		862D3B161EB6A28800A2D3C8 /* ItemDetailsScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */; };
 		862D3B191EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */; };
 		862D3B1B1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */; };
+		862D3B1D1EB7AFB900A2D3C8 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B1C1EB7AFB900A2D3C8 /* PaddedLabel.swift */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
 		862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */; };
@@ -60,6 +61,7 @@
 		862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsScreenController.xib; sourceTree = "<group>"; };
 		862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
 		862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPagePresenter.swift; sourceTree = "<group>"; };
+		862D3B1C1EB7AFB900A2D3C8 /* PaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */,
 				862D3B131EB6A28800A2D3C8 /* ItemDetailsScreenController.swift */,
 				862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */,
+				862D3B1C1EB7AFB900A2D3C8 /* PaddedLabel.swift */,
 				862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */,
 				862D3B101EB6A15000A2D3C8 /* ItemDetailsPageController.xib */,
 			);
@@ -439,6 +442,7 @@
 				862D3B151EB6A28800A2D3C8 /* ItemDetailsScreenController.swift in Sources */,
 				862DDD411EB5E9280057C43C /* GeneralExtensions.swift in Sources */,
 				865BD28A1EB5FE9A002A5C78 /* StringConstants.swift in Sources */,
+				862D3B1D1EB7AFB900A2D3C8 /* PaddedLabel.swift in Sources */,
 				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,
 				86E626551EB4E222003D2E51 /* RequestError.swift in Sources */,
 				862D3B191EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift in Sources */,
