@@ -98,15 +98,18 @@ class HomeScreenPresenter: BasePresenter {
     
     func checkNetworkStatus(){
         if (viewController.currentReachabilityStatus == .notReachable){
-            let alert = UIAlertController(title: "Network unavailible", message: "Please check your internet connection.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default) { action in
-                // perhaps use action.title here
-            })
+            let alert = AlertUtil.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
+                { action in
+                    self.viewController.networkErrorTextView.isHidden = false
+                    self.addRoundedBorders(toView: self.viewController.networkErrorTextView)
+                }
+            )
             
+            viewController.weatherLabels.forEach({$0.isHidden = true})
             viewController.present(alert, animated: true)
-            
-//            viewController.networkErrorTextView.isHidden = false
-//            addRoundedBorders(toView: viewController.networkErrorTextView )
+        } else {
+            viewController.weatherLabels.forEach({$0.isHidden = false})
+            self.viewController.networkErrorTextView.isHidden = true
         }
     }
     

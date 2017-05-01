@@ -21,5 +21,9 @@ struct StringConstants {
     static var photoGallery = "Photo gallery"
     static var camera = "Camera"
     static var noCamera = "Camera not available"
+    
+    //network
+    static var networkUnavailible = "Network unavailible"
+    static var networkUnavailibleMessage = "Please check your internet connection."
 }
 

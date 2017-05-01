@@ -14,6 +14,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     var bag : DisposeBag = DisposeBag()
     private let reuseIdentifier = "collectionCell"
 
+    @IBOutlet var weatherLabels: [UIView]!
     @IBOutlet weak var outfitCollectionView: UICollectionView!
     
     @IBOutlet weak var imageWeatherIcon: UIImageView!
@@ -33,14 +34,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-<<<<<<< HEAD
-        presenter.checkNetworkStatus()
-        
-        closetItems = (presenter.persistanceService.fetchAllItems().fetchedObjects as! Array<ClothingItem>)
-        
-=======
->>>>>>> master
+
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self
         
@@ -50,12 +44,15 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         presenter.setup()
         
         fetchWeather()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidLayoutSubviews() {
         presenter.assignBackground()
         presenter.configureCollectionViewLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.checkNetworkStatus()
     }
     
     func fetchWeather(){
@@ -83,18 +80,13 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
-<<<<<<< HEAD
-        
-        presenter.addRoundedBorders(toView : cell)
-        cell.imageView.image = object.image
-=======
-        presenter.addRoundedBorders(toCell : cell)
+
+        presenter.addRoundedBorders(toView: cell)
         
         if let outfit = presenter.outfit {
             let object = outfit[indexPath.item] as ClothingItem
             cell.imageView.image = object.image
         }
->>>>>>> master
         
         return cell
     }
