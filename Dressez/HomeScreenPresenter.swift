@@ -27,7 +27,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     func updateView(with : WeatherResponse) {
-        viewController.imageWeatherIcon.image = IconUtil.getAppropriateWeatherIcon(weatherID: with.id!)
+        viewController.imageWeatherIcon.image = with.weatherCondition?.getIcon()
         
         viewController.labelTemperature.text = String(describing: with.tempCurrent!) + "°C"
         viewController.labelWeatherDesc.text = with.weatherDesc
@@ -38,6 +38,37 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelHumidity.text = "Humidity: " + String(describing: with.tempCurrent!) + "%"
         viewController.labelWind.text = "Wind: " + String(describing: with.windSpeed!) + " km/h"
         viewController.labelPressure.text = "Pressure: " + String(describing: with.pressure!) + " hPa"
+        
+        //TODO: REMOVE CODE BELOW
+        guard let temp = with.tempCurrent else {
+            return
+        }
+        
+        var enumArray: [ItemType]
+        
+        switch temp {
+        case -100..<5:
+            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .heavyJacket, .coat, .leatherShoes, .boots]
+        case 5..<15:
+            enumArray = [.trousers, .tracksuit, .shirt, .hoodie, .sweater, .lightJacket, .heavyJacket, .coat, .canvasShoes, .leatherShoes, .boots]
+        case 15..<25:
+            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .coat, .canvasShoes, .leatherShoes]
+        case 25..<100:
+            enumArray = [.shorts, .trousers, .tracksuit, .shirt, .tshirt, .hoodie, .sweater, .lightJacket, .canvasShoes, .leatherShoes]
+        default:
+            enumArray = []
+        }
+        
+        let temperatureItemTypes = enumArray.map({
+            (enumValue: ItemType) -> Int in
+            return enumValue.rawValue
+        })
+        
+        let items = persistanceService.fetchClothingItems(weatherConditionItemTypes: (with.weatherCondition?.getAppropriateItemTypeIds())!, temperatureItemTypes: temperatureItemTypes)
+        for item in items {
+            print(item.name)
+        }
+        print(with.weatherCondition?.description() ?? "no value")
     }
     
     func assignBackground() {
@@ -67,6 +98,4 @@ class HomeScreenPresenter: BasePresenter {
     func fetchWeather() -> Observable<WeatherResponse> {
         return networking.fetchWeather()
     }
-    
-    
 }

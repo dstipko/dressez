@@ -10,8 +10,13 @@ import Foundation
 import ObjectMapper
 
 class WeatherResponse: Mappable {
- 
-    var id: Int?
+    
+    var weatherCondition: WeatherCondition?
+    var id: Int? {
+        didSet {
+            setWeatherCondition()
+        }
+    }
     var weatherName: String?
     var weatherDesc: String?
     var city: String?
@@ -40,6 +45,40 @@ class WeatherResponse: Mappable {
         humidity <- map["main.humidity"]
         windSpeed <- map["wind.speed"]
     
+    }
+    
+    private func setWeatherCondition() {
+        guard let id = self.id else {
+            self.weatherCondition = .sun
+            return
+        }
+        
+        if (id > WeatherCodeConstants.MinimumApiWeatherCode && id < WeatherCodeConstants.MaximumApiWeatherCode){
+            switch(id){
+            case WeatherCodeConstants.Thunderstorm..<WeatherCodeConstants.Drizzle:
+                self.weatherCondition = .storm
+            case WeatherCodeConstants.Drizzle..<WeatherCodeConstants.Rain:
+                self.weatherCondition = .drizzle
+            case WeatherCodeConstants.Rain..<WeatherCodeConstants.Snow:
+                self.weatherCondition = .rain
+            case WeatherCodeConstants.Snow..<WeatherCodeConstants.Atmosphere:
+                self.weatherCondition = .snow
+            case WeatherCodeConstants.Atmosphere..<WeatherCodeConstants.Clear:
+                self.weatherCondition = .mist
+            case WeatherCodeConstants.Clear:
+                self.weatherCondition = .sun
+            case WeatherCodeConstants.Clear..<WeatherCodeConstants.Clouds:
+                self.weatherCondition = .cloud
+            case WeatherCodeConstants.Extreme..<WeatherCodeConstants.Additional:
+                self.weatherCondition = .storm
+            case WeatherCodeConstants.Additional..<WeatherCodeConstants.MaximumApiWeatherCode:
+                self.weatherCondition = .mist
+            default:
+                self.weatherCondition = .sun
+            }
+        } else {
+            self.weatherCondition = .sun
+        }
     }
     
     var location: String? {

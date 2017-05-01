@@ -110,5 +110,18 @@ extension PersistanceService {
         try! resultController.performFetch()
         return resultController
     }
-
+    
+    func fetchClothingItems(weatherConditionItemTypes: [Int], temperatureItemTypes: [Int]) -> [ClothingItem] {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ClothingItem")
+        let weatherConditionPredicate = NSPredicate(format: "typeId IN %@", weatherConditionItemTypes)
+        let temperaturePredicate = NSPredicate(format: "typeId IN %@", temperatureItemTypes)
+        let andPredicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: [weatherConditionPredicate, temperaturePredicate])
+        request.predicate = andPredicate
+        
+        do {
+            return try context.fetch(request) as! [ClothingItem]
+        } catch {
+            fatalError("Failed to fetch clothing items: \(error)")
+        }
+    }
 }

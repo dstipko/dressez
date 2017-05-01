@@ -9,38 +9,42 @@
 import Foundation
 
 enum ItemColor : Int {
-    case blue
     case white
+    case grey
+    case black
     case red
-    case pink
-    case orange
-    case purple
     case green
-    case gold
-    case gray
+    case blue
+    case orange
+    case yellow
+    case purple
     
-    static let allValues = [blue, red, white, pink, orange, purple, green, gold, gray]
+    static let allValues = [white, grey, black, red, green, blue, orange, yellow, purple]
+    static let neutralValues = [white, grey, black]
+    static let complementarySets = [[red, green],
+                                    [blue, orange],
+                                    [yellow, purple]]
 
     func description() -> String {
         switch self {
-        case .blue:
-            return "Blue"
         case .white:
             return "White"
+        case .grey:
+            return "Grey"
+        case .black:
+            return "Black"
         case .red:
             return "Red"
-        case .pink:
-            return "Pink"
-        case .orange:
-            return "Orange"
-        case .purple:
-            return "Purple"
         case .green:
             return "Green"
-        case .gold:
-            return "Gold"
-        case .gray:
-            return "Gray"                                            
+        case .blue:
+            return "Blue"
+        case .orange:
+            return "Orange"
+        case .yellow:
+            return "Yellow"
+        case .purple:
+            return "Purple"
         }
     }
 }

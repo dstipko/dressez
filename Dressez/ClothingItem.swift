@@ -14,6 +14,7 @@ class ClothingItem : NSManagedObject{
     
     @NSManaged var name : String
     @NSManaged private var typeId : Int
+    @NSManaged private var categoryId : Int
     @NSManaged private var colorId : Int
     @NSManaged var imagePath : String
     
@@ -38,6 +39,16 @@ class ClothingItem : NSManagedObject{
         }
         set {
             self.typeId = newValue.rawValue
+            self.category = ItemType(rawValue: self.typeId)!.getCategory()
+        }
+    }
+    
+    var category: ItemCategory {
+        get {
+            return ItemCategory(rawValue: self.categoryId)!
+        }
+        set {
+            self.categoryId = newValue.rawValue
         }
     }
 
