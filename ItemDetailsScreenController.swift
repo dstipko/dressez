@@ -1,5 +1,5 @@
 //
-//  ScrollImageViewController.swift
+//  ItemDetailsScreenController.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 5/1/17.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class ScrollImageViewController: BaseViewController, UIScrollViewDelegate {
+class ItemDetailsScreenController: BaseViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
 
@@ -18,18 +17,12 @@ class ScrollImageViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet weak var itemTypeLabel: UILabel!
     var item: ClothingItem?
     
-    var presenter: ScrollImagePresenter! {
-        return basePresenter as! ScrollImagePresenter
+    var presenter: ItemDetailsPresenter! {
+        return basePresenter as! ItemDetailsPresenter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.delegate = self
         presenter.setup()
     }
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return imageView
-    }
-
 }

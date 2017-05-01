@@ -10,12 +10,12 @@
 		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
-		862D3B111EB6A15000A2D3C8 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */; };
-		862D3B121EB6A15000A2D3C8 /* ImageGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */; };
-		862D3B151EB6A28800A2D3C8 /* ScrollImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */; };
-		862D3B161EB6A28800A2D3C8 /* ScrollImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */; };
-		862D3B191EB6B9C900A2D3C8 /* ScrollImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */; };
-		862D3B1B1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */; };
+		862D3B111EB6A15000A2D3C8 /* ItemDetailsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B0F1EB6A15000A2D3C8 /* ItemDetailsPageController.swift */; };
+		862D3B121EB6A15000A2D3C8 /* ItemDetailsPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B101EB6A15000A2D3C8 /* ItemDetailsPageController.xib */; };
+		862D3B151EB6A28800A2D3C8 /* ItemDetailsScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B131EB6A28800A2D3C8 /* ItemDetailsScreenController.swift */; };
+		862D3B161EB6A28800A2D3C8 /* ItemDetailsScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */; };
+		862D3B191EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */; };
+		862D3B1B1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
 		862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */; };
@@ -54,12 +54,12 @@
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
-		862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
-		862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryViewController.xib; sourceTree = "<group>"; };
-		862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImageViewController.swift; sourceTree = "<group>"; };
-		862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollImageViewController.xib; sourceTree = "<group>"; };
-		862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollImagePresenter.swift; sourceTree = "<group>"; };
-		862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryPresenter.swift; sourceTree = "<group>"; };
+		862D3B0F1EB6A15000A2D3C8 /* ItemDetailsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPageController.swift; sourceTree = "<group>"; };
+		862D3B101EB6A15000A2D3C8 /* ItemDetailsPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsPageController.xib; sourceTree = "<group>"; };
+		862D3B131EB6A28800A2D3C8 /* ItemDetailsScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsScreenController.swift; sourceTree = "<group>"; };
+		862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsScreenController.xib; sourceTree = "<group>"; };
+		862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
+		862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPagePresenter.swift; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -127,17 +127,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		862D3B171EB6A80B00A2D3C8 /* SlidingGallery */ = {
+		862D3B171EB6A80B00A2D3C8 /* ItemDetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				862D3B0F1EB6A15000A2D3C8 /* ImageGalleryViewController.swift */,
-				862D3B1A1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift */,
-				862D3B131EB6A28800A2D3C8 /* ScrollImageViewController.swift */,
-				862D3B181EB6B9C900A2D3C8 /* ScrollImagePresenter.swift */,
-				862D3B141EB6A28800A2D3C8 /* ScrollImageViewController.xib */,
-				862D3B101EB6A15000A2D3C8 /* ImageGalleryViewController.xib */,
+				862D3B0F1EB6A15000A2D3C8 /* ItemDetailsPageController.swift */,
+				862D3B1A1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift */,
+				862D3B131EB6A28800A2D3C8 /* ItemDetailsScreenController.swift */,
+				862D3B181EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift */,
+				862D3B141EB6A28800A2D3C8 /* ItemDetailsScreenController.xib */,
+				862D3B101EB6A15000A2D3C8 /* ItemDetailsPageController.xib */,
 			);
-			name = SlidingGallery;
+			name = ItemDetailsScreen;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -192,7 +192,7 @@
 				86DFC9B11EB3CC9600A9D4D0 /* HomeScreen */,
 				86E6264C1EB4D029003D2E51 /* ClosetScreen */,
 				862DDD3B1EB51D620057C43C /* NewClothingItemScreen */,
-				862D3B171EB6A80B00A2D3C8 /* SlidingGallery */,
+				862D3B171EB6A80B00A2D3C8 /* ItemDetailsScreen */,
 				86E626431EB4CD84003D2E51 /* TopControllers */,
 				862DDD401EB5E9280057C43C /* GeneralExtensions.swift */,
 				BC6279101EB50CDA00F39BB9 /* Model */,
@@ -344,9 +344,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				862D3B161EB6A28800A2D3C8 /* ScrollImageViewController.xib in Resources */,
+				862D3B161EB6A28800A2D3C8 /* ItemDetailsScreenController.xib in Resources */,
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
-				862D3B121EB6A15000A2D3C8 /* ImageGalleryViewController.xib in Resources */,
+				862D3B121EB6A15000A2D3C8 /* ItemDetailsPageController.xib in Resources */,
 				865BD2961EB63EB0002A5C78 /* ClosetScreenController.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 				862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */,
@@ -414,7 +414,7 @@
 				180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */,
 				86E6263A1EB3E401003D2E51 /* HomeScreenController.swift in Sources */,
 				862DDD441EB5EAB80057C43C /* ItemColor.swift in Sources */,
-				862D3B1B1EB6BF2A00A2D3C8 /* ImageGalleryPresenter.swift in Sources */,
+				862D3B1B1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
 				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
 				BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */,
@@ -426,7 +426,7 @@
 				BC62790E1EB50CD500F39BB9 /* Model.xcdatamodeld in Sources */,
 				180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */,
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
-				862D3B111EB6A15000A2D3C8 /* ImageGalleryViewController.swift in Sources */,
+				862D3B111EB6A15000A2D3C8 /* ItemDetailsPageController.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
 				862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */,
 				865BD2991EB64093002A5C78 /* CollectionViewCell.swift in Sources */,
@@ -436,12 +436,12 @@
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,
 				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,
 				865BD29D1EB67D36002A5C78 /* ColorConstants.swift in Sources */,
-				862D3B151EB6A28800A2D3C8 /* ScrollImageViewController.swift in Sources */,
+				862D3B151EB6A28800A2D3C8 /* ItemDetailsScreenController.swift in Sources */,
 				862DDD411EB5E9280057C43C /* GeneralExtensions.swift in Sources */,
 				865BD28A1EB5FE9A002A5C78 /* StringConstants.swift in Sources */,
 				86E6265A1EB4E873003D2E51 /* BaseViewController.swift in Sources */,
 				86E626551EB4E222003D2E51 /* RequestError.swift in Sources */,
-				862D3B191EB6B9C900A2D3C8 /* ScrollImagePresenter.swift in Sources */,
+				862D3B191EB6B9C900A2D3C8 /* ItemDetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

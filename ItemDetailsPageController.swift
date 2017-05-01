@@ -1,5 +1,5 @@
 //
-//  ImageGalleryViewController.swift
+//  ItemDetailsPageController.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 5/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageGalleryViewController: BaseViewController, UIPageViewControllerDataSource {
+class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSource {
 
     @IBOutlet weak var containerView: UIView!
     
@@ -18,8 +18,8 @@ class ImageGalleryViewController: BaseViewController, UIPageViewControllerDataSo
     var items: [ClothingItem] = []
     var currentIndex: Int?
     
-    var presenter: ImageGalleryPresenter! {
-        return basePresenter as! ImageGalleryPresenter
+    var presenter: ItemDetailsPagePresenter! {
+        return basePresenter as! ItemDetailsPagePresenter
     }
 
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ class ImageGalleryViewController: BaseViewController, UIPageViewControllerDataSo
         guard items.count > 0 else { return }
 
         for item in items {
-            let scrollImageVC = presenter.navigationService.controllerFactory(PresenterType: ScrollImagePresenter.self) as ScrollImageViewController
+            let scrollImageVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPresenter.self) as ItemDetailsScreenController
             scrollImageVC.item = item
             pageControllers.append(scrollImageVC)
         }

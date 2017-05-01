@@ -117,7 +117,7 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let galleryVC = presenter.navigationService.controllerFactory(PresenterType: ImageGalleryPresenter.self) as ImageGalleryViewController
+        let galleryVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
         galleryVC.modalTransitionStyle = .crossDissolve
         galleryVC.items = items
         galleryVC.currentIndex = indexPath.item

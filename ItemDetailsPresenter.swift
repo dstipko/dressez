@@ -1,5 +1,5 @@
 //
-//  ScrollImagePresenter.swift
+//  ItemDetailsPresenter.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 5/1/17.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ScrollImagePresenter: BasePresenter {
+class ItemDetailsPresenter: BasePresenter {
     
     var navigationService: NavigationService!
     var persistanceService: PersistanceService!
     var networking: NetworkingService!
     weak var baseViewController: BaseViewController!
-    weak var viewController: ScrollImageViewController! {
-        return baseViewController as! ScrollImageViewController
+    weak var viewController: ItemDetailsScreenController! {
+        return baseViewController as! ItemDetailsScreenController
     }
     required init() {}
     
