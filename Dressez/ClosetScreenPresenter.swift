@@ -29,7 +29,7 @@ class ClosetScreenPresenter: BasePresenter {
         viewController.navigationItem.title = "Closet"
     }
 
-    func configureCollectionViewCell(cell: CollectionViewCell, image: UIImage) -> CollectionViewCell {
+    func configureImageCollectionViewCell(cell: ImageCollectionViewCell, image: UIImage) -> ImageCollectionViewCell {
         cell.imageView.image = image
         return cell
     }

@@ -19,7 +19,7 @@ class ClothingItem : NSManagedObject{
     
     private let imageService = ImageService()
     
-    private(set) var image: UIImage? {
+    var image: UIImage? {
         get {
             return imageService.load(fileName: imagePath)
         }
