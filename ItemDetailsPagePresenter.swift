@@ -17,6 +17,6 @@ class ItemDetailsPagePresenter: BasePresenter {
     weak var viewController: ItemDetailsPageController! {
         return baseViewController as! ItemDetailsPageController
     }
+    
     required init() {}
-
 }

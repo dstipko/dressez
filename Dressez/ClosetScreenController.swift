@@ -117,13 +117,12 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let galleryVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
-        galleryVC.modalTransitionStyle = .crossDissolve
-        galleryVC.items = items
-        galleryVC.currentIndex = indexPath.item
+        let detailsVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
+        detailsVC.modalTransitionStyle = .crossDissolve
+        detailsVC.items = items
+        detailsVC.currentIndex = indexPath.item
         
-        let navController = NavigationController(rootViewController: galleryVC)
-        navController.navigationBar.isTranslucent = true
+        let navController = NavigationController(rootViewController: detailsVC)
         present(navController, animated: true, completion: nil)
 
     }

@@ -41,12 +41,10 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
         pageController.didMove(toParentViewController: self)
     }
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         pageController.view.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     }
-    
 
     func closeGallery(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
