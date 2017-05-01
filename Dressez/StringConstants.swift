@@ -24,5 +24,6 @@ struct StringConstants {
     static var homeScreenOutfitLabel = "Outfit for today:"
     static var homeScreenShuffleButton = "Shuffle"
     static var newClothingItemScreenSaveButton = "Save"
+    static var homeScreenOutfitWarningLabel = "Looks like you don't have any matching clothes.\nTime for shopping!"
 }
 
