@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,12 +15,14 @@
                 <outlet property="imageWeatherIcon" destination="zPF-ah-kg8" id="ogO-L4-apn"/>
                 <outlet property="labelCityName" destination="Sh6-fa-uHf" id="EpH-bQ-afg"/>
                 <outlet property="labelHumidity" destination="NYj-x4-yf0" id="5Pa-Ic-M8R"/>
+                <outlet property="labelOutfit" destination="T4S-cN-hER" id="rGp-hB-tSL"/>
                 <outlet property="labelPressure" destination="mxG-eo-BSC" id="s4B-cz-Z73"/>
                 <outlet property="labelTemperature" destination="VTy-aL-UcR" id="wLE-4Y-8IA"/>
                 <outlet property="labelTemperatureHiLo" destination="Q1Y-DU-N3B" id="0Fo-fR-Yj3"/>
                 <outlet property="labelWeatherDesc" destination="uuH-Nx-Xu7" id="WFR-NM-lzw"/>
                 <outlet property="labelWind" destination="jQT-AA-v1e" id="hco-QZ-FMY"/>
                 <outlet property="outfitCollectionView" destination="Mju-tr-YVd" id="5cM-Xt-oHl"/>
+                <outlet property="shuffleOutfitButton" destination="kP1-IN-NUO" id="mT5-JW-3dg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -84,10 +86,10 @@
                     </constraints>
                 </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-tr-YVd">
-                    <rect key="frame" x="20" y="497" width="335" height="150"/>
+                    <rect key="frame" x="10" y="527" width="355" height="130"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="iRW-rY-JyY"/>
+                        <constraint firstAttribute="height" constant="130" id="iRW-rY-JyY"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Moq-XC-uCa">
                         <size key="itemSize" width="50" height="50"/>
@@ -100,28 +102,49 @@
                         <outlet property="delegate" destination="-1" id="hsy-gF-3HX"/>
                     </connections>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outfit for today:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-cN-hER">
+                    <rect key="frame" x="10" y="493" width="141" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP1-IN-NUO">
+                    <rect key="frame" x="295" y="488" width="70" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="qyj-53-yWc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Shuffle"/>
+                    <connections>
+                        <action selector="shuffleOutfit:" destination="-1" eventType="touchUpInside" id="iek-0g-cqD"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.22985467314720154" green="0.62695449590682983" blue="0.82711607217788696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Mju-tr-YVd" firstAttribute="top" secondItem="T4S-cN-hER" secondAttribute="bottom" constant="10" id="1fi-fQ-QjF"/>
                 <constraint firstItem="Sh6-fa-uHf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="28F-vT-0ue"/>
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="top" secondItem="Sh6-fa-uHf" secondAttribute="bottom" constant="9.5" id="3T5-1n-hny"/>
                 <constraint firstItem="VTy-aL-UcR" firstAttribute="leading" secondItem="zPF-ah-kg8" secondAttribute="trailing" constant="18" id="8UR-e2-J2Q"/>
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="8nU-6N-LAj"/>
+                <constraint firstItem="T4S-cN-hER" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="CQh-ve-sfQ"/>
                 <constraint firstItem="NYj-x4-yf0" firstAttribute="top" secondItem="Q1Y-DU-N3B" secondAttribute="bottom" constant="14" id="FMH-pt-fci"/>
                 <constraint firstItem="jQT-AA-v1e" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="GI7-vd-vcu"/>
                 <constraint firstAttribute="trailing" secondItem="VTy-aL-UcR" secondAttribute="trailing" constant="51" id="GnV-Oi-2oD"/>
+                <constraint firstItem="Mju-tr-YVd" firstAttribute="top" secondItem="kP1-IN-NUO" secondAttribute="bottom" constant="5" id="LWA-VT-ouf"/>
                 <constraint firstItem="VTy-aL-UcR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nue-tW-3B4"/>
                 <constraint firstItem="zPF-ah-kg8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="S5H-J6-3Zg"/>
-                <constraint firstItem="Mju-tr-YVd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="UJq-UC-Riw"/>
+                <constraint firstItem="Mju-tr-YVd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="UJq-UC-Riw"/>
                 <constraint firstItem="Q1Y-DU-N3B" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="Una-DW-b2k"/>
                 <constraint firstItem="Q1Y-DU-N3B" firstAttribute="top" secondItem="VTy-aL-UcR" secondAttribute="bottom" constant="8" id="XH4-0m-PKO"/>
                 <constraint firstItem="mxG-eo-BSC" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="Xel-la-pei"/>
                 <constraint firstItem="VTy-aL-UcR" firstAttribute="top" secondItem="uuH-Nx-Xu7" secondAttribute="bottom" constant="8" id="ZUY-Cj-4FW"/>
                 <constraint firstItem="jQT-AA-v1e" firstAttribute="top" secondItem="NYj-x4-yf0" secondAttribute="bottom" id="aSI-G9-dLF"/>
-                <constraint firstAttribute="bottom" secondItem="Mju-tr-YVd" secondAttribute="bottom" constant="20" id="g5I-7o-wep"/>
+                <constraint firstAttribute="bottom" secondItem="Mju-tr-YVd" secondAttribute="bottom" constant="10" id="g5I-7o-wep"/>
                 <constraint firstItem="mxG-eo-BSC" firstAttribute="top" secondItem="jQT-AA-v1e" secondAttribute="bottom" constant="-2" id="i2d-Jz-kdB"/>
+                <constraint firstAttribute="trailing" secondItem="kP1-IN-NUO" secondAttribute="trailing" constant="10" id="j7m-Ms-t57"/>
                 <constraint firstItem="Sh6-fa-uHf" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="jT2-Ck-Eiu"/>
-                <constraint firstAttribute="trailing" secondItem="Mju-tr-YVd" secondAttribute="trailing" constant="20" id="o0u-Wb-nL0"/>
+                <constraint firstAttribute="trailing" secondItem="Mju-tr-YVd" secondAttribute="trailing" constant="10" id="o0u-Wb-nL0"/>
                 <constraint firstAttribute="trailing" secondItem="Q1Y-DU-N3B" secondAttribute="trailing" constant="51" id="qvH-FZ-0Fv"/>
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="trailing" secondItem="VTy-aL-UcR" secondAttribute="trailing" id="uYt-lq-s1t"/>
                 <constraint firstItem="zPF-ah-kg8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="v9I-S7-Ppf"/>

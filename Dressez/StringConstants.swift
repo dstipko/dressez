@@ -21,5 +21,7 @@ struct StringConstants {
     static var photoGallery = "Photo gallery"
     static var camera = "Camera"
     static var noCamera = "Camera not available"
+    static var homeScreenOutfitLabel = "Outfit for today:"
+    static var homeScreenShuffleButton = "Shuffle"
 }
 
