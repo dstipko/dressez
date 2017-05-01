@@ -23,5 +23,6 @@ struct StringConstants {
     static var noCamera = "Camera not available"
     static var homeScreenOutfitLabel = "Outfit for today:"
     static var homeScreenShuffleButton = "Shuffle"
+    static var newClothingItemScreenSaveButton = "Save"
 }
 
