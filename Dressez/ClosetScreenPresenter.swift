@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import CoreData
 
-class ClosetScreenPresenter: BasePresenter {
+class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsControllerDelegate {
     
     var navigationService: NavigationService!
     var persistanceService: PersistanceService!
     var networking: NetworkingService!
+    var resultController: NSFetchedResultsController<NSFetchRequestResult>!
     weak var baseViewController: BaseViewController!
     weak var viewController: ClosetScreenController! {
         return baseViewController as! ClosetScreenController
@@ -23,10 +25,12 @@ class ClosetScreenPresenter: BasePresenter {
     private let spacing : CGFloat = 5
     private let cellHeight : CGFloat = 90
     
-    required init() {}
+    required override init() {}
     
     func setup() {
         viewController.navigationItem.title = "Closet"
+        resultController = persistanceService.fetchAllItems()
+        resultController.delegate = self
     }
 
     func configureImageCollectionViewCell(cell: ImageCollectionViewCell, image: UIImage) -> ImageCollectionViewCell {
@@ -62,5 +66,18 @@ class ClosetScreenPresenter: BasePresenter {
     
     func configureImagePickerController(picker: UIImagePickerController) {
         picker.navigationBar.tintColor = ColorConstants.green
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        viewController.items = resultController.fetchedObjects as! [ClothingItem]
+        viewController.collectionView.reloadData()
+    }
+    
+    func fetchAllItems() -> [ClothingItem] {
+        return resultController.fetchedObjects as! [ClothingItem]
+    }
+    
+    func fetchItem(at indexPath: IndexPath) -> ClothingItem {
+        return resultController.object(at: indexPath) as! ClothingItem
     }
 }
