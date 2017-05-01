@@ -24,6 +24,8 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var labelHumidity: UILabel!
     @IBOutlet weak var labelWind: UILabel!
     @IBOutlet weak var labelPressure: UILabel!
+    @IBOutlet weak var labelOutfit: UILabel!
+    @IBOutlet weak var shuffleOutfitButton: UIButton!
     
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
@@ -82,5 +84,9 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         }
         
         return cell
+    }
+    
+    @IBAction func shuffleOutfit(_ sender: Any) {
+        presenter.updateOutfitPreview()
     }
 }

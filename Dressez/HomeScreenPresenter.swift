@@ -12,7 +12,7 @@ import RxSwift
 
 class HomeScreenPresenter: BasePresenter {
     
-    private let spacing : CGFloat = 28
+    private let spacing : CGFloat = 10
     private let cellHeight : CGFloat = 100
     
     var navigationService: NavigationService!
@@ -32,6 +32,13 @@ class HomeScreenPresenter: BasePresenter {
     
     func setup() {
         viewController.navigationItem.title = "Dressez"
+        viewController.labelOutfit.text = StringConstants.homeScreenOutfitLabel
+        viewController.shuffleOutfitButton.setTitle(StringConstants.homeScreenShuffleButton, for: .normal)
+        viewController.shuffleOutfitButton.setTitleColor(ColorConstants.lightBlue, for: .normal)
+        viewController.shuffleOutfitButton.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.shuffleOutfitButton.layer.borderWidth = NumberConstants.borderWidth
+        viewController.shuffleOutfitButton.layer.borderColor = ColorConstants.lightBlue.cgColor
+        viewController.shuffleOutfitButton.layer.masksToBounds = true
     }
     
     func updateView(with weatherResponse: WeatherResponse) {
@@ -57,7 +64,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelPressure.text = "Pressure: " + String(describing: weatherInfo.pressure!) + " hPa"
     }
     
-    private func updateOutfitPreview() {
+    func updateOutfitPreview() {
         guard let weatherInfo = self.weatherInfo else { return }
         
         outfit = outfitService.generateOutfit(for: weatherInfo)
@@ -88,6 +95,11 @@ class HomeScreenPresenter: BasePresenter {
         guard let collectionView = viewController.outfitCollectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }
+        
+        collectionView.layer.cornerRadius = NumberConstants.cornerRadius
+        collectionView.layer.masksToBounds = true
+        collectionView.layer.borderWidth = NumberConstants.borderWidth
+        collectionView.layer.borderColor = UIColor.white.cgColor
         
         let itemWidth = cellHeight
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)

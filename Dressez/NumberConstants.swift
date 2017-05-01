@@ -11,5 +11,6 @@ import UIKit
 
 struct NumberConstants {
     
-    static var cornerRadius: CGFloat = 8
+    static var cornerRadius: CGFloat = 4
+    static var borderWidth: CGFloat = 1
 }
