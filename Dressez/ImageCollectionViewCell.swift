@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  ImageCollectionViewCell.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 4/30/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class ImageCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     

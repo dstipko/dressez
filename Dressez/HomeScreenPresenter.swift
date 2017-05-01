@@ -59,11 +59,6 @@ class HomeScreenPresenter: BasePresenter {
     
     func addRoundedBorders(toCell : UICollectionViewCell) {
         toCell.layer.cornerRadius = NumberConstants.cornerRadius
-        toCell.layer.shadowColor = UIColor.black.cgColor
-        toCell.layer.shadowOpacity = 0.5
-        toCell.layer.shadowOffset = CGSize(width: 3, height: 3)
-        toCell.layer.shadowRadius = 05
-        toCell.layer.shadowPath = UIBezierPath(rect: toCell.bounds).cgPath
         toCell.layer.shouldRasterize = true
     }
     

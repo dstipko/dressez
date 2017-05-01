@@ -12,12 +12,11 @@ import RxSwift
 class HomeScreenController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var bag : DisposeBag = DisposeBag()
-    private let reuseIdentifier = "closetItemCell"
+    private let reuseIdentifier = "collectionCell"
     private var closetItems : Array<ClothingItem> = []
 
     @IBOutlet weak var outfitCollectionView: UICollectionView!
     
-    @IBOutlet weak var reccomendationsView: UIView!
     @IBOutlet weak var imageWeatherIcon: UIImageView!
     @IBOutlet weak var labelTemperature: UILabel!
     @IBOutlet weak var labelTemperatureHiLo: UILabel!
@@ -39,7 +38,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self
         
-        let nib = UINib(nibName: "ClosetItemCollectionViewCell", bundle: nil)
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         self.outfitCollectionView!.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         presenter.setup()
@@ -74,7 +73,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let object = closetItems[indexPath.item] as ClothingItem
-        let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ClosetItemCollectionViewCell
+        let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         
         presenter.addRoundedBorders(toCell : cell)
         cell.imageView.image = object.image

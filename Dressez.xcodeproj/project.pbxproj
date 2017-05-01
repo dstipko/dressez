@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		180C6EA81EB67B1800407C96 /* IconUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA71EB67B1800407C96 /* IconUtil.swift */; };
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
-		180C6EAD1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */; };
-		180C6EAE1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DDD331EB51CD60057C43C /* NewClothingItemController.swift */; };
 		862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862DDD341EB51CD60057C43C /* NewClothingItemController.xib */; };
@@ -21,8 +19,8 @@
 		865BD28A1EB5FE9A002A5C78 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD2891EB5FE9A002A5C78 /* StringConstants.swift */; };
 		865BD2951EB63EB0002A5C78 /* ClosetScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD2931EB63EB0002A5C78 /* ClosetScreenController.swift */; };
 		865BD2961EB63EB0002A5C78 /* ClosetScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BD2941EB63EB0002A5C78 /* ClosetScreenController.xib */; };
-		865BD2991EB64093002A5C78 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD2971EB64093002A5C78 /* CollectionViewCell.swift */; };
-		865BD29A1EB64093002A5C78 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BD2981EB64093002A5C78 /* CollectionViewCell.xib */; };
+		865BD2991EB64093002A5C78 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD2971EB64093002A5C78 /* ImageCollectionViewCell.swift */; };
+		865BD29A1EB64093002A5C78 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BD2981EB64093002A5C78 /* ImageCollectionViewCell.xib */; };
 		865BD29D1EB67D36002A5C78 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD29C1EB67D36002A5C78 /* ColorConstants.swift */; };
 		86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */; };
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
@@ -50,8 +48,6 @@
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA71EB67B1800407C96 /* IconUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconUtil.swift; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
-		180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		862DDD331EB51CD60057C43C /* NewClothingItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemController.swift; sourceTree = "<group>"; };
 		862DDD341EB51CD60057C43C /* NewClothingItemController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewClothingItemController.xib; sourceTree = "<group>"; };
 		862DDD391EB51D040057C43C /* NewClothingItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClothingItemPresenter.swift; sourceTree = "<group>"; };
@@ -61,8 +57,8 @@
 		865BD2891EB5FE9A002A5C78 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		865BD2931EB63EB0002A5C78 /* ClosetScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetScreenController.swift; sourceTree = "<group>"; };
 		865BD2941EB63EB0002A5C78 /* ClosetScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClosetScreenController.xib; sourceTree = "<group>"; };
-		865BD2971EB64093002A5C78 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		865BD2981EB64093002A5C78 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		865BD2971EB64093002A5C78 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		865BD2981EB64093002A5C78 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		865BD29C1EB67D36002A5C78 /* ColorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		86DFC99A1EB3CA3C00A9D4D0 /* Dressez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dressez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180C6EAF1EB7A8E800407C96 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				180C6EB01EB7A8F200407C96 /* Cells */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		180C6EB01EB7A8F200407C96 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				865BD2971EB64093002A5C78 /* ImageCollectionViewCell.swift */,
+				865BD2981EB64093002A5C78 /* ImageCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		4F39FCFAA2F1892379B4EC27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,15 +140,6 @@
 				862DDD341EB51CD60057C43C /* NewClothingItemController.xib */,
 			);
 			name = NewClothingItemScreen;
-			sourceTree = "<group>";
-		};
-		865BD29B1EB64097002A5C78 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				865BD2971EB64093002A5C78 /* CollectionViewCell.swift */,
-				865BD2981EB64093002A5C78 /* CollectionViewCell.xib */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 		86DFC9911EB3CA3C00A9D4D0 = {
@@ -183,8 +187,6 @@
 				86E626391EB3E401003D2E51 /* HomeScreenController.swift */,
 				86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */,
 				86E626371EB3E3F1003D2E51 /* HomeScreenController.xib */,
-				180C6EAB1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift */,
-				180C6EAC1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib */,
 			);
 			name = HomeScreen;
 			sourceTree = "<group>";
@@ -204,7 +206,6 @@
 				865BD2931EB63EB0002A5C78 /* ClosetScreenController.swift */,
 				86E6264A1EB4D022003D2E51 /* ClosetScreenPresenter.swift */,
 				865BD2941EB63EB0002A5C78 /* ClosetScreenController.xib */,
-				865BD29B1EB64097002A5C78 /* Cell */,
 			);
 			name = ClosetScreen;
 			sourceTree = "<group>";
@@ -212,6 +213,7 @@
 		86E6265C1EB4E879003D2E51 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				180C6EAF1EB7A8E800407C96 /* CollectionView */,
 				86E626571EB4E873003D2E51 /* BaseViewController.swift */,
 				86E626581EB4E873003D2E51 /* BasePresenter.swift */,
 			);
@@ -325,10 +327,9 @@
 			files = (
 				86E626381EB3E3F1003D2E51 /* HomeScreenController.xib in Resources */,
 				865BD2961EB63EB0002A5C78 /* ClosetScreenController.xib in Resources */,
-				180C6EAE1EB6B6E900407C96 /* ClosetItemCollectionViewCell.xib in Resources */,
 				86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */,
 				862DDD361EB51CD60057C43C /* NewClothingItemController.xib in Resources */,
-				865BD29A1EB64093002A5C78 /* CollectionViewCell.xib in Resources */,
+				865BD29A1EB64093002A5C78 /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +406,9 @@
 				86DFC9BB1EB3D6B600A9D4D0 /* PersistanceService.swift in Sources */,
 				BC62790F1EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift in Sources */,
 				862DDD351EB51CD60057C43C /* NewClothingItemController.swift in Sources */,
-				865BD2991EB64093002A5C78 /* CollectionViewCell.swift in Sources */,
+				865BD2991EB64093002A5C78 /* ImageCollectionViewCell.swift in Sources */,
 				BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */,
 				862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */,
-				180C6EAD1EB6B6E900407C96 /* ClosetItemCollectionViewCell.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,
 				86E6265B1EB4E873003D2E51 /* BasePresenter.swift in Sources */,
