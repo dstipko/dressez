@@ -10,10 +10,10 @@ import Foundation
 
 class OutfitService {
     
-    var persistanceService: PersistanceService
+    var persistanceService: PersistenceService
     
     init() {
-        persistanceService = PersistanceService()
+        persistanceService = PersistenceService()
     }
     
     func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem] {
