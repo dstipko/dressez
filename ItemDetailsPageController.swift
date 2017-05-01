@@ -17,7 +17,6 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
     
     var items: [ClothingItem] = []
     var currentIndex: Int?
-    
     var presenter: ItemDetailsPagePresenter! {
         return basePresenter as! ItemDetailsPagePresenter
     }
@@ -26,13 +25,11 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(closeGallery))
+        presenter.setup()
         let pageControl = UIPageControl.appearance()
-        containerView.backgroundColor = ColorConstants.green
-        pageControl.currentPageIndicatorTintColor = ColorConstants.darkGray
-        pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.backgroundColor = ColorConstants.green
+        presenter.configurePageControl(pageControl: pageControl)
         pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        
+
         addPageViewControllers()
         
         addChildViewController(pageController)
@@ -95,7 +92,5 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
         } else {
             return 0
         }
-        
     }
-
 }

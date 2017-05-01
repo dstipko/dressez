@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ItemDetailsPagePresenter: BasePresenter {
     
@@ -19,4 +20,15 @@ class ItemDetailsPagePresenter: BasePresenter {
     }
     
     required init() {}
+    
+    func setup() {
+        viewController.containerView.backgroundColor = ColorConstants.green
+    }
+    
+    func configurePageControl(pageControl: UIPageControl){
+        
+        pageControl.currentPageIndicatorTintColor = ColorConstants.darkGray
+        pageControl.pageIndicatorTintColor = UIColor.white
+        pageControl.backgroundColor = ColorConstants.green
+    }
 }
