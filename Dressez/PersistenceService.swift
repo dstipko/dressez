@@ -110,5 +110,16 @@ extension PersistenceService {
         try! resultController.performFetch()
         return resultController
     }
-
+    
+    func fetchClothingItems(with itemTypes: [Int]) -> [ClothingItem] {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ClothingItem")
+        let predicate = NSPredicate(format: "typeId IN %@", itemTypes)
+        request.predicate = predicate
+        
+        do {
+            return try context.fetch(request) as! [ClothingItem]
+        } catch {
+            fatalError("Failed to fetch clothing items: \(error)")
+        }
+    }
 }
