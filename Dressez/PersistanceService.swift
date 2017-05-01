@@ -111,7 +111,7 @@ extension PersistanceService {
         return resultController
     }
     
-    func fetchClothingItems(itemTypes: [Int]) -> [ClothingItem] {
+    func fetchClothingItems(with itemTypes: [Int]) -> [ClothingItem] {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ClothingItem")
         let predicate = NSPredicate(format: "typeId IN %@", itemTypes)
         request.predicate = predicate

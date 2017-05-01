@@ -42,9 +42,7 @@ class HomeScreenPresenter: BasePresenter {
     }
     
     private func updateWeatherPreview() {
-        guard let weatherInfo = self.weatherInfo else {
-            return
-        }
+        guard let weatherInfo = self.weatherInfo else { return }
         
         viewController.imageWeatherIcon.image = weatherInfo.weatherCondition?.getIcon()
         
@@ -62,7 +60,7 @@ class HomeScreenPresenter: BasePresenter {
     private func updateOutfitPreview() {
         guard let weatherInfo = self.weatherInfo else { return }
         
-        outfit = outfitService.generateOutfitFor(weatherInfo: weatherInfo)
+        outfit = outfitService.generateOutfit(for: weatherInfo)
         
         viewController.outfitCollectionView.reloadData()
     }

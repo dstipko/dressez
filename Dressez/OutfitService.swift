@@ -16,14 +16,14 @@ class OutfitService {
         persistanceService = PersistanceService()
     }
     
-    func generateOutfitFor(weatherInfo: WeatherResponse) -> [ClothingItem] {
+    func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem] {
         let appropriateTemperatureItemTypes = getItemTypesFor(temperature: weatherInfo.tempCurrent!)
         let appropriateConditionItemTypes = getItemTypesFor(weatherCondition: weatherInfo.weatherCondition!)
         let itemTypes = appropriateTemperatureItemTypes.filter {
             return appropriateConditionItemTypes.contains($0)
         }
         
-        let weatherAppropriateItems = persistanceService.fetchClothingItems(itemTypes: itemTypes)
+        let weatherAppropriateItems = persistanceService.fetchClothingItems(with: itemTypes)
         
         var colorMatchingItems: [ClothingItem]
         var outfit: [ClothingItem]
@@ -39,12 +39,11 @@ class OutfitService {
             
             for type in ItemType.allValues {
                 if let distinctItem = (colorMatchingItems.filter { return $0.type == type }).first {
-                    print(distinctItem.name)
                     outfit.append(distinctItem)
                 }
             }
             
-            if isValidOutfit(outfit: outfit) {
+            if isValid(outfit: outfit) {
                 return outfit
             }
         }
@@ -52,7 +51,7 @@ class OutfitService {
         return []
     }
     
-    private func isValidOutfit(outfit: [ClothingItem]) -> Bool {
+    private func isValid(outfit: [ClothingItem]) -> Bool {
         let outfitCategories = outfit.map { $0.category }
         
         for category in ItemCategory.crucialCategories {
