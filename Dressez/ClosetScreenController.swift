@@ -31,7 +31,7 @@ class ClosetScreenController: BaseViewController {
         self.resultController = presenter.persistanceService.fetchAllItems()
         presenter.setup()
         configureRightBarButtonItem()
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
+        let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -106,9 +106,9 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let current = resultController.object(at: indexPath) as! ClothingItem
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         if let image = current.image {
-            return presenter.configureCollectionViewCell(cell: cell, image: image)
+            return presenter.configureImageCollectionViewCell(cell: cell, image: image)
         }
         else {
             return UICollectionViewCell()
