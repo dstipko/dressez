@@ -16,7 +16,6 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
 
     @IBOutlet var weatherLabels: [UIView]!
     @IBOutlet weak var outfitCollectionView: UICollectionView!
-    
     @IBOutlet weak var imageWeatherIcon: UIImageView!
     @IBOutlet weak var labelTemperature: UILabel!
     @IBOutlet weak var labelTemperatureHiLo: UILabel!
@@ -27,6 +26,8 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var labelPressure: UILabel!
     @IBOutlet weak var labelOutfit: UILabel!
     @IBOutlet weak var shuffleOutfitButton: UIButton!
+    @IBOutlet weak var outfitLoader: UIActivityIndicatorView!
+    @IBOutlet weak var labelOutfitWarning: UILabel!
     
     @IBOutlet weak var networkErrorTextView: UITextView!
     
@@ -91,6 +92,18 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let outfit = presenter.outfit else { return }
+        let pageController = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
+        pageController.modalTransitionStyle = .crossDissolve
+        pageController.items = outfit
+        pageController.currentIndex = indexPath.item
+        
+        let navigationController = NavigationController(rootViewController: pageController)
+        navigationController.navigationBar.isTranslucent = true
+        present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func shuffleOutfit(_ sender: Any) {

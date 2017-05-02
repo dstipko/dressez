@@ -25,8 +25,7 @@ class ItemDetailsPagePresenter: BasePresenter {
         viewController.containerView.backgroundColor = ColorConstants.green
     }
     
-    func configurePageControl(pageControl: UIPageControl){
-        
+    func configurePageControl(pageControl: UIPageControl) {
         pageControl.currentPageIndicatorTintColor = ColorConstants.darkGray
         pageControl.pageIndicatorTintColor = UIColor.white
         pageControl.backgroundColor = ColorConstants.green

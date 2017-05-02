@@ -16,7 +16,7 @@ class OutfitService {
         persistenceService = PersistenceService()
     }
     
-    func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem] {
+    func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem]? {
         let appropriateTemperatureItemTypes = getItemTypesFor(temperature: weatherInfo.tempCurrent!)
         let appropriateConditionItemTypes = getItemTypesFor(weatherCondition: weatherInfo.weatherCondition!)
         let itemTypes = appropriateTemperatureItemTypes.filter {
@@ -48,7 +48,7 @@ class OutfitService {
             }
         }
         
-        return []
+        return nil
     }
     
     private func isValid(outfit: [ClothingItem]) -> Bool {

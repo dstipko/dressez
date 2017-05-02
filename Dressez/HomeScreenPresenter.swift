@@ -33,12 +33,17 @@ class HomeScreenPresenter: BasePresenter {
     func setup() {
         viewController.navigationItem.title = "Dressez"
         viewController.labelOutfit.text = StringConstants.homeScreenOutfitLabel
+        viewController.labelOutfitWarning.text = StringConstants.homeScreenOutfitWarningLabel
+        viewController.labelOutfitWarning.isHidden = true
         viewController.shuffleOutfitButton.setTitle(StringConstants.homeScreenShuffleButton, for: .normal)
         viewController.shuffleOutfitButton.setTitleColor(ColorConstants.lightBlue, for: .normal)
         viewController.shuffleOutfitButton.layer.cornerRadius = NumberConstants.cornerRadius
         viewController.shuffleOutfitButton.layer.borderWidth = NumberConstants.borderWidth
         viewController.shuffleOutfitButton.layer.borderColor = ColorConstants.lightBlue.cgColor
         viewController.shuffleOutfitButton.layer.masksToBounds = true
+        viewController.outfitLoader.hidesWhenStopped = true
+        
+        viewController.outfitLoader.startAnimating()
     }
     
     func updateView(with weatherResponse: WeatherResponse) {
@@ -66,7 +71,11 @@ class HomeScreenPresenter: BasePresenter {
     func updateOutfitPreview() {
         guard let weatherInfo = self.weatherInfo else { return }
         
+        viewController.outfitLoader.startAnimating()
         outfit = outfitService.generateOutfit(for: weatherInfo)
+        viewController.outfitLoader.stopAnimating()
+        
+        viewController.labelOutfitWarning.isHidden = outfit != nil
         
         viewController.outfitCollectionView.reloadData()
     }

@@ -17,15 +17,24 @@ extension String {
 }
 
 extension UIViewController {    
-    func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+    func createActionSheet(title: String?, message: String?) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         alert.view.tintColor = ColorConstants.green
+        let cancelAction = UIAlertAction(title: StringConstants.cancel, style: .cancel, handler: { _ in
+            self.dismiss(animated: true, completion: nil)
+        })
+        alert.addAction(cancelAction)
         return alert
     }
     
-    func createAlertAction(title: String?, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
-        return UIAlertAction(title: title, style: .default, handler: completionHandler)
-
+    func createAlertDialog(with title: String?, message: String?, buttonText: String, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: handler))
+                return alert
+    }
+    
+    func createAlertAction(title: String?, handler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
+        return UIAlertAction(title: title, style: .default, handler: handler)
     }
 }
 
