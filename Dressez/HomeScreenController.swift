@@ -29,7 +29,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var outfitLoader: UIActivityIndicatorView!
     @IBOutlet weak var labelOutfitWarning: UILabel!
     
-    @IBOutlet weak var networkErrorTextView: UILabel!
+    @IBOutlet weak var networkErrorLabel: UILabel!
     
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
