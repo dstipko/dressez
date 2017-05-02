@@ -127,6 +127,7 @@ class HomeScreenPresenter: BasePresenter {
             )
             
             viewController.weatherLabels.forEach({$0.isHidden = true})
+            viewController.labelOutfitWarning.isHidden = true
             viewController.present(alert, animated: true)
         } else {
             viewController.weatherLabels.forEach({$0.isHidden = false})
