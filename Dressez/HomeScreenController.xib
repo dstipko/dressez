@@ -22,7 +22,7 @@
                 <outlet property="labelTemperatureHiLo" destination="Q1Y-DU-N3B" id="0Fo-fR-Yj3"/>
                 <outlet property="labelWeatherDesc" destination="uuH-Nx-Xu7" id="WFR-NM-lzw"/>
                 <outlet property="labelWind" destination="jQT-AA-v1e" id="hco-QZ-FMY"/>
-                <outlet property="networkErrorTextView" destination="fU3-oH-zug" id="wvo-bH-WsT"/>
+                <outlet property="networkErrorLabel" destination="fU3-oH-zug" id="lyU-hd-3u3"/>
                 <outlet property="outfitCollectionView" destination="Mju-tr-YVd" id="5cM-Xt-oHl"/>
                 <outlet property="outfitLoader" destination="VrJ-w8-mLY" id="bLB-zi-DlE"/>
                 <outlet property="shuffleOutfitButton" destination="kP1-IN-NUO" id="mT5-JW-3dg"/>
@@ -35,6 +35,10 @@
                 <outletCollection property="weatherLabels" destination="jQT-AA-v1e" collectionClass="NSMutableArray" id="lmU-vj-why"/>
                 <outletCollection property="weatherLabels" destination="mxG-eo-BSC" collectionClass="NSMutableArray" id="05i-TM-vAK"/>
                 <outletCollection property="weatherLabels" destination="zPF-ah-kg8" collectionClass="NSMutableArray" id="BWE-sm-wiu"/>
+                <outletCollection property="weatherLabels" destination="T4S-cN-hER" collectionClass="NSMutableArray" id="K95-If-ItR"/>
+                <outletCollection property="weatherLabels" destination="uEr-zS-WBF" collectionClass="NSMutableArray" id="e6j-2F-uoL"/>
+                <outletCollection property="weatherLabels" destination="kP1-IN-NUO" collectionClass="NSMutableArray" id="cHx-BZ-ZM1"/>
+                <outletCollection property="weatherLabels" destination="Mju-tr-YVd" collectionClass="NSMutableArray" id="86f-eB-DrF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -143,7 +147,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network not available! Please check your internet connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-oH-zug">
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network not available! Please check your internet connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-oH-zug" userLabel="Network Error Label">
                     <rect key="frame" x="18" y="120" width="339" height="110"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>

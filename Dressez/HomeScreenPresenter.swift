@@ -118,10 +118,11 @@ class HomeScreenPresenter: BasePresenter {
     
     func checkNetworkStatus(){
         if (viewController.currentReachabilityStatus == .notReachable){
+            viewController.outfitLoader.stopAnimating()
             let alert = viewController.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
                 { action in
-                    self.viewController.networkErrorTextView.isHidden = false
-                    self.addRoundedBorders(to: self.viewController.networkErrorTextView)
+                    self.viewController.networkErrorLabel.isHidden = false
+                    self.addRoundedBorders(to: self.viewController.networkErrorLabel)
                 }
             )
             
@@ -129,7 +130,7 @@ class HomeScreenPresenter: BasePresenter {
             viewController.present(alert, animated: true)
         } else {
             viewController.weatherLabels.forEach({$0.isHidden = false})
-            self.viewController.networkErrorTextView.isHidden = true
+            self.viewController.networkErrorLabel.isHidden = true
         }
     }
     
