@@ -57,7 +57,6 @@ class HomeScreenPresenter: BasePresenter {
         guard let weatherInfo = self.weatherInfo else { return }
         
         viewController.imageWeatherIcon.image = weatherInfo.weatherCondition?.getIcon()
-        
         viewController.labelTemperature.text = String(describing: weatherInfo.tempCurrent!) + "°C"
         viewController.labelWeatherDesc.text = weatherInfo.weatherDesc
         viewController.labelCityName.text = weatherInfo.location
@@ -68,7 +67,7 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelWind.text = "Wind: " + String(describing: weatherInfo.windSpeed!) + " km/h"
         viewController.labelPressure.text = "Pressure: " + String(describing: weatherInfo.pressure!) + " hPa"
     }
-    
+
     func updateOutfitPreview() {
         guard let weatherInfo = self.weatherInfo else { return }
         
@@ -95,9 +94,9 @@ class HomeScreenPresenter: BasePresenter {
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func addRoundedBorders(toCell : UICollectionViewCell) {
-        toCell.layer.cornerRadius = NumberConstants.cornerRadius
-        toCell.layer.shouldRasterize = true
+    func addRoundedBorders(to view : UIView) {
+        view.layer.cornerRadius = NumberConstants.cornerRadius
+        view.layer.shouldRasterize = true
     }
     
     func configureCollectionViewLayout() {
@@ -115,6 +114,24 @@ class HomeScreenPresenter: BasePresenter {
         layout.sectionInset = UIEdgeInsetsMake(spacing, spacing, spacing, spacing)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
+    }
+    
+    func checkNetworkStatus(){
+        if (viewController.currentReachabilityStatus == .notReachable){
+            viewController.outfitLoader.stopAnimating()
+            let alert = viewController.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
+                { action in
+                    self.viewController.networkErrorLabel.isHidden = false
+                    self.addRoundedBorders(to: self.viewController.networkErrorLabel)
+                }
+            )
+            
+            viewController.weatherLabels.forEach({$0.isHidden = true})
+            viewController.present(alert, animated: true)
+        } else {
+            viewController.weatherLabels.forEach({$0.isHidden = false})
+            self.viewController.networkErrorLabel.isHidden = true
+        }
     }
     
     func fetchWeather() -> Observable<WeatherResponse> {

@@ -10,11 +10,11 @@ import Foundation
 
 struct StringConstants {
     
+
     static let title = "Add clothing item"
     static let selectColor = "Select color"
     static let selectType = "Select type"
     static let ok = "OK"
-    static let cancel = "Cancel"
     static let requiredFields = "Empty fields"
     static let newClothingItemNameFieldPlaceholder = "Enter desired name..."
     static let newClothingItemTypeFieldPlaceholder = "Select type..."
@@ -24,6 +24,12 @@ struct StringConstants {
     static let noCamera = "Camera not available"
     static let homeScreenOutfitLabel = "Outfit for today:"
     static let homeScreenShuffleButton = "Shuffle"
+    
+    //network
+    static let networkUnavailible = "Network unavailible"
+    static let networkUnavailibleMessage = "Please check your internet connection."
+
+    static let cancel = "Cancel"
     static let newClothingItemScreenSaveButton = "Save"
     static let homeScreenOutfitWarningLabel = "Looks like you don't have any matching clothes.\nTime for shopping!"
 }

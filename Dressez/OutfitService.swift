@@ -10,10 +10,10 @@ import Foundation
 
 class OutfitService {
     
-    var persistanceService: PersistenceService
+    var persistenceService: PersistenceService
     
     init() {
-        persistanceService = PersistenceService()
+        persistenceService = PersistenceService()
     }
     
     func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem]? {
@@ -23,7 +23,7 @@ class OutfitService {
             return appropriateConditionItemTypes.contains($0)
         }
         
-        let weatherAppropriateItems = persistanceService.fetchClothingItems(with: itemTypes)
+        let weatherAppropriateItems = persistenceService.fetchClothingItems(with: itemTypes)
         
         var colorMatchingItems: [ClothingItem]
         var outfit: [ClothingItem]
