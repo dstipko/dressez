@@ -12,6 +12,8 @@ import RxSwift
 class HomeScreenController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var bag : DisposeBag = DisposeBag()
+    var selected: UIImageView?
+    fileprivate var transition = PopAnimator()
     private let reuseIdentifier = "collectionCell"
 
     @IBOutlet var weatherLabels: [UIView]!
@@ -28,7 +30,6 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var shuffleOutfitButton: UIButton!
     @IBOutlet weak var outfitLoader: UIActivityIndicatorView!
     @IBOutlet weak var labelOutfitWarning: UILabel!
-    
     @IBOutlet weak var networkErrorLabel: UILabel!
     
     var presenter: HomeScreenPresenter! {
@@ -101,12 +102,31 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         pageController.items = outfit
         pageController.currentIndex = indexPath.item
         
+        let cell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
+        selected = cell.imageView
+        
         let navigationController = NavigationController(rootViewController: pageController)
         navigationController.title = StringConstants.todaysOutfit
+        navigationController.transitioningDelegate = self
         present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func shuffleOutfit(_ sender: Any) {
         presenter.updateOutfitPreview()
+    }
+}
+
+extension HomeScreenController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if let selected = selected, let frame  = selected.superview?.convert(selected.frame, to: nil){
+            transition.originFrame = frame
+            transition.presenting = true
+        }
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
     }
 }

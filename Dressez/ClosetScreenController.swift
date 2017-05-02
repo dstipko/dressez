@@ -20,6 +20,9 @@ class ClosetScreenController: BaseViewController {
     
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
+    fileprivate let transition = PopAnimator()
+    fileprivate var selected: UIImageView?
+    
     var items: [ClothingItem] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -117,13 +120,32 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
+        selected = cell.imageView
         let detailsVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
         detailsVC.modalTransitionStyle = .crossDissolve
         detailsVC.items = items
         detailsVC.currentIndex = indexPath.item
         
         let navController = NavigationController(rootViewController: detailsVC)
+        navController.navigationBar.isTranslucent = true
         navController.title = StringConstants.closet
+        navController.transitioningDelegate = self
         present(navController, animated: true, completion: nil)
+    }
+}
+
+extension ClosetScreenController: UIViewControllerTransitioningDelegate {
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if let selected = selected, let frame  = selected.superview?.convert(selected.frame, to: nil){
+            transition.originFrame = frame
+            transition.presenting = true
+        }
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
     }
 }
