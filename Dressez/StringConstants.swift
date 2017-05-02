@@ -21,11 +21,8 @@ struct StringConstants {
     static var photoGallery = "Photo gallery"
     static var camera = "Camera"
     static var noCamera = "Camera not available"
-<<<<<<< HEAD
-=======
     static var homeScreenOutfitLabel = "Outfit for today:"
     static var homeScreenShuffleButton = "Shuffle"
->>>>>>> DEZ-013-Network-connection-check-merge
     
     //network
     static var networkUnavailible = "Network unavailible"

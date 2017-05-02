@@ -112,8 +112,6 @@
                         <outlet property="delegate" destination="-1" id="hsy-gF-3HX"/>
                     </connections>
                 </collectionView>
-<<<<<<< HEAD
-=======
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outfit for today:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-cN-hER">
                     <rect key="frame" x="10" y="483" width="141" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -131,7 +129,6 @@
                         <action selector="shuffleOutfit:" destination="-1" eventType="touchUpInside" id="iek-0g-cqD"/>
                     </connections>
                 </button>
->>>>>>> DEZ-013-Network-connection-check-merge
                 <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" editable="NO" text="Network not available! Please check your internet connection." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-LX-60u">
                     <rect key="frame" x="26" y="120" width="323" height="110"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,10 +148,7 @@
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="top" secondItem="Sh6-fa-uHf" secondAttribute="bottom" constant="9.5" id="3T5-1n-hny"/>
                 <constraint firstItem="VTy-aL-UcR" firstAttribute="leading" secondItem="zPF-ah-kg8" secondAttribute="trailing" constant="18" id="8UR-e2-J2Q"/>
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="8nU-6N-LAj"/>
-<<<<<<< HEAD
-=======
-                <constraint firstItem="T4S-cN-hER" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="CQh-ve-sfQ"/>
->>>>>>> DEZ-013-Network-connection-check-merge
+                <constraint firstItem="T4S-cN-hER" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="AbN-Zq-fU7"/>
                 <constraint firstAttribute="trailingMargin" secondItem="HrJ-LX-60u" secondAttribute="trailing" constant="18" id="DHY-Bd-Iic"/>
                 <constraint firstItem="NYj-x4-yf0" firstAttribute="top" secondItem="Q1Y-DU-N3B" secondAttribute="bottom" constant="14" id="FMH-pt-fci"/>
                 <constraint firstItem="jQT-AA-v1e" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="GI7-vd-vcu"/>

@@ -10,17 +10,10 @@ import Foundation
 
 class OutfitService {
     
-<<<<<<< HEAD
-    var persistanceService: PersistanceService
+    var persistenceService: PersistenceService
     
     init() {
-        persistanceService = PersistanceService()
-=======
-    var persistanceService: PersistenceService
-    
-    init() {
-        persistanceService = PersistenceService()
->>>>>>> DEZ-013-Network-connection-check-merge
+        persistenceService = PersistenceService()
     }
     
     func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem] {
@@ -30,7 +23,7 @@ class OutfitService {
             return appropriateConditionItemTypes.contains($0)
         }
         
-        let weatherAppropriateItems = persistanceService.fetchClothingItems(with: itemTypes)
+        let weatherAppropriateItems = persistenceService.fetchClothingItems(with: itemTypes)
         
         var colorMatchingItems: [ClothingItem]
         var outfit: [ClothingItem]

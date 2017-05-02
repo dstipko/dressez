@@ -52,10 +52,6 @@ class HomeScreenPresenter: BasePresenter {
         guard let weatherInfo = self.weatherInfo else { return }
         
         viewController.imageWeatherIcon.image = weatherInfo.weatherCondition?.getIcon()
-<<<<<<< HEAD
-        
-=======
->>>>>>> DEZ-013-Network-connection-check-merge
         viewController.labelTemperature.text = String(describing: weatherInfo.tempCurrent!) + "°C"
         viewController.labelWeatherDesc.text = weatherInfo.weatherDesc
         viewController.labelCityName.text = weatherInfo.location
@@ -66,13 +62,8 @@ class HomeScreenPresenter: BasePresenter {
         viewController.labelWind.text = "Wind: " + String(describing: weatherInfo.windSpeed!) + " km/h"
         viewController.labelPressure.text = "Pressure: " + String(describing: weatherInfo.pressure!) + " hPa"
     }
-<<<<<<< HEAD
-    
-    private func updateOutfitPreview() {
-=======
 
     func updateOutfitPreview() {
->>>>>>> DEZ-013-Network-connection-check-merge
         guard let weatherInfo = self.weatherInfo else { return }
         
         outfit = outfitService.generateOutfit(for: weatherInfo)

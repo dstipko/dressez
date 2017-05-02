@@ -30,19 +30,13 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     @IBOutlet weak var networkErrorTextView: UITextView!
     
-    @IBOutlet weak var networkErrorTextView: UITextView!
-    
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> DEZ-013-Network-connection-check-merge
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self
         
