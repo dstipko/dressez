@@ -32,5 +32,7 @@ struct StringConstants {
     static let cancel = "Cancel"
     static let newClothingItemScreenSaveButton = "Save"
     static let homeScreenOutfitWarningLabel = "Looks like you don't have any matching clothes.\nTime for shopping!"
+    
+    static let noClothesText = "You don't have any clothes yet. :("
 }
 
