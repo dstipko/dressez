@@ -74,6 +74,13 @@ class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsController
         viewController.collectionView.reloadData()
     }
     
+    func deleteItem(at indexPath: IndexPath) {
+        let item = self.fetchItem(at: indexPath)
+        DispatchQueue.global().async {
+            self.persistenceService.delete(clothingItem: item)
+        }
+    }
+    
     func fetchAllItems() -> [ClothingItem] {
         return resultController.fetchedObjects as! [ClothingItem]
     }

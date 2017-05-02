@@ -73,6 +73,21 @@ class ClosetScreenController: BaseViewController {
         pickerType.addAction(cameraAction)
         self.present(pickerType, animated: true, completion: nil)
     }
+    
+    func checkReset(sender: UISwipeGestureRecognizer) {
+        let resetDialog = createAlertDialog(with: nil, message: "Are you sure you want to delete this item?", buttonText: "Delete", handler: {_ in
+            let cell = sender.view as! UICollectionViewCell
+            if let idxPath = self.collectionView.indexPath(for: cell) {
+                self.presenter.deleteItem(at: idxPath)
+            }
+            })
+        let cancelAction = createAlertAction(title: "Cancel", handler: {_ in
+        self.dismiss(animated: true, completion: nil)
+        })
+        resetDialog.addAction(cancelAction)
+        self.present(resetDialog, animated: true, completion: nil)
+    }
+
 }
 
 extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -98,13 +113,14 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         return sectionData.numberOfObjects
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let current = presenter.fetchItem(at: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
+        setGestureRecognizer(to: cell)
         if let image = current.image {
             return presenter.configureImageCollectionViewCell(cell: cell, image: image)
         }
+        
         else {
             return UICollectionViewCell()
         }
@@ -119,5 +135,12 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         let navController = NavigationController(rootViewController: detailsVC)
         navController.title = StringConstants.closet
         present(navController, animated: true, completion: nil)
+    }
+    
+    private func setGestureRecognizer(to cell: UICollectionViewCell) {
+        let cellSelector = #selector(self.checkReset(sender:))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: cellSelector )
+        upSwipe.direction = UISwipeGestureRecognizerDirection.up
+        cell.addGestureRecognizer(upSwipe)
     }
 }
