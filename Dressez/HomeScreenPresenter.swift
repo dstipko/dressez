@@ -31,15 +31,15 @@ class HomeScreenPresenter: BasePresenter {
     required init() {}
     
     func setup() {
-        viewController.navigationItem.title = "Dressez"
+        viewController.navigationItem.title = StringConstants.dressez
         viewController.labelOutfit.text = StringConstants.homeScreenOutfitLabel
         viewController.labelOutfitWarning.text = StringConstants.homeScreenOutfitWarningLabel
         viewController.labelOutfitWarning.isHidden = true
         viewController.shuffleOutfitButton.setTitle(StringConstants.homeScreenShuffleButton, for: .normal)
-        viewController.shuffleOutfitButton.setTitleColor(ColorConstants.lightBlue, for: .normal)
+        viewController.shuffleOutfitButton.setTitleColor(UIColor.white, for: .normal)
         viewController.shuffleOutfitButton.layer.cornerRadius = NumberConstants.cornerRadius
         viewController.shuffleOutfitButton.layer.borderWidth = NumberConstants.borderWidth
-        viewController.shuffleOutfitButton.layer.borderColor = ColorConstants.lightBlue.cgColor
+        viewController.shuffleOutfitButton.layer.borderColor = UIColor.white.cgColor
         viewController.shuffleOutfitButton.layer.masksToBounds = true
         viewController.outfitLoader.hidesWhenStopped = true
         

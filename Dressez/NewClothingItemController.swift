@@ -15,7 +15,6 @@ class NewClothingItemController: BaseViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
-    @IBOutlet weak var saveButton: UIButton!
     
     var presenter: NewClothingItemPresenter! {
         return basePresenter as! NewClothingItemPresenter
@@ -32,14 +31,15 @@ class NewClothingItemController: BaseViewController {
         
         typeTextField.delegate = self
         colorTextField.delegate = self
+        
+        configureRightBarButton()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        presenter.assignBackground()
     }
    
-    @IBAction func saveClothingItem(_ sender: Any) {
+    func saveClothingItem(selector: UIBarButtonItem) {
         if let colorId = itemColor, let typeId = itemType,let type = ItemType(rawValue: typeId), let color = ItemColor(rawValue: colorId), let nameText = nameTextField.text, let name = nameText.onlyHasWhitespaces() ? nil : nameText {
             
             DispatchQueue.main.async {
@@ -56,6 +56,10 @@ class NewClothingItemController: BaseViewController {
             self.present(alert, animated: true, completion: nil)
         }
         
+    }
+    
+    func configureRightBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save , target: self, action: #selector(self.saveClothingItem))
     }
 }
 
