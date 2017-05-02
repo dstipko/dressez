@@ -75,14 +75,13 @@ class ClosetScreenController: BaseViewController {
     }
     
     func confirmDelete(sender: UISwipeGestureRecognizer) {
-        let resetDialog = createAlertDialog(with: nil, message: "Are you sure you want to delete this item?", buttonText: "Delete", handler: {_ in
+        let resetDialog = createAlertDialog(with: nil, message: StringConstants.confirmDelete, buttonText: StringConstants.delete, handler: {_ in
             let cell = sender.view as! UICollectionViewCell
             if let idxPath = self.collectionView.indexPath(for: cell) {
                 self.presenter.deleteItem(at: idxPath)
-            }
-            })
-        let cancelAction = createAlertAction(title: "Cancel", handler: {_ in
-        self.dismiss(animated: true, completion: nil)
+            }})
+        let cancelAction = createAlertAction(title: StringConstants.cancel, handler: {_ in
+            self.dismiss(animated: true, completion: nil)
         })
         resetDialog.addAction(cancelAction)
         self.present(resetDialog, animated: true, completion: nil)
@@ -96,7 +95,6 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         dismiss(animated: true, completion: nil)
         presenter.navigationService.pushToNewClothingItemScreen(navigationController: self.navigationController, image: chosenImage)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -119,9 +117,7 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         setGestureRecognizer(to: cell)
         if let image = current.image {
             return presenter.configureImageCollectionViewCell(cell: cell, image: image)
-        }
-        
-        else {
+        } else {
             return UICollectionViewCell()
         }
     }
