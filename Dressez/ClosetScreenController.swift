@@ -20,11 +20,7 @@ class ClosetScreenController: BaseViewController {
     
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
-    var items: [ClothingItem] = [] {
-        didSet {
-            presenter.checkClothesQuantity()
-        }
-    }
+    var items: [ClothingItem] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -102,6 +98,9 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         guard let sectionData = presenter.resultController.sections?[section] else {
             return 0
         }
+        
+        presenter.checkClothesQuantity()
+        
         return sectionData.numberOfObjects
     }
     
