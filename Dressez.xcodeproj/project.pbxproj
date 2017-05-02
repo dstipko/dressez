@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		180C6EAA1EB6A03900407C96 /* WeatherCodeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */; };
 		180C6EB41EB7B8EA00407C96 /* NSObject+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */; };
-		180C6EB61EB7F48100407C96 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C6EB51EB7F48100407C96 /* AlertUtil.swift */; };
 		180C6EB71EB8009B00407C96 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9BA1EB3D6B600A9D4D0 /* PersistenceService.swift */; };
 		2D5B78D3CB8C2EE231092B2C /* Pods_Dressez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A26A94F571583135240004 /* Pods_Dressez.framework */; };
 		862D3B111EB6A15000A2D3C8 /* ItemDetailsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862D3B0F1EB6A15000A2D3C8 /* ItemDetailsPageController.swift */; };
@@ -59,7 +58,6 @@
 		0F4782790492EF2861199AE7 /* Pods-Dressez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dressez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dressez/Pods-Dressez.release.xcconfig"; sourceTree = "<group>"; };
 		180C6EA91EB6A03900407C96 /* WeatherCodeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodeConstants.swift; sourceTree = "<group>"; };
 		180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utilities.swift"; sourceTree = "<group>"; };
-		180C6EB51EB7F48100407C96 /* AlertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
 		862D3B0F1EB6A15000A2D3C8 /* ItemDetailsPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsPageController.swift; sourceTree = "<group>"; };
 		862D3B101EB6A15000A2D3C8 /* ItemDetailsPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailsPageController.xib; sourceTree = "<group>"; };
 		862D3B131EB6A28800A2D3C8 /* ItemDetailsScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsScreenController.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				86E626541EB4E222003D2E51 /* RequestError.swift */,
 				BC6279091EB50CD500F39BB9 /* NSManagedObjectContext+Utilities.swift */,
 				180C6EB31EB7B8EA00407C96 /* NSObject+Utilities.swift */,
-				180C6EB51EB7F48100407C96 /* AlertUtil.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 				865BD2991EB64093002A5C78 /* ImageCollectionViewCell.swift in Sources */,
 				BC62790A1EB50CD500F39BB9 /* ClothingItem.swift in Sources */,
 				BCA25B131EB6ACC300037798 /* OutfitService.swift in Sources */,
-				180C6EB61EB7F48100407C96 /* AlertUtil.swift in Sources */,
 				862DDD3A1EB51D040057C43C /* NewClothingItemPresenter.swift in Sources */,
 				86E6264B1EB4D022003D2E51 /* ClosetScreenPresenter.swift in Sources */,
 				862DDD451EB5EAB80057C43C /* ItemType.swift in Sources */,

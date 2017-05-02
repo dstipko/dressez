@@ -131,7 +131,6 @@
                         <action selector="shuffleOutfit:" destination="-1" eventType="touchUpInside" id="iek-0g-cqD"/>
                     </connections>
                 </button>
-<<<<<<< HEAD
                 <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" editable="NO" text="Network not available! Please check your internet connection." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-LX-60u">
                     <rect key="frame" x="26" y="120" width="323" height="110"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,7 +142,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-=======
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-w8-mLY">
                     <rect key="frame" x="177.5" y="582" width="20" height="20"/>
                     <constraints>
@@ -157,7 +155,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
->>>>>>> master
             </subviews>
             <color key="backgroundColor" red="0.22985467314720154" green="0.62695449590682983" blue="0.82711607217788696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -190,13 +187,9 @@
                 <constraint firstItem="mxG-eo-BSC" firstAttribute="top" secondItem="jQT-AA-v1e" secondAttribute="bottom" constant="-2" id="i2d-Jz-kdB"/>
                 <constraint firstAttribute="trailing" secondItem="kP1-IN-NUO" secondAttribute="trailing" constant="10" id="j7m-Ms-t57"/>
                 <constraint firstItem="Sh6-fa-uHf" firstAttribute="leading" secondItem="VTy-aL-UcR" secondAttribute="leading" id="jT2-Ck-Eiu"/>
-<<<<<<< HEAD
                 <constraint firstAttribute="trailing" secondItem="Mju-tr-YVd" secondAttribute="trailing" constant="20" id="o0u-Wb-nL0"/>
-=======
                 <constraint firstItem="uEr-zS-WBF" firstAttribute="height" secondItem="Mju-tr-YVd" secondAttribute="height" id="jWJ-i0-kgE"/>
                 <constraint firstItem="uEr-zS-WBF" firstAttribute="centerY" secondItem="Mju-tr-YVd" secondAttribute="centerY" id="kVq-aY-hww"/>
-                <constraint firstAttribute="trailing" secondItem="Mju-tr-YVd" secondAttribute="trailing" constant="10" id="o0u-Wb-nL0"/>
->>>>>>> master
                 <constraint firstAttribute="trailing" secondItem="Q1Y-DU-N3B" secondAttribute="trailing" constant="51" id="qvH-FZ-0Fv"/>
                 <constraint firstItem="uuH-Nx-Xu7" firstAttribute="trailing" secondItem="VTy-aL-UcR" secondAttribute="trailing" id="uYt-lq-s1t"/>
                 <constraint firstItem="zPF-ah-kg8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="v9I-S7-Ppf"/>

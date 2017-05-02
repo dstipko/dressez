@@ -118,7 +118,7 @@ class HomeScreenPresenter: BasePresenter {
     
     func checkNetworkStatus(){
         if (viewController.currentReachabilityStatus == .notReachable){
-            let alert = AlertUtil.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
+            let alert = viewController.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
                 { action in
                     self.viewController.networkErrorTextView.isHidden = false
                     self.addRoundedBorders(toView: self.viewController.networkErrorTextView)
