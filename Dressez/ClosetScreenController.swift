@@ -74,7 +74,7 @@ class ClosetScreenController: BaseViewController {
         self.present(pickerType, animated: true, completion: nil)
     }
     
-    func checkReset(sender: UISwipeGestureRecognizer) {
+    func confirmDelete(sender: UISwipeGestureRecognizer) {
         let resetDialog = createAlertDialog(with: nil, message: "Are you sure you want to delete this item?", buttonText: "Delete", handler: {_ in
             let cell = sender.view as! UICollectionViewCell
             if let idxPath = self.collectionView.indexPath(for: cell) {
@@ -138,7 +138,7 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     private func setGestureRecognizer(to cell: UICollectionViewCell) {
-        let cellSelector = #selector(self.checkReset(sender:))
+        let cellSelector = #selector(self.confirmDelete(sender:))
         let upSwipe = UISwipeGestureRecognizer(target: self, action: cellSelector )
         upSwipe.direction = UISwipeGestureRecognizerDirection.up
         cell.addGestureRecognizer(upSwipe)
