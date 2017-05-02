@@ -20,12 +20,15 @@ extension UIViewController {
     func createAlertController(title: String?, message: String?, style: UIAlertControllerStyle) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         alert.view.tintColor = ColorConstants.green
+        let cancelAction = UIAlertAction(title: StringConstants.cancel, style: .cancel, handler: { _ in
+            self.dismiss(animated: true, completion: nil)
+        })
+        alert.addAction(cancelAction)
         return alert
     }
     
     func createAlertAction(title: String?, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
         return UIAlertAction(title: title, style: .default, handler: completionHandler)
-
     }
 }
 
