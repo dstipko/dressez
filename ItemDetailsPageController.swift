@@ -51,9 +51,10 @@ class ItemDetailsPageController: BaseViewController, UIPageViewControllerDataSou
         guard items.count > 0 else { return }
 
         for item in items {
-            let scrollImageVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPresenter.self) as ItemDetailsScreenController
-            scrollImageVC.item = item
-            pageControllers.append(scrollImageVC)
+            let detailsVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPresenter.self) as ItemDetailsScreenController
+            
+            detailsVC.item = item
+            pageControllers.append(detailsVC)
         }
         
         pageController.dataSource = self
