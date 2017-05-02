@@ -64,6 +64,15 @@ class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsController
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
+    func checkClothesQuantity() {
+        if (viewController.items.count == 0) {
+            viewController.noClothesLabel.text = StringConstants.noClothesText
+            viewController.noClothesLabel.isHidden = false
+        } else {
+            viewController.noClothesLabel.isHidden = true
+        }
+    }
+    
     func configureImagePickerController(picker: UIImagePickerController) {
         picker.navigationBar.tintColor = ColorConstants.green
         picker.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 20)]

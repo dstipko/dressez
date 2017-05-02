@@ -15,6 +15,9 @@ enum ImagePickerType {
 }
 
 class ClosetScreenController: BaseViewController {
+    
+    @IBOutlet weak var noClothesLabel: UILabel!
+    
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
     var items: [ClothingItem] = []
@@ -95,6 +98,9 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         guard let sectionData = presenter.resultController.sections?[section] else {
             return 0
         }
+        
+        presenter.checkClothesQuantity()
+        
         return sectionData.numberOfObjects
     }
     
