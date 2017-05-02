@@ -25,6 +25,10 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var labelHumidity: UILabel!
     @IBOutlet weak var labelWind: UILabel!
     @IBOutlet weak var labelPressure: UILabel!
+    @IBOutlet weak var labelOutfit: UILabel!
+    @IBOutlet weak var shuffleOutfitButton: UIButton!
+    
+    @IBOutlet weak var networkErrorTextView: UITextView!
     
     @IBOutlet weak var networkErrorTextView: UITextView!
     
@@ -34,7 +38,11 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> DEZ-013-Network-connection-check-merge
         outfitCollectionView.delegate = self
         outfitCollectionView.dataSource = self
         
@@ -89,5 +97,9 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         }
         
         return cell
+    }
+    
+    @IBAction func shuffleOutfit(_ sender: Any) {
+        presenter.updateOutfitPreview()
     }
 }

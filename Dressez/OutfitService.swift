@@ -10,10 +10,17 @@ import Foundation
 
 class OutfitService {
     
+<<<<<<< HEAD
     var persistanceService: PersistanceService
     
     init() {
         persistanceService = PersistanceService()
+=======
+    var persistanceService: PersistenceService
+    
+    init() {
+        persistanceService = PersistenceService()
+>>>>>>> DEZ-013-Network-connection-check-merge
     }
     
     func generateOutfit(for weatherInfo: WeatherResponse) -> [ClothingItem] {

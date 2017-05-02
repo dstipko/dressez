@@ -43,7 +43,7 @@ class NewClothingItemController: BaseViewController {
         if let colorId = itemColor, let typeId = itemType,let type = ItemType(rawValue: typeId), let color = ItemColor(rawValue: colorId), let nameText = nameTextField.text, let name = nameText.onlyHasWhitespaces() ? nil : nameText {
             
             DispatchQueue.main.async {
-                self.presenter.persistanceService.createClothingItem(name: name, image: self.image, type: type, color: color, completion: { item in
+                self.presenter.persistenceService.createClothingItem(name: name, image: self.image, type: type, color: color, completion: { item in
                     return
                 })
             }

@@ -1,5 +1,5 @@
 //
-//  PersistanceService.swift
+//  PersistenceService.swift
 //  Dressez
 //
 //  Created by Dora Stipković on 4/28/17.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-struct PersistanceService {
+struct PersistenceService {
     
     private var storeURL: URL {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -59,7 +59,7 @@ struct PersistanceService {
     }
 }
 
-extension PersistanceService {
+extension PersistenceService {
     
     func createClothingItem(name: String,
                             image: UIImage,

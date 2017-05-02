@@ -15,10 +15,9 @@ enum ImagePickerType {
 }
 
 class ClosetScreenController: BaseViewController {
-    
-    fileprivate var resultController: NSFetchedResultsController<NSFetchRequestResult>!
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
+    var items: [ClothingItem] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -28,16 +27,15 @@ class ClosetScreenController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.resultController = presenter.persistanceService.fetchAllItems()
         presenter.setup()
         configureRightBarButtonItem()
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
-        resultController.delegate = self
         picker.delegate = self
         presenter.configureImagePickerController(picker: picker)
+        items = presenter.fetchAllItems()
     }
     
     override func viewDidLayoutSubviews() {
@@ -97,7 +95,7 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
 extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let sectionData = resultController.sections?[section] else {
+        guard let sectionData = presenter.resultController.sections?[section] else {
             return 0
         }
         return sectionData.numberOfObjects
@@ -105,7 +103,7 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let current = resultController.object(at: indexPath) as! ClothingItem
+        let current = presenter.fetchItem(at: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         if let image = current.image {
             return presenter.configureImageCollectionViewCell(cell: cell, image: image)
@@ -114,12 +112,14 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
             return UICollectionViewCell()
         }
     }
-}
-
-extension ClosetScreenController: NSFetchedResultsControllerDelegate {
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        collectionView.reloadData()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
+        detailsVC.modalTransitionStyle = .crossDissolve
+        detailsVC.items = items
+        detailsVC.currentIndex = indexPath.item
+        
+        let navController = NavigationController(rootViewController: detailsVC)
+        present(navController, animated: true, completion: nil)
     }
 }
-
