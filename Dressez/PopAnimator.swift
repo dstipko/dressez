@@ -54,11 +54,9 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                         fromView.transform = self.presenting ?
                             CGAffineTransform.identity : scaleTransform
                         fromView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
-        }, 
-                       completion:{_ in
+                       }, completion: {_ in
                         transitionContext.completeTransition(true)
-        }
-        )
+                       })
     }
     
 }
