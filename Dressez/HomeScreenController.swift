@@ -94,7 +94,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         pageController.currentIndex = indexPath.item
         
         let navigationController = NavigationController(rootViewController: pageController)
-        navigationController.navigationBar.isTranslucent = true
+        navigationController.title = StringConstants.todaysOutfit
         present(navigationController, animated: true, completion: nil)
     }
     

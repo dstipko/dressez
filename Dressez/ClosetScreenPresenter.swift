@@ -28,7 +28,7 @@ class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsController
     required override init() {}
     
     func setup() {
-        viewController.navigationItem.title = "Closet"
+        viewController.navigationItem.title = StringConstants.closet
         resultController = persistenceService.fetchAllItems()
         resultController.delegate = self
     }
@@ -66,6 +66,7 @@ class ClosetScreenPresenter: NSObject, BasePresenter, NSFetchedResultsController
     
     func configureImagePickerController(picker: UIImagePickerController) {
         picker.navigationBar.tintColor = ColorConstants.green
+        picker.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 20)]
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
