@@ -29,7 +29,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var outfitLoader: UIActivityIndicatorView!
     @IBOutlet weak var labelOutfitWarning: UILabel!
     
-    @IBOutlet weak var networkErrorTextView: UITextView!
+    @IBOutlet weak var networkErrorTextView: UILabel!
     
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter
@@ -84,7 +84,7 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = outfitCollectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
 
-        presenter.addRoundedBorders(toView: cell)
+        presenter.addRoundedBorders(to: cell)
         
         if let outfit = presenter.outfit {
             let object = outfit[indexPath.item] as ClothingItem

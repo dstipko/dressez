@@ -94,9 +94,9 @@ class HomeScreenPresenter: BasePresenter {
         viewController.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func addRoundedBorders(toView : UIView) {
-        toView.layer.cornerRadius = NumberConstants.cornerRadius
-        toView.layer.shouldRasterize = true
+    func addRoundedBorders(to view : UIView) {
+        view.layer.cornerRadius = NumberConstants.cornerRadius
+        view.layer.shouldRasterize = true
     }
     
     func configureCollectionViewLayout() {
@@ -121,7 +121,7 @@ class HomeScreenPresenter: BasePresenter {
             let alert = viewController.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
                 { action in
                     self.viewController.networkErrorTextView.isHidden = false
-                    self.addRoundedBorders(toView: self.viewController.networkErrorTextView)
+                    self.addRoundedBorders(to: self.viewController.networkErrorTextView)
                 }
             )
             
