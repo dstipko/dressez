@@ -51,20 +51,17 @@ class ClosetScreenController: BaseViewController {
     
     
     func openImagePicker(selector: UIBarButtonItem) {
-        let pickerType = createAlertController(title: nil, message: nil, style: .actionSheet)
-        let galleryAction = createAlertAction(title: StringConstants.photoGallery, completionHandler: { _ in
+        let pickerType = createActionSheet(title: nil, message: nil)
+        let galleryAction = createAlertAction(title: StringConstants.photoGallery, handler: { _ in
             self.picker.allowsEditing = false
             self.picker.sourceType = .photoLibrary
             self.present(self.picker, animated: true, completion: nil)
         })
-        let cameraAction = createAlertAction(title: StringConstants.camera, completionHandler: { _ in
+        let cameraAction = createAlertAction(title: StringConstants.camera, handler: { _ in
             self.picker.allowsEditing = false
             if !UIImagePickerController.isSourceTypeAvailable(.camera) {
-                let availabilityAlert = self.createAlertController(title: nil, message: StringConstants.noCamera, style: .alert)
-                let okAction = self.createAlertAction(title: StringConstants.ok, completionHandler: { _ in
-                    self.dismiss(animated: true, completion: nil)
-                })
-                availabilityAlert.addAction(okAction)
+                let availabilityAlert = self.createAlertDialog(with: nil, message: StringConstants.noCamera, buttonText: StringConstants.ok, handler: { _ in
+                    self.dismiss(animated: true, completion: nil)})
                 self.present(availabilityAlert, animated: true, completion: nil)
             }
             else {
