@@ -30,6 +30,7 @@
 		865BD2991EB64093002A5C78 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD2971EB64093002A5C78 /* ImageCollectionViewCell.swift */; };
 		865BD29A1EB64093002A5C78 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BD2981EB64093002A5C78 /* ImageCollectionViewCell.xib */; };
 		865BD29D1EB67D36002A5C78 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BD29C1EB67D36002A5C78 /* ColorConstants.swift */; };
+		866BDB2B1EB9359B007D11CD /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866BDB2A1EB9359B007D11CD /* PopAnimator.swift */; };
 		86DFC99E1EB3CA3C00A9D4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */; };
 		86DFC9A51EB3CA3C00A9D4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */; };
 		86DFC9B31EB3D1A900A9D4D0 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFC9B21EB3D1A900A9D4D0 /* HomeScreenPresenter.swift */; };
@@ -77,6 +78,7 @@
 		865BD2971EB64093002A5C78 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		865BD2981EB64093002A5C78 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		865BD29C1EB67D36002A5C78 /* ColorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		866BDB2A1EB9359B007D11CD /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		86DFC99A1EB3CA3C00A9D4D0 /* Dressez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dressez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DFC9A41EB3CA3C00A9D4D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Dressez/Assets.xcassets; sourceTree = "<group>"; };
@@ -202,7 +204,9 @@
 			children = (
 				BC0E74831EB6AED1002509BB /* Enums */,
 				86DFC99D1EB3CA3C00A9D4D0 /* AppDelegate.swift */,
+				866BDB2A1EB9359B007D11CD /* PopAnimator.swift */,
 				86E6263B1EB3E46E003D2E51 /* WeatherResponse.swift */,
+				862DDD401EB5E9280057C43C /* GeneralExtensions.swift */,
 				BC94653D1EB67FD0007C719A /* Constants */,
 				BC1C134A1EB4BD1B008880B6 /* Services */,
 				BC6279111EB50CE500F39BB9 /* Utilities */,
@@ -212,7 +216,6 @@
 				862DDD3B1EB51D620057C43C /* NewClothingItemScreen */,
 				862D3B171EB6A80B00A2D3C8 /* ItemDetailsScreen */,
 				86E626431EB4CD84003D2E51 /* TopControllers */,
-				862DDD401EB5E9280057C43C /* GeneralExtensions.swift */,
 				BC6279101EB50CDA00F39BB9 /* Model */,
 			);
 			path = Dressez;
@@ -445,6 +448,7 @@
 				862D3B1B1EB6BF2A00A2D3C8 /* ItemDetailsPagePresenter.swift in Sources */,
 				86E626401EB4CD08003D2E51 /* TabBarController.swift in Sources */,
 				86E6263E1EB4CC91003D2E51 /* NavigationService.swift in Sources */,
+				866BDB2B1EB9359B007D11CD /* PopAnimator.swift in Sources */,
 				BC62790B1EB50CD500F39BB9 /* ImageService.swift in Sources */,
 				BC0E74891EB6B604002509BB /* WeatherCondition.swift in Sources */,
 				86E6263C1EB3E46E003D2E51 /* WeatherResponse.swift in Sources */,
