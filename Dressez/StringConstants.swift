@@ -23,5 +23,9 @@ struct StringConstants {
     static var noCamera = "Camera not available"
     static var homeScreenOutfitLabel = "Outfit for today:"
     static var homeScreenShuffleButton = "Shuffle"
+    
+    //network
+    static var networkUnavailible = "Network unavailible"
+    static var networkUnavailibleMessage = "Please check your internet connection."
 }
 
