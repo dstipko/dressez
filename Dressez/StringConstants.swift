@@ -24,5 +24,7 @@ struct StringConstants {
     static let noCamera = "Camera not available"
     static let homeScreenOutfitLabel = "Outfit for today:"
     static let homeScreenShuffleButton = "Shuffle"
+    static let newClothingItemScreenSaveButton = "Save"
+    static let homeScreenOutfitWarningLabel = "Looks like you don't have any matching clothes.\nTime for shopping!"
 }
 

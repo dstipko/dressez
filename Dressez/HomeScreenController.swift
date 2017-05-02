@@ -25,6 +25,8 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var labelPressure: UILabel!
     @IBOutlet weak var labelOutfit: UILabel!
     @IBOutlet weak var shuffleOutfitButton: UIButton!
+    @IBOutlet weak var outfitLoader: UIActivityIndicatorView!
+    @IBOutlet weak var labelOutfitWarning: UILabel!
     
     var presenter: HomeScreenPresenter! {
         return basePresenter as! HomeScreenPresenter

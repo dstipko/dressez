@@ -28,8 +28,11 @@ class NewClothingItemPresenter: BasePresenter {
         viewController.clothingItemImageView.layer.cornerRadius = NumberConstants.cornerRadius
         viewController.clothingItemImageView.layer.masksToBounds = true
         
-        viewController.saveButton.setTitleColor(.white, for: .normal)
+        viewController.saveButton.setTitle(StringConstants.newClothingItemScreenSaveButton, for: .normal)
+        viewController.saveButton.setTitleColor(ColorConstants.green, for: .normal)
         viewController.saveButton.layer.cornerRadius = NumberConstants.cornerRadius
+        viewController.saveButton.layer.borderWidth = NumberConstants.borderWidth
+        viewController.saveButton.layer.borderColor = ColorConstants.green.cgColor
         viewController.saveButton.layer.masksToBounds = true
     }
     
@@ -40,6 +43,6 @@ class NewClothingItemPresenter: BasePresenter {
     }
     
     func assignBackground() {
-        viewController.view.backgroundColor = ColorConstants.green
+        viewController.view.backgroundColor = ColorConstants.lightBlue
     }
 }
