@@ -117,7 +117,7 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         detailsVC.currentIndex = indexPath.item
         
         let navController = NavigationController(rootViewController: detailsVC)
-        navController.navigationBar.isTranslucent = true
+        navController.title = StringConstants.closet
         present(navController, animated: true, completion: nil)
     }
 }

@@ -17,6 +17,6 @@ class NavigationController: UINavigationController {
         navigationBar.barStyle = UIBarStyle.default
         navigationBar.tintColor = ColorConstants.green
         navigationBar.barTintColor = ColorConstants.barsDefault
+        navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 20)]
     }
-    
 }
