@@ -14,6 +14,8 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
     var bag : DisposeBag = DisposeBag()
     private let reuseIdentifier = "collectionCell"
 
+    @IBOutlet weak var labelsConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageConstraint: NSLayoutConstraint!
     @IBOutlet var weatherLabels: [UIView]!
     @IBOutlet weak var outfitCollectionView: UICollectionView!
     @IBOutlet weak var imageWeatherIcon: UIImageView!
@@ -45,18 +47,67 @@ class HomeScreenController: BaseViewController, UICollectionViewDelegate, UIColl
         self.outfitCollectionView!.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
         presenter.setup()
+
+        let con = self.imageConstraint.constant
         
+        self.imageConstraint.constant  = -125
+        self.labelsConstraint.constant = 50
+
         fetchWeather()
     }
     
     override func viewDidLayoutSubviews() {
         presenter.assignBackground()
         presenter.configureCollectionViewLayout()
+        let wi = self.view.frame.width
+//        self.constraint.constant = -self.view.frame.width
     }
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.checkNetworkStatus()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animateScreen()
+        }
+
+    func animateScreen() {
+        self.imageConstraint.constant = -self.view.frame.width/4
+        self.labelsConstraint.constant = 0
+        
+        UIView.animate(withDuration: 1.0,
+                       delay: 0,
+                       options: .curveEaseIn,
+                       animations: {
+                        self.view.layoutIfNeeded()
+                        self.imageWeatherIcon.alpha = 100
+                        self.weatherLabels.forEach({$0.alpha = 100})
+
+        },
+                       completion: { finished in
+                        print("animated")
+                        //                        
+                    }
+        )
+    }
+    
+    func animateOutfit() {
+        UIView.animate(withDuration: 1.0,
+                       delay: 1,
+                       options: .curveEaseIn,
+                       animations: {
+                        self.view.layoutIfNeeded()
+                        self.labelOutfitWarning.alpha = 100
+
+        },
+                       completion: { finished in
+                        print("animated")
+        }
+        )
+    }
+
     
     func fetchWeather(){
         presenter.fetchWeather().subscribe(onNext: {(result) in
