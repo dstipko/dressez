@@ -37,8 +37,8 @@ class OutfitService {
             
             colorMatchingItems.shuffle()
             
-            for type in ItemType.allValues {
-                if let distinctItem = (colorMatchingItems.filter { return $0.type == type }).first {
+            for category in ItemCategory.allValues {
+                if let distinctItem = (colorMatchingItems.filter { return $0.category == category }).first {
                     outfit.append(distinctItem)
                 }
             }
