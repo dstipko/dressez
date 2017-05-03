@@ -72,7 +72,9 @@ class HomeScreenPresenter: BasePresenter {
         guard let weatherInfo = self.weatherInfo else { return }
         
         viewController.outfitLoader.startAnimating()
-        outfit = outfitService.generateOutfit(for: weatherInfo)
+        DispatchQueue.global().async {
+            self.outfit = self.outfitService.generateOutfit(for: weatherInfo)
+        }
         viewController.outfitLoader.stopAnimating()
         
         viewController.labelOutfitWarning.isHidden = outfit != nil
