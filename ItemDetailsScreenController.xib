@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -45,18 +45,18 @@
                     <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-8M-fzM" customClass="PaddedLabel" customModule="Dressez" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="445" width="375" height="40"/>
+                    <rect key="frame" x="0.0" y="445" width="375" height="25"/>
                     <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="8hU-DQ-3vm"/>
+                        <constraint firstAttribute="height" constant="25" id="8hU-DQ-3vm"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                     <color key="textColor" red="0.4431372549" green="0.58823529409999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn9-im-7Jw" customClass="PaddedLabel" customModule="Dressez" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="485" width="375" height="40"/>
+                    <rect key="frame" x="0.0" y="470" width="375" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="aYB-UO-GQN"/>
@@ -66,18 +66,18 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3T-3v-wcR" customClass="PaddedLabel" customModule="Dressez" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="525" width="375" height="40"/>
+                    <rect key="frame" x="0.0" y="510" width="375" height="25"/>
                     <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="nNQ-Ad-M0r"/>
+                        <constraint firstAttribute="height" constant="25" id="nNQ-Ad-M0r"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                     <color key="textColor" red="0.4431372549" green="0.58823529409999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-T0-UKw" customClass="PaddedLabel" customModule="Dressez" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="565" width="375" height="40"/>
+                    <rect key="frame" x="0.0" y="535" width="375" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="G7N-tq-1k1"/>
@@ -94,21 +94,21 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApU-0F-Q3r">
-                    <rect key="frame" x="0.0" y="485" width="375" height="1"/>
+                    <rect key="frame" x="0.0" y="470" width="375" height="1"/>
                     <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="OUN-AN-Pv8"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfL-ZM-qug">
-                    <rect key="frame" x="0.0" y="525" width="375" height="1"/>
+                    <rect key="frame" x="0.0" y="510" width="375" height="1"/>
                     <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Xq9-Sa-mk6"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-4X-haO">
-                    <rect key="frame" x="0.0" y="565" width="375" height="1"/>
+                    <rect key="frame" x="0.0" y="535" width="375" height="1"/>
                     <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="IiO-VJ-NRW"/>
