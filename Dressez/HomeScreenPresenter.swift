@@ -122,6 +122,7 @@ class HomeScreenPresenter: BasePresenter {
             let alert = viewController.createAlertDialog(with: StringConstants.networkUnavailible, message: StringConstants.networkUnavailibleMessage, buttonText: StringConstants.ok, handler:
                 { action in
                     self.viewController.networkErrorLabel.isHidden = false
+                    self.viewController.networkErrorLabel.text = StringConstants.networkUnavailibleMessage
                     self.addRoundedBorders(to: self.viewController.networkErrorLabel)
                 }
             )
@@ -130,7 +131,7 @@ class HomeScreenPresenter: BasePresenter {
             viewController.labelOutfitWarning.isHidden = true
             viewController.present(alert, animated: true)
         } else {
-            viewController.weatherLabels.forEach({$0.isHidden = false})
+//            viewController.weatherLabels.forEach({$0.isHidden = false})
             self.viewController.networkErrorLabel.isHidden = true
         }
     }
