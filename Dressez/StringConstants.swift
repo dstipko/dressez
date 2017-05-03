@@ -36,8 +36,10 @@ struct StringConstants {
     static let noClothesText = "You don't have any clothes yet. :("
 
     static let todaysOutfit = "Todays outfit"
+
     static let closet =  "Closet"
     static let dressez = "dressez"
+
     static let confirmDelete = "Are you sure you want to delete this item?"
     static let delete = "Delete"
 }
