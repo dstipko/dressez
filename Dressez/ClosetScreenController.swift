@@ -20,6 +20,9 @@ class ClosetScreenController: BaseViewController {
     
     fileprivate let picker = UIImagePickerController()
     fileprivate let reuseIdentifier = "collectionCell"
+    fileprivate let transition = PopAnimator()
+    fileprivate var selected: UIImageView?
+    
     var items: [ClothingItem] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -76,6 +79,20 @@ class ClosetScreenController: BaseViewController {
         pickerType.addAction(cameraAction)
         self.present(pickerType, animated: true, completion: nil)
     }
+    
+    func confirmDelete(sender: UISwipeGestureRecognizer) {
+        let resetDialog = createAlertDialog(with: nil, message: StringConstants.confirmDelete, buttonText: StringConstants.delete, handler: {_ in
+            let cell = sender.view as! UICollectionViewCell
+            if let idxPath = self.collectionView.indexPath(for: cell) {
+                self.presenter.deleteItem(at: idxPath)
+            }})
+        let cancelAction = createAlertAction(title: StringConstants.cancel, handler: {_ in
+            self.dismiss(animated: true, completion: nil)
+        })
+        resetDialog.addAction(cancelAction)
+        self.present(resetDialog, animated: true, completion: nil)
+    }
+
 }
 
 extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -84,7 +101,6 @@ extension ClosetScreenController: UIImagePickerControllerDelegate, UINavigationC
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         dismiss(animated: true, completion: nil)
         presenter.navigationService.pushToNewClothingItemScreen(navigationController: self.navigationController, image: chosenImage)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -104,26 +120,51 @@ extension ClosetScreenController: UICollectionViewDataSource, UICollectionViewDe
         return sectionData.numberOfObjects
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let current = presenter.fetchItem(at: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
+        setGestureRecognizer(to: cell)
         if let image = current.image {
             return presenter.configureImageCollectionViewCell(cell: cell, image: image)
-        }
-        else {
+        } else {
             return UICollectionViewCell()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
+        selected = cell.imageView
         let detailsVC = presenter.navigationService.controllerFactory(PresenterType: ItemDetailsPagePresenter.self) as ItemDetailsPageController
         detailsVC.modalTransitionStyle = .crossDissolve
         detailsVC.items = items
         detailsVC.currentIndex = indexPath.item
         
         let navController = NavigationController(rootViewController: detailsVC)
+        navController.navigationBar.isTranslucent = true
         navController.title = StringConstants.closet
+        navController.transitioningDelegate = self
         present(navController, animated: true, completion: nil)
+    }
+    
+    private func setGestureRecognizer(to cell: UICollectionViewCell) {
+        let cellSelector = #selector(self.confirmDelete(sender:))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: cellSelector )
+        upSwipe.direction = UISwipeGestureRecognizerDirection.up
+        cell.addGestureRecognizer(upSwipe)
+    }
+}
+
+extension ClosetScreenController: UIViewControllerTransitioningDelegate {
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if let selected = selected, let frame  = selected.superview?.convert(selected.frame, to: nil){
+            transition.originFrame = frame
+            transition.presenting = true
+        }
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
     }
 }
